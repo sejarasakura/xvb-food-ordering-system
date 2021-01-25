@@ -1,0 +1,15 @@
+﻿Public Class VRColor
+    Public Shared ReadOnly Property PRIMARY_BG = ColorTranslator.FromHtml("#FFFFFF")
+    Public Shared ReadOnly Property SECOND_BG = ColorTranslator.FromHtml("#F2F2F2")
+    Public Shared ReadOnly Property COLORED_BG = ColorTranslator.FromHtml("#039BCD")
+    Public Shared ReadOnly Property DARK_COLOR_BG = ColorTranslator.FromHtml("#15262E")
+    Public Shared ReadOnly Property PRIMARY_TEXT = ColorTranslator.FromHtml("#7C7C7C")
+    Public Shared ReadOnly Property SECOND_TEXT = ColorTranslator.FromHtml("#111111")
+    Public Shared ReadOnly Property SUCCESS_COLOR = ColorTranslator.FromHtml("#5CB85C")
+    Public Shared ReadOnly Property INFO_COLOR = ColorTranslator.FromHtml("#5BC0DE")
+    Public Shared ReadOnly Property WARNING_COLOR = ColorTranslator.FromHtml("#F0AD4E")
+    Public Shared ReadOnly Property DANGER_COLOR = ColorTranslator.FromHtml("#D9534F")
+    Public Shared ReadOnly Property BUTTON_TEXT = ColorTranslator.FromHtml("#FCFCFC")
+    Public Shared ReadOnly Property BUTTON_BG = ColorTranslator.FromHtml("#039BCD")
+    Public Shared ReadOnly Property HOVER_BUTTON_BG = ColorTranslator.FromHtml("#006194")
+End Class
