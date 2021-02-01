@@ -4,7 +4,7 @@
         Me.cancleBtn.BackColor = VRColor.WARNING_COLOR
         Me.loginBtn.BackColor = VRColor.COLORED_BG
         Me.MaximumSize = Me.Size
-
+        'No Content
     End Sub
 
     Private Sub cancleBtnOnclick(sender As Object, e As EventArgs) Handles cancleBtn.Click
