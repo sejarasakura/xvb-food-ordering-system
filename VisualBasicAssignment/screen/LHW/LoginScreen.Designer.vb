@@ -109,10 +109,10 @@ Partial Class LoginScreen
         '
         'cancleBtn
         '
-        Me.cancleBtn.BackColor = System.Drawing.Color.Transparent
+        Me.cancleBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(78, Byte), Integer))
         Me.cancleBtn.CheckedState.Parent = Me.cancleBtn
         Me.cancleBtn.CustomImages.Parent = Me.cancleBtn
-        Me.cancleBtn.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.cancleBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.cancleBtn.ForeColor = System.Drawing.Color.White
         Me.cancleBtn.HoverState.Parent = Me.cancleBtn
         Me.cancleBtn.Location = New System.Drawing.Point(74, 648)
@@ -120,15 +120,14 @@ Partial Class LoginScreen
         Me.cancleBtn.ShadowDecoration.Parent = Me.cancleBtn
         Me.cancleBtn.Size = New System.Drawing.Size(207, 62)
         Me.cancleBtn.TabIndex = 7
-        Me.cancleBtn.BackColor = VRColor.WARNING_COLOR
         Me.cancleBtn.Text = "Cancle"
         '
         'loginBtn
         '
-        Me.loginBtn.BackColor = System.Drawing.Color.Transparent
+        Me.loginBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(205, Byte), Integer))
         Me.loginBtn.CheckedState.Parent = Me.loginBtn
         Me.loginBtn.CustomImages.Parent = Me.loginBtn
-        Me.loginBtn.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.loginBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.loginBtn.ForeColor = System.Drawing.Color.White
         Me.loginBtn.HoverState.Parent = Me.loginBtn
         Me.loginBtn.Location = New System.Drawing.Point(332, 648)
@@ -136,7 +135,6 @@ Partial Class LoginScreen
         Me.loginBtn.ShadowDecoration.Parent = Me.loginBtn
         Me.loginBtn.Size = New System.Drawing.Size(207, 62)
         Me.loginBtn.TabIndex = 7
-        Me.loginBtn.BackColor = VRColor.COLORED_BG
         Me.loginBtn.Text = "Login"
         '
         'PictureBox1
