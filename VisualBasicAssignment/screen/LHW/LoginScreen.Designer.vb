@@ -49,7 +49,7 @@ Partial Class LoginScreen
         Me.tbxName.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbxName.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.tbxName.HoverState.Parent = Me.tbxName
-        Me.tbxName.Location = New System.Drawing.Point(74, 430)
+        Me.tbxName.Location = New System.Drawing.Point(53, 432)
         Me.tbxName.Margin = New System.Windows.Forms.Padding(2)
         Me.tbxName.Name = "tbxName"
         Me.tbxName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -75,7 +75,7 @@ Partial Class LoginScreen
         Me.tbxPassword.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbxPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.tbxPassword.HoverState.Parent = Me.tbxPassword
-        Me.tbxPassword.Location = New System.Drawing.Point(74, 542)
+        Me.tbxPassword.Location = New System.Drawing.Point(53, 544)
         Me.tbxPassword.Margin = New System.Windows.Forms.Padding(2)
         Me.tbxPassword.Name = "tbxPassword"
         Me.tbxPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -90,7 +90,7 @@ Partial Class LoginScreen
         Me.lblName.AutoSize = True
         Me.lblName.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblName.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.lblName.Location = New System.Drawing.Point(70, 399)
+        Me.lblName.Location = New System.Drawing.Point(49, 401)
         Me.lblName.Name = "lblName"
         Me.lblName.Size = New System.Drawing.Size(249, 20)
         Me.lblName.TabIndex = 2
@@ -101,7 +101,7 @@ Partial Class LoginScreen
         Me.lblPassword.AutoSize = True
         Me.lblPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPassword.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.lblPassword.Location = New System.Drawing.Point(70, 520)
+        Me.lblPassword.Location = New System.Drawing.Point(49, 522)
         Me.lblPassword.Name = "lblPassword"
         Me.lblPassword.Size = New System.Drawing.Size(83, 20)
         Me.lblPassword.TabIndex = 3
@@ -115,7 +115,7 @@ Partial Class LoginScreen
         Me.cancleBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.cancleBtn.ForeColor = System.Drawing.Color.White
         Me.cancleBtn.HoverState.Parent = Me.cancleBtn
-        Me.cancleBtn.Location = New System.Drawing.Point(74, 648)
+        Me.cancleBtn.Location = New System.Drawing.Point(53, 650)
         Me.cancleBtn.Name = "cancleBtn"
         Me.cancleBtn.ShadowDecoration.Parent = Me.cancleBtn
         Me.cancleBtn.Size = New System.Drawing.Size(207, 62)
@@ -130,7 +130,7 @@ Partial Class LoginScreen
         Me.loginBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.loginBtn.ForeColor = System.Drawing.Color.White
         Me.loginBtn.HoverState.Parent = Me.loginBtn
-        Me.loginBtn.Location = New System.Drawing.Point(332, 648)
+        Me.loginBtn.Location = New System.Drawing.Point(311, 650)
         Me.loginBtn.Name = "loginBtn"
         Me.loginBtn.ShadowDecoration.Parent = Me.loginBtn
         Me.loginBtn.Size = New System.Drawing.Size(207, 62)
@@ -143,7 +143,7 @@ Partial Class LoginScreen
         Me.PictureBox1.BackgroundImage = Global.VisualBasicAssignment.My.Resources.Resources.default_user
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.PictureBox1.Location = New System.Drawing.Point(201, 109)
+        Me.PictureBox1.Location = New System.Drawing.Point(186, 109)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(220, 220)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -154,7 +154,7 @@ Partial Class LoginScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(619, 778)
+        Me.ClientSize = New System.Drawing.Size(568, 778)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.loginBtn)
         Me.Controls.Add(Me.cancleBtn)
