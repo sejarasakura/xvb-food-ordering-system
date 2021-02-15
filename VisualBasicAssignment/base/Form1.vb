@@ -69,6 +69,10 @@
 
     End Sub
 
+    Private Sub btn_Click(sender As Object, e As MouseEventArgs) Handles btnProfile.MouseClick, btnOrder.MouseClick, btnMenu.MouseClick, btnCart.MouseClick
+
+    End Sub
+
 
 
 
