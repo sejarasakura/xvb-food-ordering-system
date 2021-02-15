@@ -77,6 +77,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="constant\VRColor.vb" />
+    <Compile Include="master\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="master\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="master\Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="master\Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="screen\LHW\LoginScreen.Designer.vb">
       <DependentUpon>LoginScreen.vb</DependentUpon>
     </Compile>
@@ -113,6 +125,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="master\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="master\Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
