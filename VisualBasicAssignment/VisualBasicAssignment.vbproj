@@ -51,16 +51,20 @@
     <Reference Include="Guna.UI2, Version=2.0.1.4, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.1.4\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -76,12 +80,60 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="base\Form1.designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="base\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="base\Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="base\Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="constant\VRColor.vb" />
     <Compile Include="screen\LHW\LoginScreen.Designer.vb">
       <DependentUpon>LoginScreen.vb</DependentUpon>
     </Compile>
     <Compile Include="screen\LHW\LoginScreen.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user_control\payment\PaymentChoice.Designer.vb">
+      <DependentUpon>PaymentChoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="user_control\payment\PaymentChoice.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user_control\payment\PaymentConfrim.Designer.vb">
+      <DependentUpon>PaymentConfrim.vb</DependentUpon>
+    </Compile>
+    <Compile Include="user_control\payment\PaymentConfrim.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user_control\payment\SecureRedirect.Designer.vb">
+      <DependentUpon>SecureRedirect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="user_control\payment\SecureRedirect.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user_control\payment\widget\PaymentListTile.Designer.vb">
+      <DependentUpon>PaymentListTile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="user_control\payment\widget\PaymentListTile.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user_control\payment\PaymentManagement.Designer.vb">
+      <DependentUpon>PaymentManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="user_control\payment\PaymentManagement.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user_control\payment\PaymentMethod.Designer.vb">
+      <DependentUpon>PaymentMethod.vb</DependentUpon>
+    </Compile>
+    <Compile Include="user_control\payment\PaymentMethod.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="SplashScreen.vb">
       <SubType>Form</SubType>
@@ -113,6 +165,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="base\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="base\Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -127,6 +185,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="user_control\basic\VRButton.resx">
       <DependentUpon>VRButton.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user_control\payment\PaymentChoice.resx">
+      <DependentUpon>PaymentChoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user_control\payment\PaymentMethod.resx">
+      <DependentUpon>PaymentMethod.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user_control\payment\PaymentConfrim.resx">
+      <DependentUpon>PaymentConfrim.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -145,13 +212,32 @@
   <ItemGroup>
     <Folder Include="commons\" />
     <Folder Include="model\" />
-    <Folder Include="screen\LSK\" />
+    <Folder Include="screen\payment\" />
     <Folder Include="services\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="asset\image\main\default_user.png" />
     <Content Include="asset\image\main\icon.ico" />
     <Content Include="asset\image\main\splash_screen.png" />
+    <Content Include="asset\image\Resources\cart.png" />
+    <Content Include="asset\image\Resources\cart1.png" />
+    <Content Include="asset\image\Resources\icon1.png" />
+    <Content Include="asset\image\Resources\icon2.bmp" />
+    <Content Include="asset\image\Resources\icon2.png" />
+    <Content Include="asset\image\Resources\icon21.png" />
+    <Content Include="asset\image\Resources\icon22.png" />
+    <Content Include="asset\image\Resources\icons8-close-window-96 %281%29.png" />
+    <Content Include="asset\image\Resources\icons8-close-window-96.png" />
+    <Content Include="asset\image\Resources\icons8-macos-minimize-90.png" />
+    <Content Include="asset\image\Resources\icons8-macos-minimize-96 %281%29.png" />
+    <Content Include="asset\image\Resources\menu.png" />
+    <Content Include="asset\image\Resources\nav.png" />
+    <Content Include="asset\image\Resources\nav1.gif" />
+    <Content Include="asset\image\Resources\nav2.bmp" />
+    <Content Include="asset\image\Resources\nav2.gif" />
+    <Content Include="asset\image\Resources\payment.png" />
+    <Content Include="asset\image\Resources\profile.png" />
+    <Content Include="asset\image\Resources\profile1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
