@@ -22,6 +22,7 @@ Partial Class LoginScreen
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginScreen))
         Me.tbxName = New Guna.UI2.WinForms.Guna2TextBox()
         Me.tbxPassword = New Guna.UI2.WinForms.Guna2TextBox()
@@ -30,6 +31,7 @@ Partial Class LoginScreen
         Me.cancleBtn = New Guna.UI2.WinForms.Guna2Button()
         Me.loginBtn = New Guna.UI2.WinForms.Guna2Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -150,6 +152,10 @@ Partial Class LoginScreen
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
         '
+        'Guna2BorderlessForm1
+        '
+        Me.Guna2BorderlessForm1.ContainerControl = Me
+        '
         'LoginScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -180,4 +186,5 @@ Partial Class LoginScreen
     Friend WithEvents cancleBtn As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents loginBtn As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
 End Class
