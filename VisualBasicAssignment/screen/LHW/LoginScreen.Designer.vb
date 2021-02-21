@@ -120,7 +120,7 @@ Partial Class LoginScreen
         Me.cancleBtn.ShadowDecoration.Parent = Me.cancleBtn
         Me.cancleBtn.Size = New System.Drawing.Size(207, 62)
         Me.cancleBtn.TabIndex = 7
-        Me.cancleBtn.Text = "Cancle"
+        Me.cancleBtn.Text = "Cancel"
         '
         'loginBtn
         '
