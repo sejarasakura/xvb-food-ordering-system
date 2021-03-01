@@ -83,6 +83,18 @@
     <Compile Include="screen\LHW\LoginScreen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="screen\LHW\ProfileScreen.Designer.vb">
+      <DependentUpon>ProfileScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="screen\LHW\ProfileScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="screen\LHW\RegistrationScreenStaff.Designer.vb">
+      <DependentUpon>RegistrationScreenStaff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="screen\LHW\RegistrationScreenStaff.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SplashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +106,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -121,6 +134,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="screen\LHW\LoginScreen.resx">
       <DependentUpon>LoginScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screen\LHW\ProfileScreen.resx">
+      <DependentUpon>ProfileScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screen\LHW\RegistrationScreenStaff.resx">
+      <DependentUpon>RegistrationScreenStaff.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
