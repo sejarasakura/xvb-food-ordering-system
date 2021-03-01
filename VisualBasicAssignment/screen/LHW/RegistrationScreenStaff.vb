@@ -16,7 +16,7 @@
         Me.Close()
     End Sub
 
-    Private Sub lblPosition_Click(sender As Object, e As EventArgs) Handles lblPosition.Click
+    Private Sub lblPosition_Click(sender As Object, e As EventArgs) Handles lblRole.Click
 
     End Sub
 

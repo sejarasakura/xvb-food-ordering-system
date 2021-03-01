@@ -30,7 +30,7 @@ Partial Class RegistrationScreenStaff
         Me.lblGender = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.lblEmail = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2AnimateWindow1 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
-        Me.lblPosition = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.lblRole = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.lblAddress = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.lblMaritalStatus = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.txtStaffName = New Guna.UI2.WinForms.Guna2TextBox()
@@ -46,6 +46,8 @@ Partial Class RegistrationScreenStaff
         Me.btnCancel = New Guna.UI2.WinForms.Guna2Button()
         Me.btnClear = New Guna.UI2.WinForms.Guna2Button()
         Me.txtPosition = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.SuspendLayout()
         '
         'lblStaffRegistration
@@ -75,7 +77,7 @@ Partial Class RegistrationScreenStaff
         Me.lblSalary.AutoSize = False
         Me.lblSalary.BackColor = System.Drawing.Color.Transparent
         Me.lblSalary.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSalary.Location = New System.Drawing.Point(102, 328)
+        Me.lblSalary.Location = New System.Drawing.Point(102, 413)
         Me.lblSalary.Name = "lblSalary"
         Me.lblSalary.Size = New System.Drawing.Size(103, 34)
         Me.lblSalary.TabIndex = 2
@@ -86,7 +88,7 @@ Partial Class RegistrationScreenStaff
         Me.lblMobileNumber.AutoSize = False
         Me.lblMobileNumber.BackColor = System.Drawing.Color.Transparent
         Me.lblMobileNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMobileNumber.Location = New System.Drawing.Point(102, 370)
+        Me.lblMobileNumber.Location = New System.Drawing.Point(102, 467)
         Me.lblMobileNumber.Name = "lblMobileNumber"
         Me.lblMobileNumber.Size = New System.Drawing.Size(137, 34)
         Me.lblMobileNumber.TabIndex = 3
@@ -97,7 +99,7 @@ Partial Class RegistrationScreenStaff
         Me.lblGender.AutoSize = False
         Me.lblGender.BackColor = System.Drawing.Color.Transparent
         Me.lblGender.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblGender.Location = New System.Drawing.Point(102, 244)
+        Me.lblGender.Location = New System.Drawing.Point(102, 314)
         Me.lblGender.Name = "lblGender"
         Me.lblGender.Size = New System.Drawing.Size(103, 34)
         Me.lblGender.TabIndex = 4
@@ -108,29 +110,29 @@ Partial Class RegistrationScreenStaff
         Me.lblEmail.AutoSize = False
         Me.lblEmail.BackColor = System.Drawing.Color.Transparent
         Me.lblEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEmail.Location = New System.Drawing.Point(102, 137)
+        Me.lblEmail.Location = New System.Drawing.Point(102, 140)
         Me.lblEmail.Name = "lblEmail"
         Me.lblEmail.Size = New System.Drawing.Size(103, 34)
         Me.lblEmail.TabIndex = 5
         Me.lblEmail.Text = "Email"
         '
-        'lblPosition
+        'lblRole
         '
-        Me.lblPosition.AutoSize = False
-        Me.lblPosition.BackColor = System.Drawing.Color.Transparent
-        Me.lblPosition.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPosition.Location = New System.Drawing.Point(102, 190)
-        Me.lblPosition.Name = "lblPosition"
-        Me.lblPosition.Size = New System.Drawing.Size(103, 34)
-        Me.lblPosition.TabIndex = 7
-        Me.lblPosition.Text = "Position"
+        Me.lblRole.AutoSize = False
+        Me.lblRole.BackColor = System.Drawing.Color.Transparent
+        Me.lblRole.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRole.Location = New System.Drawing.Point(102, 249)
+        Me.lblRole.Name = "lblRole"
+        Me.lblRole.Size = New System.Drawing.Size(103, 34)
+        Me.lblRole.TabIndex = 7
+        Me.lblRole.Text = "Role"
         '
         'lblAddress
         '
         Me.lblAddress.AutoSize = False
         Me.lblAddress.BackColor = System.Drawing.Color.Transparent
         Me.lblAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAddress.Location = New System.Drawing.Point(102, 284)
+        Me.lblAddress.Location = New System.Drawing.Point(102, 354)
         Me.lblAddress.Name = "lblAddress"
         Me.lblAddress.Size = New System.Drawing.Size(75, 34)
         Me.lblAddress.TabIndex = 8
@@ -141,7 +143,7 @@ Partial Class RegistrationScreenStaff
         Me.lblMaritalStatus.AutoSize = False
         Me.lblMaritalStatus.BackColor = System.Drawing.Color.Transparent
         Me.lblMaritalStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMaritalStatus.Location = New System.Drawing.Point(102, 421)
+        Me.lblMaritalStatus.Location = New System.Drawing.Point(102, 517)
         Me.lblMaritalStatus.Name = "lblMaritalStatus"
         Me.lblMaritalStatus.Size = New System.Drawing.Size(137, 34)
         Me.lblMaritalStatus.TabIndex = 9
@@ -184,7 +186,7 @@ Partial Class RegistrationScreenStaff
         Me.txtEmail.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtEmail.HoverState.Parent = Me.txtEmail
-        Me.txtEmail.Location = New System.Drawing.Point(276, 126)
+        Me.txtEmail.Location = New System.Drawing.Point(276, 140)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtEmail.PlaceholderText = ""
@@ -201,7 +203,7 @@ Partial Class RegistrationScreenStaff
         Me.radMale.CheckedState.InnerColor = System.Drawing.Color.White
         Me.radMale.CheckedState.InnerOffset = -4
         Me.radMale.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.radMale.Location = New System.Drawing.Point(276, 244)
+        Me.radMale.Location = New System.Drawing.Point(276, 314)
         Me.radMale.Name = "radMale"
         Me.radMale.Size = New System.Drawing.Size(121, 21)
         Me.radMale.TabIndex = 14
@@ -219,7 +221,7 @@ Partial Class RegistrationScreenStaff
         Me.radFemale.CheckedState.InnerColor = System.Drawing.Color.White
         Me.radFemale.CheckedState.InnerOffset = -4
         Me.radFemale.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.radFemale.Location = New System.Drawing.Point(427, 244)
+        Me.radFemale.Location = New System.Drawing.Point(427, 314)
         Me.radFemale.Name = "radFemale"
         Me.radFemale.Size = New System.Drawing.Size(121, 21)
         Me.radFemale.TabIndex = 15
@@ -243,7 +245,7 @@ Partial Class RegistrationScreenStaff
         Me.txtAddress.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtAddress.HoverState.Parent = Me.txtAddress
-        Me.txtAddress.Location = New System.Drawing.Point(276, 284)
+        Me.txtAddress.Location = New System.Drawing.Point(276, 352)
         Me.txtAddress.Name = "txtAddress"
         Me.txtAddress.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtAddress.PlaceholderText = ""
@@ -266,7 +268,7 @@ Partial Class RegistrationScreenStaff
         Me.txtSalary.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtSalary.HoverState.Parent = Me.txtSalary
-        Me.txtSalary.Location = New System.Drawing.Point(276, 326)
+        Me.txtSalary.Location = New System.Drawing.Point(276, 411)
         Me.txtSalary.Name = "txtSalary"
         Me.txtSalary.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtSalary.PlaceholderText = ""
@@ -289,7 +291,7 @@ Partial Class RegistrationScreenStaff
         Me.txtMobileNumber.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtMobileNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtMobileNumber.HoverState.Parent = Me.txtMobileNumber
-        Me.txtMobileNumber.Location = New System.Drawing.Point(276, 368)
+        Me.txtMobileNumber.Location = New System.Drawing.Point(276, 465)
         Me.txtMobileNumber.Name = "txtMobileNumber"
         Me.txtMobileNumber.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtMobileNumber.PlaceholderText = ""
@@ -305,7 +307,7 @@ Partial Class RegistrationScreenStaff
         Me.radSingle.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.radSingle.CheckedState.InnerColor = System.Drawing.Color.White
         Me.radSingle.CheckedState.InnerOffset = -4
-        Me.radSingle.Location = New System.Drawing.Point(276, 421)
+        Me.radSingle.Location = New System.Drawing.Point(276, 517)
         Me.radSingle.Name = "radSingle"
         Me.radSingle.Size = New System.Drawing.Size(121, 21)
         Me.radSingle.TabIndex = 19
@@ -322,7 +324,7 @@ Partial Class RegistrationScreenStaff
         Me.radMarried.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.radMarried.CheckedState.InnerColor = System.Drawing.Color.White
         Me.radMarried.CheckedState.InnerOffset = -4
-        Me.radMarried.Location = New System.Drawing.Point(427, 421)
+        Me.radMarried.Location = New System.Drawing.Point(427, 517)
         Me.radMarried.Name = "radMarried"
         Me.radMarried.Size = New System.Drawing.Size(121, 21)
         Me.radMarried.TabIndex = 20
@@ -339,7 +341,7 @@ Partial Class RegistrationScreenStaff
         Me.btnSubmit.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnSubmit.ForeColor = System.Drawing.Color.White
         Me.btnSubmit.HoverState.Parent = Me.btnSubmit
-        Me.btnSubmit.Location = New System.Drawing.Point(276, 472)
+        Me.btnSubmit.Location = New System.Drawing.Point(276, 576)
         Me.btnSubmit.Name = "btnSubmit"
         Me.btnSubmit.ShadowDecoration.Parent = Me.btnSubmit
         Me.btnSubmit.Size = New System.Drawing.Size(180, 45)
@@ -353,7 +355,7 @@ Partial Class RegistrationScreenStaff
         Me.btnCancel.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnCancel.ForeColor = System.Drawing.Color.White
         Me.btnCancel.HoverState.Parent = Me.btnCancel
-        Me.btnCancel.Location = New System.Drawing.Point(71, 472)
+        Me.btnCancel.Location = New System.Drawing.Point(59, 576)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.ShadowDecoration.Parent = Me.btnCancel
         Me.btnCancel.Size = New System.Drawing.Size(180, 45)
@@ -367,7 +369,7 @@ Partial Class RegistrationScreenStaff
         Me.btnClear.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnClear.ForeColor = System.Drawing.Color.White
         Me.btnClear.HoverState.Parent = Me.btnClear
-        Me.btnClear.Location = New System.Drawing.Point(503, 472)
+        Me.btnClear.Location = New System.Drawing.Point(506, 576)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.ShadowDecoration.Parent = Me.btnClear
         Me.btnClear.Size = New System.Drawing.Size(180, 45)
@@ -388,7 +390,7 @@ Partial Class RegistrationScreenStaff
         Me.txtPosition.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtPosition.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtPosition.HoverState.Parent = Me.txtPosition
-        Me.txtPosition.Location = New System.Drawing.Point(276, 177)
+        Me.txtPosition.Location = New System.Drawing.Point(276, 249)
         Me.txtPosition.Name = "txtPosition"
         Me.txtPosition.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtPosition.PlaceholderText = ""
@@ -397,11 +399,47 @@ Partial Class RegistrationScreenStaff
         Me.txtPosition.Size = New System.Drawing.Size(272, 36)
         Me.txtPosition.TabIndex = 24
         '
+        'Guna2HtmlLabel1
+        '
+        Me.Guna2HtmlLabel1.AutoSize = False
+        Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(102, 197)
+        Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
+        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(103, 34)
+        Me.Guna2HtmlLabel1.TabIndex = 25
+        Me.Guna2HtmlLabel1.Text = "Password"
+        '
+        'Guna2TextBox1
+        '
+        Me.Guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.Guna2TextBox1.DefaultText = ""
+        Me.Guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.Guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.Guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2TextBox1.DisabledState.Parent = Me.Guna2TextBox1
+        Me.Guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2TextBox1.FocusedState.Parent = Me.Guna2TextBox1
+        Me.Guna2TextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2TextBox1.HoverState.Parent = Me.Guna2TextBox1
+        Me.Guna2TextBox1.Location = New System.Drawing.Point(276, 197)
+        Me.Guna2TextBox1.Name = "Guna2TextBox1"
+        Me.Guna2TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Guna2TextBox1.PlaceholderText = ""
+        Me.Guna2TextBox1.SelectedText = ""
+        Me.Guna2TextBox1.ShadowDecoration.Parent = Me.Guna2TextBox1
+        Me.Guna2TextBox1.Size = New System.Drawing.Size(272, 36)
+        Me.Guna2TextBox1.TabIndex = 26
+        '
         'RegistrationScreenStaff
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 564)
+        Me.ClientSize = New System.Drawing.Size(800, 679)
+        Me.Controls.Add(Me.Guna2TextBox1)
+        Me.Controls.Add(Me.Guna2HtmlLabel1)
         Me.Controls.Add(Me.txtPosition)
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.btnCancel)
@@ -417,7 +455,7 @@ Partial Class RegistrationScreenStaff
         Me.Controls.Add(Me.txtStaffName)
         Me.Controls.Add(Me.lblMaritalStatus)
         Me.Controls.Add(Me.lblAddress)
-        Me.Controls.Add(Me.lblPosition)
+        Me.Controls.Add(Me.lblRole)
         Me.Controls.Add(Me.lblEmail)
         Me.Controls.Add(Me.lblGender)
         Me.Controls.Add(Me.lblMobileNumber)
@@ -437,7 +475,7 @@ Partial Class RegistrationScreenStaff
     Friend WithEvents lblGender As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents lblEmail As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2AnimateWindow1 As Guna.UI2.WinForms.Guna2AnimateWindow
-    Friend WithEvents lblPosition As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblRole As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents lblAddress As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents lblMaritalStatus As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents txtStaffName As Guna.UI2.WinForms.Guna2TextBox
@@ -453,4 +491,6 @@ Partial Class RegistrationScreenStaff
     Friend WithEvents btnCancel As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnClear As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents txtPosition As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
 End Class
