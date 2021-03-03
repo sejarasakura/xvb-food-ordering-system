@@ -77,16 +77,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="constant\VRColor.vb" />
-    <Compile Include="master\Form1.Designer.vb">
+    <Compile Include="kz\Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
-    <Compile Include="master\Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="master\Form2.Designer.vb">
-      <DependentUpon>Form2.vb</DependentUpon>
-    </Compile>
-    <Compile Include="master\Form2.vb">
+    <Compile Include="kz\Form1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="screen\LHW\LoginScreen.Designer.vb">
@@ -106,6 +100,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -125,11 +120,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="master\Form1.resx">
+    <EmbeddedResource Include="kz\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="master\Form2.resx">
-      <DependentUpon>Form2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -162,6 +154,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="commons\" />
+    <Folder Include="master\" />
     <Folder Include="model\" />
     <Folder Include="screen\LSK\" />
     <Folder Include="services\" />
@@ -170,6 +163,7 @@
     <Content Include="asset\image\main\default_user.png" />
     <Content Include="asset\image\main\icon.ico" />
     <Content Include="asset\image\main\splash_screen.png" />
+    <None Include="Resources\Image1.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

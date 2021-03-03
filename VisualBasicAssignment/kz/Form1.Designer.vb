@@ -190,7 +190,7 @@ Partial Class Form1
         Me.btnNav.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnNav.ForeColor = System.Drawing.Color.White
         Me.btnNav.HoverState.Parent = Me.btnNav
-        Me.btnNav.Image = Global.assignment.My.Resources.Resources.nav
+        'Me.btnNav.Image = Global.assignment.My.Resources.Resources.nav
         Me.btnNav.Location = New System.Drawing.Point(0, 0)
         Me.btnNav.Name = "btnNav"
         Me.btnNav.ShadowDecoration.Parent = Me.btnNav

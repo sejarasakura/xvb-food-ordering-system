@@ -10,27 +10,27 @@
     End Sub
 
     Private Sub btnClose_MouseHover(sender As Object, e As EventArgs) Handles btnClose.MouseHover
-        btnClose.Image = My.Resources.icons8_close_window_96
+        'btnClose.Image = My.Resources.icons8_close_window_96
     End Sub
 
     Private Sub btnClose_MouseLeave(sender As Object, e As EventArgs) Handles btnClose.MouseLeave
-        btnClose.Image = My.Resources.icons8_close_window_96__1_
+        'btnClose.Image = My.Resources.icons8_close_window_96__1_
     End Sub
 
     Private Sub btnMini_MouseHover(sender As Object, e As EventArgs) Handles btnMini.MouseHover
-        btnMini.Image = My.Resources.icons8_macos_minimize_90
+        'btnMini.Image = My.Resources.icons8_macos_minimize_90
     End Sub
 
     Private Sub btnMini_MouseLeave(sender As Object, e As EventArgs) Handles btnMini.MouseLeave
-        btnMini.Image = My.Resources.icons8_macos_minimize_96__1_
+        'btnMini.Image = My.Resources.icons8_macos_minimize_96__1_
     End Sub
 
     Private Sub picIcon_MouseHover(sender As Object, e As EventArgs) Handles picIcon.MouseHover
-        picIcon.Image = My.Resources.icon2
+        'picIcon.Image = My.Resources.icon2
     End Sub
 
     Private Sub picIcon_MouseLeave(sender As Object, e As EventArgs) Handles picIcon.MouseLeave
-        picIcon.Image = My.Resources.icon1
+        'picIcon.Image = My.Resources.icon1
     End Sub
 
     Private Sub btn_Click(sender As Object, e As EventArgs) Handles btnProfile.MouseClick, btnMenu.MouseClick, btnOrder.MouseClick, btnCart.MouseClick
