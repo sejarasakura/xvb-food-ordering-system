@@ -1,5 +1,6 @@
 ﻿Public Class Form1
     Dim statusMax As Boolean = True
+    Private navindex As Integer
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -33,10 +34,6 @@
         'picIcon.Image = My.Resources.icon1
     End Sub
 
-    Private Sub btn_Click(sender As Object, e As EventArgs) Handles btnProfile.MouseClick, btnMenu.MouseClick, btnOrder.MouseClick, btnCart.MouseClick
-        btnProfile.FillColor = Color.White
-        btnProfile.ForeColor = Color.Black
-    End Sub
 
     Private Sub btnNav_Click(sender As Object, e As EventArgs) Handles btnNav.Click
         Timer1.Start()
@@ -68,6 +65,68 @@
         End If
 
     End Sub
+
+    Private Sub btnProfile_Click(sender As Object, e As EventArgs) Handles btnProfile.Click
+        btnProfile.FillColor = Color.White
+        btnProfile.ForeColor = Color.Black
+        checkNav(1)
+    End Sub
+
+    Private Sub btnCart_Click(sender As Object, e As EventArgs) Handles btnCart.Click
+        btnCart.FillColor = Color.White
+        btnCart.ForeColor = Color.Black
+        checkNav(2)
+    End Sub
+
+    Private Sub btnOrder_Click(sender As Object, e As EventArgs) Handles btnOrder.Click
+        btnOrder.FillColor = Color.White
+        btnOrder.ForeColor = Color.Black
+        checkNav(3)
+    End Sub
+
+    Private Sub btnMenu_Click(sender As Object, e As EventArgs) Handles btnMenu.Click
+        btnMenu.FillColor = Color.White
+        btnMenu.ForeColor = Color.Black
+        checkNav(4)
+    End Sub
+
+    Private Sub checkNav(index As Integer)
+        Select Case index
+            Case 1
+                btnCart.FillColor = Color.FromArgb(3, 139, 205)
+                btnCart.ForeColor = Color.White
+                btnOrder.FillColor = Color.FromArgb(3, 139, 205)
+                btnOrder.ForeColor = Color.White
+                btnMenu.FillColor = Color.FromArgb(3, 139, 205)
+                btnMenu.ForeColor = Color.White
+            Case 2
+                btnProfile.FillColor = Color.FromArgb(3, 139, 205)
+                btnProfile.ForeColor = Color.White
+                btnOrder.FillColor = Color.FromArgb(3, 139, 205)
+                btnOrder.ForeColor = Color.White
+                btnMenu.FillColor = Color.FromArgb(3, 139, 205)
+                btnMenu.ForeColor = Color.White
+            Case 3
+                btnProfile.FillColor = Color.FromArgb(3, 139, 205)
+                btnProfile.ForeColor = Color.White
+                btnCart.FillColor = Color.FromArgb(3, 139, 205)
+                btnCart.ForeColor = Color.White
+                btnMenu.FillColor = Color.FromArgb(3, 139, 205)
+                btnMenu.ForeColor = Color.White
+            Case 4
+                btnProfile.FillColor = Color.FromArgb(3, 139, 205)
+                btnProfile.ForeColor = Color.White
+                btnCart.FillColor = Color.FromArgb(3, 139, 205)
+                btnCart.ForeColor = Color.White
+                btnOrder.FillColor = Color.FromArgb(3, 139, 205)
+                btnOrder.ForeColor = Color.White
+        End Select
+
+
+    End Sub
+
+
+
 
 
 

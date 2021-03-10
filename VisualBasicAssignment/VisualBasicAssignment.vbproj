@@ -83,6 +83,18 @@
     <Compile Include="kz\Form1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="kz\Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="kz\Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kz\loginform.Designer.vb">
+      <DependentUpon>loginform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="kz\loginform.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="screen\LHW\LoginScreen.Designer.vb">
       <DependentUpon>LoginScreen.vb</DependentUpon>
     </Compile>
@@ -122,6 +134,12 @@
   <ItemGroup>
     <EmbeddedResource Include="kz\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kz\Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kz\loginform.resx">
+      <DependentUpon>loginform.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -163,6 +181,17 @@
     <Content Include="asset\image\main\default_user.png" />
     <Content Include="asset\image\main\icon.ico" />
     <Content Include="asset\image\main\splash_screen.png" />
+    <None Include="Resources\cart.png" />
+    <None Include="Resources\profile.png" />
+    <None Include="Resources\payment.png" />
+    <None Include="Resources\nav.png" />
+    <None Include="Resources\menu.png" />
+    <None Include="Resources\icons8-macos-minimize-96 %281%29.png" />
+    <None Include="Resources\icons8-macos-minimize-90.png" />
+    <None Include="Resources\icons8-close-window-96.png" />
+    <None Include="Resources\icons8-close-window-96 %281%29.png" />
+    <None Include="Resources\icon2.png" />
+    <None Include="Resources\icon1.png" />
     <None Include="Resources\Image1.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
