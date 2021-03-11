@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bfbd7e1b60994fd0b3ac8b830524129f" Name="Diagram1" ZoomLevel="34">
+        <EntityTypeShape EntityType="FoodShopModel.Address" Width="1.5" PointX="7.5" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodShopModel.Cart" Width="1.5" PointX="8.625" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodShopModel.CartDetail" Width="1.5" PointX="10.375" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodShopModel.Catergory" Width="1.5" PointX="15.5" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodShopModel.Customer" Width="1.5" PointX="3.25" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodShopModel.Delivery" Width="1.5" PointX="5.125" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodShopModel.DeliveryChain" Width="1.5" PointX="5.625" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodShopModel.DeliveryCompany" Width="1.5" PointX="3.5" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodShopModel.DeliveryStatu" Width="1.5" PointX="3" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodShopModel.Food" Width="1.5" PointX="13.375" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodShopModel.Membership" Width="1.5" PointX="1" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodShopModel.Menu" Width="1.5" PointX="15.5" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodShopModel.Order" Width="1.5" PointX="8.25" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodShopModel.OrderDetail" Width="1.5" PointX="10.375" PointY="26.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodShopModel.Payment" Width="1.5" PointX="14" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodShopModel.PaymentDetail" Width="1.5" PointX="16.25" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodShopModel.PaymentMethod" Width="1.5" PointX="11.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodShopModel.PaymentStatu" Width="1.5" PointX="11.75" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodShopModel.Position" Width="1.5" PointX="1" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodShopModel.ResetPasswordToken" Width="1.5" PointX="2.25" PointY="26.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodShopModel.Staff" Width="1.5" PointX="3.25" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodShopModel.User" Width="1.5" PointX="5.375" PointY="20.125" IsExpanded="true" />
+        <AssociationConnector Association="FoodShopModel.FK__Delivery__destin__693CA210" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodShopModel.FK__Delivery__source__68487DD7" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodShopModel.FK__DeliveryC__addre__6EF57B66" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodShopModel.FK__Cart__customer_i__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodShopModel.FK__CartDetai__cart___412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodShopModel.FK__CartDetai__food___4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodShopModel.FK__Food__catergory___398D8EEE" ManuallyRouted="false" ></AssociationConnector>
+        <AssociationConnector Association="FoodShopModel.FK__Customer__member__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodShopModel.FK__Customer__user_i__2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodShopModel.FK__Delivery__delive__6A30C649" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodShopModel.FK__Delivery__final___6B24EA82" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodShopModel.FK__DeliveryC__deliv__6FE99F9F" ManuallyRouted="false" >
+        </AssociationConnector>
+        <AssociationConnector Association="FoodShopModel.FK__Food__duty_staff__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodShopModel.FK__OrderDeta__food___48CFD27E" ManuallyRouted="false" ></AssociationConnector>
+        <AssociationConnector Association="FoodShopModel.FK__PaymentDe__food___5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodShopModel.FK__Order__customer___44FF419A" ManuallyRouted="false" >
+        </AssociationConnector>
+        <AssociationConnector Association="FoodShopModel.FK__OrderDeta__order__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodShopModel.FK__Payment__payment__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodShopModel.FK__Payment__payment__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodShopModel.FK__Payment__user_id__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodShopModel.FK__PaymentDe__payme__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodShopModel.FK__Staff__position___2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodShopModel.FK__ResetPass__user___35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodShopModel.FK__Staff__user_id__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodShopModel.DeliveryChainDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodShopModel.MenuItems" ManuallyRouted="false" />
+        <AssociationConnector Association="FoodShopModel.UserAddress" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,1807 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="FoodShopModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Address">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="latitude" Type="float" Nullable="false" />
+          <Property Name="longitude" Type="float" Nullable="false" />
+          <Property Name="details" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="street" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="city" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="state" Type="nvarchar" MaxLength="50" />
+          <Property Name="poscode" Type="nvarchar" MaxLength="50" />
+          <Property Name="country" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Cart">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="customer_id" Type="int" Nullable="false" />
+          <Property Name="remark" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="CartDetails">
+          <Key>
+            <PropertyRef Name="cart_id" />
+            <PropertyRef Name="food_id" />
+          </Key>
+          <Property Name="cart_id" Type="int" Nullable="false" />
+          <Property Name="food_id" Type="int" Nullable="false" />
+          <Property Name="quantity" Type="int" Nullable="false" />
+          <Property Name="add_datetime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Catergory">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="description" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="birthday_date" Type="date" />
+          <Property Name="membership_id" Type="int" Nullable="false" />
+          <Property Name="wallate_amount" Type="float" />
+        </EntityType>
+        <EntityType Name="Delivery">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="source" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="destination" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="delivery_note" Type="nvarchar" MaxLength="100" />
+          <Property Name="final_delivery_status" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="delivery_company" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="recive_dates" Type="datetime" />
+          <Property Name="recive_prove" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="DeliveryChain">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="arrival_dates" Type="datetime" Nullable="false" />
+          <Property Name="address_id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="delivery_status" Type="uniqueidentifier" />
+          <Property Name="notes" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DeliveryChainDetails">
+          <Key>
+            <PropertyRef Name="delivery_id" />
+            <PropertyRef Name="tranfer_chain_id" />
+          </Key>
+          <Property Name="delivery_id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="tranfer_chain_id" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DeliveryCompany">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="company_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="company_phones" Type="nvarchar" MaxLength="50" />
+          <Property Name="description" Type="nvarchar" MaxLength="200" />
+          <Property Name="rm_per_g" Type="float" Nullable="false" />
+          <Property Name="rm_per_cm3" Type="float" Nullable="false" />
+          <Property Name="gradient" Type="float" Nullable="false" />
+          <Property Name="prefence_country" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="oversea_support" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DeliveryStatus">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="description" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Food">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="duty_staff_id" Type="int" Nullable="false" />
+          <Property Name="image" Type="image" />
+          <Property Name="price" Type="float" Nullable="false" />
+          <Property Name="stock" Type="int" Nullable="false" />
+          <Property Name="add_date" Type="datetime" Nullable="false" />
+          <Property Name="title" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="descriptions" Type="nvarchar" MaxLength="200" />
+          <Property Name="poscode" Type="nvarchar" MaxLength="50" />
+          <Property Name="catergory_id" Type="int" />
+        </EntityType>
+        <EntityType Name="Membership">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="description" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Menu">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="start_date" Type="datetime" Nullable="false" />
+          <Property Name="end_date" Type="datetime" Nullable="false" />
+          <Property Name="title" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="descriptions" Type="nvarchar" MaxLength="200" />
+          <Property Name="enabled" Type="bit" />
+          <Property Name="menu_image" Type="image" />
+        </EntityType>
+        <EntityType Name="MenuItems">
+          <Key>
+            <PropertyRef Name="menu_id" />
+            <PropertyRef Name="food_id" />
+          </Key>
+          <Property Name="menu_id" Type="int" Nullable="false" />
+          <Property Name="food_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="customer_id" Type="int" Nullable="false" />
+          <Property Name="order_status" Type="nvarchar" MaxLength="1" />
+          <Property Name="datetime" Type="datetime" />
+          <Property Name="customer_note" Type="nvarchar" MaxLength="200" />
+          <Property Name="payload" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="OrderDetails">
+          <Key>
+            <PropertyRef Name="order_id" />
+            <PropertyRef Name="food_id" />
+          </Key>
+          <Property Name="order_id" Type="int" Nullable="false" />
+          <Property Name="food_id" Type="int" Nullable="false" />
+          <Property Name="quantity" Type="int" Nullable="false" />
+          <Property Name="add_datetime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Payment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="payment_method" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="payment_status" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="tax_change" Type="float" />
+          <Property Name="net_pay" Type="float" />
+          <Property Name="discount" Type="float" />
+          <Property Name="total_pay" Type="float" />
+          <Property Name="customer_paid" Type="float" />
+          <Property Name="payment_date" Type="datetime" />
+          <Property Name="payment_meta" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="notes" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PaymentDetails">
+          <Key>
+            <PropertyRef Name="payment_id" />
+            <PropertyRef Name="food_id" />
+          </Key>
+          <Property Name="payment_id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="food_id" Type="int" Nullable="false" />
+          <Property Name="quantity" Type="int" />
+          <Property Name="add_date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="PaymentMethod">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="description" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="meta_field" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PaymentStatus">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="description" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Position">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="description" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ResetPasswordToken">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="key" Type="varchar" MaxLength="100" />
+          <Property Name="exp_date" Type="datetime" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Staff">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="priority" Type="int" Nullable="false" />
+          <Property Name="position_id" Type="int" Nullable="false" />
+          <Property Name="salary" Type="float" />
+        </EntityType>
+        <EntityType Name="UserAddress">
+          <Key>
+            <PropertyRef Name="user_id" />
+            <PropertyRef Name="address_id" />
+          </Key>
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="address_id" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="user_email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="username" Type="nvarchar" MaxLength="50" />
+          <Property Name="last_name" Type="nvarchar" MaxLength="20" />
+          <Property Name="first_name" Type="nvarchar" MaxLength="20" />
+          <Property Name="user_role" Type="nvarchar" MaxLength="1" />
+          <Property Name="phone_num" Type="nvarchar" MaxLength="11" />
+          <Property Name="gender" Type="nvarchar" MaxLength="1" />
+          <Property Name="picture" Type="image" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Cart__customer_i__3E52440B">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="Cart" Type="Self.Cart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="Cart">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CartDetai__cart___412EB0B6">
+          <End Role="Cart" Type="Self.Cart" Multiplicity="1" />
+          <End Role="CartDetails" Type="Self.CartDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cart">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CartDetails">
+              <PropertyRef Name="cart_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CartDetai__food___4222D4EF">
+          <End Role="Food" Type="Self.Food" Multiplicity="1" />
+          <End Role="CartDetails" Type="Self.CartDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Food">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CartDetails">
+              <PropertyRef Name="food_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Customer__member__300424B4">
+          <End Role="Membership" Type="Self.Membership" Multiplicity="1" />
+          <End Role="Customer" Type="Self.Customer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Membership">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Customer">
+              <PropertyRef Name="membership_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Customer__user_i__2F10007B">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="Customer">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Delivery__delive__6A30C649">
+          <End Role="DeliveryCompany" Type="Self.DeliveryCompany" Multiplicity="1" />
+          <End Role="Delivery" Type="Self.Delivery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DeliveryCompany">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Delivery">
+              <PropertyRef Name="delivery_company" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Delivery__destin__693CA210">
+          <End Role="Address" Type="Self.Address" Multiplicity="1" />
+          <End Role="Delivery" Type="Self.Delivery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Delivery">
+              <PropertyRef Name="destination" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Delivery__final___6B24EA82">
+          <End Role="DeliveryStatus" Type="Self.DeliveryStatus" Multiplicity="1" />
+          <End Role="Delivery" Type="Self.Delivery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DeliveryStatus">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Delivery">
+              <PropertyRef Name="final_delivery_status" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Delivery__source__68487DD7">
+          <End Role="Address" Type="Self.Address" Multiplicity="1" />
+          <End Role="Delivery" Type="Self.Delivery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Delivery">
+              <PropertyRef Name="source" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DeliveryC__addre__6EF57B66">
+          <End Role="Address" Type="Self.Address" Multiplicity="1" />
+          <End Role="DeliveryChain" Type="Self.DeliveryChain" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DeliveryChain">
+              <PropertyRef Name="address_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DeliveryC__deliv__6FE99F9F">
+          <End Role="DeliveryStatus" Type="Self.DeliveryStatus" Multiplicity="0..1" />
+          <End Role="DeliveryChain" Type="Self.DeliveryChain" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DeliveryStatus">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DeliveryChain">
+              <PropertyRef Name="delivery_status" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DeliveryC__deliv__72C60C4A">
+          <End Role="Delivery" Type="Self.Delivery" Multiplicity="1" />
+          <End Role="DeliveryChainDetails" Type="Self.DeliveryChainDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Delivery">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DeliveryChainDetails">
+              <PropertyRef Name="delivery_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DeliveryC__tranf__73BA3083">
+          <End Role="DeliveryChain" Type="Self.DeliveryChain" Multiplicity="1" />
+          <End Role="DeliveryChainDetails" Type="Self.DeliveryChainDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DeliveryChain">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DeliveryChainDetails">
+              <PropertyRef Name="tranfer_chain_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Food__catergory___398D8EEE">
+          <End Role="Catergory" Type="Self.Catergory" Multiplicity="0..1" />
+          <End Role="Food" Type="Self.Food" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Catergory">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Food">
+              <PropertyRef Name="catergory_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Food__duty_staff__38996AB5">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="Food" Type="Self.Food" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="Food">
+              <PropertyRef Name="duty_staff_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MenuItems__food___76969D2E">
+          <End Role="Food" Type="Self.Food" Multiplicity="1" />
+          <End Role="MenuItems" Type="Self.MenuItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Food">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="MenuItems">
+              <PropertyRef Name="food_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MenuItems__menu___778AC167">
+          <End Role="Menu" Type="Self.Menu" Multiplicity="1" />
+          <End Role="MenuItems" Type="Self.MenuItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Menu">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="MenuItems">
+              <PropertyRef Name="menu_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Order__customer___44FF419A">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="Order" Type="Self.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__OrderDeta__food___48CFD27E">
+          <End Role="Food" Type="Self.Food" Multiplicity="1" />
+          <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Food">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="OrderDetails">
+              <PropertyRef Name="food_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__OrderDeta__order__47DBAE45">
+          <End Role="Order" Type="Self.Order" Multiplicity="1" />
+          <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="OrderDetails">
+              <PropertyRef Name="order_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Payment__payment__52593CB8">
+          <End Role="PaymentMethod" Type="Self.PaymentMethod" Multiplicity="1" />
+          <End Role="Payment" Type="Self.Payment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PaymentMethod">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Payment">
+              <PropertyRef Name="payment_method" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Payment__payment__534D60F1">
+          <End Role="PaymentStatus" Type="Self.PaymentStatus" Multiplicity="1" />
+          <End Role="Payment" Type="Self.Payment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PaymentStatus">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Payment">
+              <PropertyRef Name="payment_status" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Payment__user_id__5441852A">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="Payment" Type="Self.Payment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="Payment">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PaymentDe__food___5812160E">
+          <End Role="Food" Type="Self.Food" Multiplicity="1" />
+          <End Role="PaymentDetails" Type="Self.PaymentDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Food">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="PaymentDetails">
+              <PropertyRef Name="food_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PaymentDe__payme__571DF1D5">
+          <End Role="Payment" Type="Self.Payment" Multiplicity="1" />
+          <End Role="PaymentDetails" Type="Self.PaymentDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Payment">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="PaymentDetails">
+              <PropertyRef Name="payment_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ResetPass__user___35BCFE0A">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="ResetPasswordToken" Type="Self.ResetPasswordToken" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="ResetPasswordToken">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Staff__position___2C3393D0">
+          <End Role="Position" Type="Self.Position" Multiplicity="1" />
+          <End Role="Staff" Type="Self.Staff" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Position">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Staff">
+              <PropertyRef Name="position_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Staff__user_id__2B3F6F97">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="Staff" Type="Self.Staff" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="Staff">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserAddre__addre__6477ECF3">
+          <End Role="Address" Type="Self.Address" Multiplicity="1" />
+          <End Role="UserAddress" Type="Self.UserAddress" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="UserAddress">
+              <PropertyRef Name="address_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserAddre__user___6383C8BA">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="UserAddress" Type="Self.UserAddress" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="UserAddress">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="FoodShopModelStoreContainer">
+          <EntitySet Name="Address" EntityType="Self.Address" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cart" EntityType="Self.Cart" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CartDetails" EntityType="Self.CartDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Catergory" EntityType="Self.Catergory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Delivery" EntityType="Self.Delivery" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DeliveryChain" EntityType="Self.DeliveryChain" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DeliveryChainDetails" EntityType="Self.DeliveryChainDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DeliveryCompany" EntityType="Self.DeliveryCompany" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DeliveryStatus" EntityType="Self.DeliveryStatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Food" EntityType="Self.Food" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Membership" EntityType="Self.Membership" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Menu" EntityType="Self.Menu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MenuItems" EntityType="Self.MenuItems" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OrderDetails" EntityType="Self.OrderDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Payment" EntityType="Self.Payment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PaymentDetails" EntityType="Self.PaymentDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PaymentMethod" EntityType="Self.PaymentMethod" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PaymentStatus" EntityType="Self.PaymentStatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Position" EntityType="Self.Position" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ResetPasswordToken" EntityType="Self.ResetPasswordToken" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Staff" EntityType="Self.Staff" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserAddress" EntityType="Self.UserAddress" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Cart__customer_i__3E52440B" Association="Self.FK__Cart__customer_i__3E52440B">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Cart" EntitySet="Cart" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CartDetai__cart___412EB0B6" Association="Self.FK__CartDetai__cart___412EB0B6">
+            <End Role="Cart" EntitySet="Cart" />
+            <End Role="CartDetails" EntitySet="CartDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CartDetai__food___4222D4EF" Association="Self.FK__CartDetai__food___4222D4EF">
+            <End Role="Food" EntitySet="Food" />
+            <End Role="CartDetails" EntitySet="CartDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Customer__member__300424B4" Association="Self.FK__Customer__member__300424B4">
+            <End Role="Membership" EntitySet="Membership" />
+            <End Role="Customer" EntitySet="Customer" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Customer__user_i__2F10007B" Association="Self.FK__Customer__user_i__2F10007B">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Customer" EntitySet="Customer" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Delivery__delive__6A30C649" Association="Self.FK__Delivery__delive__6A30C649">
+            <End Role="DeliveryCompany" EntitySet="DeliveryCompany" />
+            <End Role="Delivery" EntitySet="Delivery" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Delivery__destin__693CA210" Association="Self.FK__Delivery__destin__693CA210">
+            <End Role="Address" EntitySet="Address" />
+            <End Role="Delivery" EntitySet="Delivery" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Delivery__final___6B24EA82" Association="Self.FK__Delivery__final___6B24EA82">
+            <End Role="DeliveryStatus" EntitySet="DeliveryStatus" />
+            <End Role="Delivery" EntitySet="Delivery" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Delivery__source__68487DD7" Association="Self.FK__Delivery__source__68487DD7">
+            <End Role="Address" EntitySet="Address" />
+            <End Role="Delivery" EntitySet="Delivery" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DeliveryC__addre__6EF57B66" Association="Self.FK__DeliveryC__addre__6EF57B66">
+            <End Role="Address" EntitySet="Address" />
+            <End Role="DeliveryChain" EntitySet="DeliveryChain" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DeliveryC__deliv__6FE99F9F" Association="Self.FK__DeliveryC__deliv__6FE99F9F">
+            <End Role="DeliveryStatus" EntitySet="DeliveryStatus" />
+            <End Role="DeliveryChain" EntitySet="DeliveryChain" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DeliveryC__deliv__72C60C4A" Association="Self.FK__DeliveryC__deliv__72C60C4A">
+            <End Role="Delivery" EntitySet="Delivery" />
+            <End Role="DeliveryChainDetails" EntitySet="DeliveryChainDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DeliveryC__tranf__73BA3083" Association="Self.FK__DeliveryC__tranf__73BA3083">
+            <End Role="DeliveryChain" EntitySet="DeliveryChain" />
+            <End Role="DeliveryChainDetails" EntitySet="DeliveryChainDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Food__catergory___398D8EEE" Association="Self.FK__Food__catergory___398D8EEE">
+            <End Role="Catergory" EntitySet="Catergory" />
+            <End Role="Food" EntitySet="Food" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Food__duty_staff__38996AB5" Association="Self.FK__Food__duty_staff__38996AB5">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Food" EntitySet="Food" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MenuItems__food___76969D2E" Association="Self.FK__MenuItems__food___76969D2E">
+            <End Role="Food" EntitySet="Food" />
+            <End Role="MenuItems" EntitySet="MenuItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MenuItems__menu___778AC167" Association="Self.FK__MenuItems__menu___778AC167">
+            <End Role="Menu" EntitySet="Menu" />
+            <End Role="MenuItems" EntitySet="MenuItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Order__customer___44FF419A" Association="Self.FK__Order__customer___44FF419A">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK__OrderDeta__food___48CFD27E" Association="Self.FK__OrderDeta__food___48CFD27E">
+            <End Role="Food" EntitySet="Food" />
+            <End Role="OrderDetails" EntitySet="OrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__OrderDeta__order__47DBAE45" Association="Self.FK__OrderDeta__order__47DBAE45">
+            <End Role="Order" EntitySet="Order" />
+            <End Role="OrderDetails" EntitySet="OrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Payment__payment__52593CB8" Association="Self.FK__Payment__payment__52593CB8">
+            <End Role="PaymentMethod" EntitySet="PaymentMethod" />
+            <End Role="Payment" EntitySet="Payment" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Payment__payment__534D60F1" Association="Self.FK__Payment__payment__534D60F1">
+            <End Role="PaymentStatus" EntitySet="PaymentStatus" />
+            <End Role="Payment" EntitySet="Payment" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Payment__user_id__5441852A" Association="Self.FK__Payment__user_id__5441852A">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Payment" EntitySet="Payment" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PaymentDe__food___5812160E" Association="Self.FK__PaymentDe__food___5812160E">
+            <End Role="Food" EntitySet="Food" />
+            <End Role="PaymentDetails" EntitySet="PaymentDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PaymentDe__payme__571DF1D5" Association="Self.FK__PaymentDe__payme__571DF1D5">
+            <End Role="Payment" EntitySet="Payment" />
+            <End Role="PaymentDetails" EntitySet="PaymentDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ResetPass__user___35BCFE0A" Association="Self.FK__ResetPass__user___35BCFE0A">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="ResetPasswordToken" EntitySet="ResetPasswordToken" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Staff__position___2C3393D0" Association="Self.FK__Staff__position___2C3393D0">
+            <End Role="Position" EntitySet="Position" />
+            <End Role="Staff" EntitySet="Staff" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Staff__user_id__2B3F6F97" Association="Self.FK__Staff__user_id__2B3F6F97">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Staff" EntitySet="Staff" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserAddre__addre__6477ECF3" Association="Self.FK__UserAddre__addre__6477ECF3">
+            <End Role="Address" EntitySet="Address" />
+            <End Role="UserAddress" EntitySet="UserAddress" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserAddre__user___6383C8BA" Association="Self.FK__UserAddre__user___6383C8BA">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="UserAddress" EntitySet="UserAddress" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FoodShopModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Address">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Guid" Nullable="false" />
+          <Property Name="latitude" Type="Double" Nullable="false" />
+          <Property Name="longitude" Type="Double" Nullable="false" />
+          <Property Name="details" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="street" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="state" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="poscode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Deliveries" Relationship="Self.FK__Delivery__destin__693CA210" FromRole="Address" ToRole="Delivery" />
+          <NavigationProperty Name="Deliveries1" Relationship="Self.FK__Delivery__source__68487DD7" FromRole="Address" ToRole="Delivery" />
+          <NavigationProperty Name="DeliveryChains" Relationship="Self.FK__DeliveryC__addre__6EF57B66" FromRole="Address" ToRole="DeliveryChain" />
+          <NavigationProperty Name="Users" Relationship="Self.UserAddress" FromRole="Address" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Cart">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="customer_id" Type="Int32" Nullable="false" />
+          <Property Name="remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="User" Relationship="Self.FK__Cart__customer_i__3E52440B" FromRole="Cart" ToRole="Users" />
+          <NavigationProperty Name="CartDetails" Relationship="Self.FK__CartDetai__cart___412EB0B6" FromRole="Cart" ToRole="CartDetails" />
+        </EntityType>
+        <EntityType Name="CartDetail">
+          <Key>
+            <PropertyRef Name="cart_id" />
+            <PropertyRef Name="food_id" />
+          </Key>
+          <Property Name="cart_id" Type="Int32" Nullable="false" />
+          <Property Name="food_id" Type="Int32" Nullable="false" />
+          <Property Name="quantity" Type="Int32" Nullable="false" />
+          <Property Name="add_datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Cart" Relationship="Self.FK__CartDetai__cart___412EB0B6" FromRole="CartDetails" ToRole="Cart" />
+          <NavigationProperty Name="Food" Relationship="Self.FK__CartDetai__food___4222D4EF" FromRole="CartDetails" ToRole="Food" />
+        </EntityType>
+        <EntityType Name="Catergory">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Foods" Relationship="Self.FK__Food__catergory___398D8EEE" FromRole="Catergory" ToRole="Food" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="birthday_date" Type="DateTime" Precision="0" />
+          <Property Name="membership_id" Type="Int32" Nullable="false" />
+          <Property Name="wallate_amount" Type="Double" />
+          <NavigationProperty Name="Membership" Relationship="Self.FK__Customer__member__300424B4" FromRole="Customer" ToRole="Membership" />
+          <NavigationProperty Name="User" Relationship="Self.FK__Customer__user_i__2F10007B" FromRole="Customer" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Delivery">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Guid" Nullable="false" />
+          <Property Name="source" Type="Guid" Nullable="false" />
+          <Property Name="destination" Type="Guid" Nullable="false" />
+          <Property Name="delivery_note" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="final_delivery_status" Type="Guid" Nullable="false" />
+          <Property Name="delivery_company" Type="Guid" Nullable="false" />
+          <Property Name="recive_dates" Type="DateTime" Precision="3" />
+          <Property Name="recive_prove" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Address" Relationship="Self.FK__Delivery__destin__693CA210" FromRole="Delivery" ToRole="Address" />
+          <NavigationProperty Name="Address1" Relationship="Self.FK__Delivery__source__68487DD7" FromRole="Delivery" ToRole="Address" />
+          <NavigationProperty Name="DeliveryCompany" Relationship="Self.FK__Delivery__delive__6A30C649" FromRole="Delivery" ToRole="DeliveryCompany" />
+          <NavigationProperty Name="DeliveryStatu" Relationship="Self.FK__Delivery__final___6B24EA82" FromRole="Delivery" ToRole="DeliveryStatus" />
+          <NavigationProperty Name="DeliveryChains" Relationship="Self.DeliveryChainDetails" FromRole="Delivery" ToRole="DeliveryChain" />
+        </EntityType>
+        <EntityType Name="DeliveryChain">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Guid" Nullable="false" />
+          <Property Name="arrival_dates" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="address_id" Type="Guid" Nullable="false" />
+          <Property Name="delivery_status" Type="Guid" />
+          <Property Name="notes" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Address" Relationship="Self.FK__DeliveryC__addre__6EF57B66" FromRole="DeliveryChain" ToRole="Address" />
+          <NavigationProperty Name="DeliveryStatu" Relationship="Self.FK__DeliveryC__deliv__6FE99F9F" FromRole="DeliveryChain" ToRole="DeliveryStatus" />
+          <NavigationProperty Name="Deliveries" Relationship="Self.DeliveryChainDetails" FromRole="DeliveryChain" ToRole="Delivery" />
+        </EntityType>
+        <EntityType Name="DeliveryCompany">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Guid" Nullable="false" />
+          <Property Name="company_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="company_phones" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="rm_per_g" Type="Double" Nullable="false" />
+          <Property Name="rm_per_cm3" Type="Double" Nullable="false" />
+          <Property Name="gradient" Type="Double" Nullable="false" />
+          <Property Name="prefence_country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="oversea_support" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Deliveries" Relationship="Self.FK__Delivery__delive__6A30C649" FromRole="DeliveryCompany" ToRole="Delivery" />
+        </EntityType>
+        <EntityType Name="DeliveryStatu">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Guid" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Deliveries" Relationship="Self.FK__Delivery__final___6B24EA82" FromRole="DeliveryStatus" ToRole="Delivery" />
+          <NavigationProperty Name="DeliveryChains" Relationship="Self.FK__DeliveryC__deliv__6FE99F9F" FromRole="DeliveryStatus" ToRole="DeliveryChain" />
+        </EntityType>
+        <EntityType Name="Food">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="duty_staff_id" Type="Int32" Nullable="false" />
+          <Property Name="image" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="price" Type="Double" Nullable="false" />
+          <Property Name="stock" Type="Int32" Nullable="false" />
+          <Property Name="add_date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="descriptions" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="poscode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="catergory_id" Type="Int32" />
+          <NavigationProperty Name="CartDetails" Relationship="Self.FK__CartDetai__food___4222D4EF" FromRole="Food" ToRole="CartDetails" />
+          <NavigationProperty Name="Catergory" Relationship="Self.FK__Food__catergory___398D8EEE" FromRole="Food" ToRole="Catergory" />
+          <NavigationProperty Name="User" Relationship="Self.FK__Food__duty_staff__38996AB5" FromRole="Food" ToRole="Users" />
+          <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__food___48CFD27E" FromRole="Food" ToRole="OrderDetails" />
+          <NavigationProperty Name="PaymentDetails" Relationship="Self.FK__PaymentDe__food___5812160E" FromRole="Food" ToRole="PaymentDetails" />
+          <NavigationProperty Name="Menus" Relationship="Self.MenuItems" FromRole="Food" ToRole="Menu" />
+        </EntityType>
+        <EntityType Name="Membership">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Customers" Relationship="Self.FK__Customer__member__300424B4" FromRole="Membership" ToRole="Customer" />
+        </EntityType>
+        <EntityType Name="Menu">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="start_date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="end_date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="descriptions" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="enabled" Type="Boolean" />
+          <Property Name="menu_image" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Foods" Relationship="Self.MenuItems" FromRole="Menu" ToRole="Food" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="customer_id" Type="Int32" Nullable="false" />
+          <Property Name="order_status" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="datetime" Type="DateTime" Precision="3" />
+          <Property Name="customer_note" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="payload" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="User" Relationship="Self.FK__Order__customer___44FF419A" FromRole="Order" ToRole="Users" />
+          <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__order__47DBAE45" FromRole="Order" ToRole="OrderDetails" />
+        </EntityType>
+        <EntityType Name="OrderDetail">
+          <Key>
+            <PropertyRef Name="order_id" />
+            <PropertyRef Name="food_id" />
+          </Key>
+          <Property Name="order_id" Type="Int32" Nullable="false" />
+          <Property Name="food_id" Type="Int32" Nullable="false" />
+          <Property Name="quantity" Type="Int32" Nullable="false" />
+          <Property Name="add_datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Food" Relationship="Self.FK__OrderDeta__food___48CFD27E" FromRole="OrderDetails" ToRole="Food" />
+          <NavigationProperty Name="Order" Relationship="Self.FK__OrderDeta__order__47DBAE45" FromRole="OrderDetails" ToRole="Order" />
+        </EntityType>
+        <EntityType Name="Payment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Guid" Nullable="false" />
+          <Property Name="payment_method" Type="Guid" Nullable="false" />
+          <Property Name="payment_status" Type="Guid" Nullable="false" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="tax_change" Type="Double" />
+          <Property Name="net_pay" Type="Double" />
+          <Property Name="discount" Type="Double" />
+          <Property Name="total_pay" Type="Double" />
+          <Property Name="customer_paid" Type="Double" />
+          <Property Name="payment_date" Type="DateTime" Precision="3" />
+          <Property Name="payment_meta" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="notes" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="PaymentMethod" Relationship="Self.FK__Payment__payment__52593CB8" FromRole="Payment" ToRole="PaymentMethod" />
+          <NavigationProperty Name="PaymentStatu" Relationship="Self.FK__Payment__payment__534D60F1" FromRole="Payment" ToRole="PaymentStatus" />
+          <NavigationProperty Name="User" Relationship="Self.FK__Payment__user_id__5441852A" FromRole="Payment" ToRole="Users" />
+          <NavigationProperty Name="PaymentDetails" Relationship="Self.FK__PaymentDe__payme__571DF1D5" FromRole="Payment" ToRole="PaymentDetails" />
+        </EntityType>
+        <EntityType Name="PaymentDetail">
+          <Key>
+            <PropertyRef Name="payment_id" />
+            <PropertyRef Name="food_id" />
+          </Key>
+          <Property Name="payment_id" Type="Guid" Nullable="false" />
+          <Property Name="food_id" Type="Int32" Nullable="false" />
+          <Property Name="quantity" Type="Int32" />
+          <Property Name="add_date" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Food" Relationship="Self.FK__PaymentDe__food___5812160E" FromRole="PaymentDetails" ToRole="Food" />
+          <NavigationProperty Name="Payment" Relationship="Self.FK__PaymentDe__payme__571DF1D5" FromRole="PaymentDetails" ToRole="Payment" />
+        </EntityType>
+        <EntityType Name="PaymentMethod">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Guid" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="meta_field" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Payments" Relationship="Self.FK__Payment__payment__52593CB8" FromRole="PaymentMethod" ToRole="Payment" />
+        </EntityType>
+        <EntityType Name="PaymentStatu">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Guid" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Payments" Relationship="Self.FK__Payment__payment__534D60F1" FromRole="PaymentStatus" ToRole="Payment" />
+        </EntityType>
+        <EntityType Name="Position">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Staffs" Relationship="Self.FK__Staff__position___2C3393D0" FromRole="Position" ToRole="Staff" />
+        </EntityType>
+        <EntityType Name="ResetPasswordToken">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="key" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="exp_date" Type="DateTime" Precision="3" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="Self.FK__ResetPass__user___35BCFE0A" FromRole="ResetPasswordToken" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Staff">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="priority" Type="Int32" Nullable="false" />
+          <Property Name="position_id" Type="Int32" Nullable="false" />
+          <Property Name="salary" Type="Double" />
+          <NavigationProperty Name="Position" Relationship="Self.FK__Staff__position___2C3393D0" FromRole="Staff" ToRole="Position" />
+          <NavigationProperty Name="User" Relationship="Self.FK__Staff__user_id__2B3F6F97" FromRole="Staff" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="user_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="last_name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="first_name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="user_role" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="phone_num" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="gender" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Carts" Relationship="Self.FK__Cart__customer_i__3E52440B" FromRole="Users" ToRole="Cart" />
+          <NavigationProperty Name="Customer" Relationship="Self.FK__Customer__user_i__2F10007B" FromRole="Users" ToRole="Customer" />
+          <NavigationProperty Name="Foods" Relationship="Self.FK__Food__duty_staff__38996AB5" FromRole="Users" ToRole="Food" />
+          <NavigationProperty Name="Orders" Relationship="Self.FK__Order__customer___44FF419A" FromRole="Users" ToRole="Order" />
+          <NavigationProperty Name="Payments" Relationship="Self.FK__Payment__user_id__5441852A" FromRole="Users" ToRole="Payment" />
+          <NavigationProperty Name="ResetPasswordTokens" Relationship="Self.FK__ResetPass__user___35BCFE0A" FromRole="Users" ToRole="ResetPasswordToken" />
+          <NavigationProperty Name="Staff" Relationship="Self.FK__Staff__user_id__2B3F6F97" FromRole="Users" ToRole="Staff" />
+          <NavigationProperty Name="Addresses" Relationship="Self.UserAddress" FromRole="Users" ToRole="Address" />
+        </EntityType>
+        <Association Name="FK__Delivery__destin__693CA210">
+          <End Role="Address" Type="Self.Address" Multiplicity="1" />
+          <End Role="Delivery" Type="Self.Delivery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Delivery">
+              <PropertyRef Name="destination" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Delivery__source__68487DD7">
+          <End Role="Address" Type="Self.Address" Multiplicity="1" />
+          <End Role="Delivery" Type="Self.Delivery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Delivery">
+              <PropertyRef Name="source" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DeliveryC__addre__6EF57B66">
+          <End Role="Address" Type="Self.Address" Multiplicity="1" />
+          <End Role="DeliveryChain" Type="Self.DeliveryChain" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DeliveryChain">
+              <PropertyRef Name="address_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cart__customer_i__3E52440B">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="Cart" Type="Self.Cart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="Cart">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CartDetai__cart___412EB0B6">
+          <End Role="Cart" Type="Self.Cart" Multiplicity="1" />
+          <End Role="CartDetails" Type="Self.CartDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cart">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CartDetails">
+              <PropertyRef Name="cart_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CartDetai__food___4222D4EF">
+          <End Role="Food" Type="Self.Food" Multiplicity="1" />
+          <End Role="CartDetails" Type="Self.CartDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Food">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CartDetails">
+              <PropertyRef Name="food_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Food__catergory___398D8EEE">
+          <End Role="Catergory" Type="Self.Catergory" Multiplicity="0..1" />
+          <End Role="Food" Type="Self.Food" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Catergory">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Food">
+              <PropertyRef Name="catergory_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Customer__member__300424B4">
+          <End Role="Membership" Type="Self.Membership" Multiplicity="1" />
+          <End Role="Customer" Type="Self.Customer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Membership">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Customer">
+              <PropertyRef Name="membership_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Customer__user_i__2F10007B">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="Customer">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Delivery__delive__6A30C649">
+          <End Role="DeliveryCompany" Type="Self.DeliveryCompany" Multiplicity="1" />
+          <End Role="Delivery" Type="Self.Delivery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DeliveryCompany">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Delivery">
+              <PropertyRef Name="delivery_company" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Delivery__final___6B24EA82">
+          <End Role="DeliveryStatus" Type="Self.DeliveryStatu" Multiplicity="1" />
+          <End Role="Delivery" Type="Self.Delivery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DeliveryStatus">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Delivery">
+              <PropertyRef Name="final_delivery_status" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DeliveryC__deliv__6FE99F9F">
+          <End Role="DeliveryStatus" Type="Self.DeliveryStatu" Multiplicity="0..1" />
+          <End Role="DeliveryChain" Type="Self.DeliveryChain" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DeliveryStatus">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DeliveryChain">
+              <PropertyRef Name="delivery_status" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Food__duty_staff__38996AB5">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="Food" Type="Self.Food" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="Food">
+              <PropertyRef Name="duty_staff_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__OrderDeta__food___48CFD27E">
+          <End Role="Food" Type="Self.Food" Multiplicity="1" />
+          <End Role="OrderDetails" Type="Self.OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Food">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="OrderDetails">
+              <PropertyRef Name="food_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PaymentDe__food___5812160E">
+          <End Role="Food" Type="Self.Food" Multiplicity="1" />
+          <End Role="PaymentDetails" Type="Self.PaymentDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Food">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="PaymentDetails">
+              <PropertyRef Name="food_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Order__customer___44FF419A">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="Order" Type="Self.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__OrderDeta__order__47DBAE45">
+          <End Role="Order" Type="Self.Order" Multiplicity="1" />
+          <End Role="OrderDetails" Type="Self.OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="OrderDetails">
+              <PropertyRef Name="order_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Payment__payment__52593CB8">
+          <End Role="PaymentMethod" Type="Self.PaymentMethod" Multiplicity="1" />
+          <End Role="Payment" Type="Self.Payment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PaymentMethod">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Payment">
+              <PropertyRef Name="payment_method" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Payment__payment__534D60F1">
+          <End Role="PaymentStatus" Type="Self.PaymentStatu" Multiplicity="1" />
+          <End Role="Payment" Type="Self.Payment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PaymentStatus">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Payment">
+              <PropertyRef Name="payment_status" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Payment__user_id__5441852A">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="Payment" Type="Self.Payment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="Payment">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PaymentDe__payme__571DF1D5">
+          <End Role="Payment" Type="Self.Payment" Multiplicity="1" />
+          <End Role="PaymentDetails" Type="Self.PaymentDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Payment">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="PaymentDetails">
+              <PropertyRef Name="payment_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Staff__position___2C3393D0">
+          <End Role="Position" Type="Self.Position" Multiplicity="1" />
+          <End Role="Staff" Type="Self.Staff" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Position">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Staff">
+              <PropertyRef Name="position_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ResetPass__user___35BCFE0A">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="ResetPasswordToken" Type="Self.ResetPasswordToken" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="ResetPasswordToken">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Staff__user_id__2B3F6F97">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="Staff" Type="Self.Staff" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="Staff">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="DeliveryChainDetails">
+          <End Role="Delivery" Type="Self.Delivery" Multiplicity="*" />
+          <End Role="DeliveryChain" Type="Self.DeliveryChain" Multiplicity="*" />
+        </Association>
+        <Association Name="MenuItems">
+          <End Role="Food" Type="Self.Food" Multiplicity="*" />
+          <End Role="Menu" Type="Self.Menu" Multiplicity="*" />
+        </Association>
+        <Association Name="UserAddress">
+          <End Role="Address" Type="Self.Address" Multiplicity="*" />
+          <End Role="Users" Type="Self.User" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="FoodShopEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Addresses" EntityType="Self.Address" />
+          <EntitySet Name="Carts" EntityType="Self.Cart" />
+          <EntitySet Name="CartDetails" EntityType="Self.CartDetail" />
+          <EntitySet Name="Catergories" EntityType="Self.Catergory" />
+          <EntitySet Name="Customers" EntityType="Self.Customer" />
+          <EntitySet Name="Deliveries" EntityType="Self.Delivery" />
+          <EntitySet Name="DeliveryChains" EntityType="Self.DeliveryChain" />
+          <EntitySet Name="DeliveryCompanies" EntityType="Self.DeliveryCompany" />
+          <EntitySet Name="DeliveryStatus" EntityType="Self.DeliveryStatu" />
+          <EntitySet Name="Foods" EntityType="Self.Food" />
+          <EntitySet Name="Memberships" EntityType="Self.Membership" />
+          <EntitySet Name="Menus" EntityType="Self.Menu" />
+          <EntitySet Name="Orders" EntityType="Self.Order" />
+          <EntitySet Name="OrderDetails" EntityType="Self.OrderDetail" />
+          <EntitySet Name="Payments" EntityType="Self.Payment" />
+          <EntitySet Name="PaymentDetails" EntityType="Self.PaymentDetail" />
+          <EntitySet Name="PaymentMethods" EntityType="Self.PaymentMethod" />
+          <EntitySet Name="PaymentStatus" EntityType="Self.PaymentStatu" />
+          <EntitySet Name="Positions" EntityType="Self.Position" />
+          <EntitySet Name="ResetPasswordTokens" EntityType="Self.ResetPasswordToken" />
+          <EntitySet Name="Staffs" EntityType="Self.Staff" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <AssociationSet Name="FK__Delivery__destin__693CA210" Association="Self.FK__Delivery__destin__693CA210">
+            <End Role="Address" EntitySet="Addresses" />
+            <End Role="Delivery" EntitySet="Deliveries" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Delivery__source__68487DD7" Association="Self.FK__Delivery__source__68487DD7">
+            <End Role="Address" EntitySet="Addresses" />
+            <End Role="Delivery" EntitySet="Deliveries" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DeliveryC__addre__6EF57B66" Association="Self.FK__DeliveryC__addre__6EF57B66">
+            <End Role="Address" EntitySet="Addresses" />
+            <End Role="DeliveryChain" EntitySet="DeliveryChains" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cart__customer_i__3E52440B" Association="Self.FK__Cart__customer_i__3E52440B">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Cart" EntitySet="Carts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CartDetai__cart___412EB0B6" Association="Self.FK__CartDetai__cart___412EB0B6">
+            <End Role="Cart" EntitySet="Carts" />
+            <End Role="CartDetails" EntitySet="CartDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CartDetai__food___4222D4EF" Association="Self.FK__CartDetai__food___4222D4EF">
+            <End Role="Food" EntitySet="Foods" />
+            <End Role="CartDetails" EntitySet="CartDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Food__catergory___398D8EEE" Association="Self.FK__Food__catergory___398D8EEE">
+            <End Role="Catergory" EntitySet="Catergories" />
+            <End Role="Food" EntitySet="Foods" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Customer__member__300424B4" Association="Self.FK__Customer__member__300424B4">
+            <End Role="Membership" EntitySet="Memberships" />
+            <End Role="Customer" EntitySet="Customers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Customer__user_i__2F10007B" Association="Self.FK__Customer__user_i__2F10007B">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Customer" EntitySet="Customers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Delivery__delive__6A30C649" Association="Self.FK__Delivery__delive__6A30C649">
+            <End Role="DeliveryCompany" EntitySet="DeliveryCompanies" />
+            <End Role="Delivery" EntitySet="Deliveries" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Delivery__final___6B24EA82" Association="Self.FK__Delivery__final___6B24EA82">
+            <End Role="DeliveryStatus" EntitySet="DeliveryStatus" />
+            <End Role="Delivery" EntitySet="Deliveries" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DeliveryC__deliv__6FE99F9F" Association="Self.FK__DeliveryC__deliv__6FE99F9F">
+            <End Role="DeliveryStatus" EntitySet="DeliveryStatus" />
+            <End Role="DeliveryChain" EntitySet="DeliveryChains" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Food__duty_staff__38996AB5" Association="Self.FK__Food__duty_staff__38996AB5">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Food" EntitySet="Foods" />
+          </AssociationSet>
+          <AssociationSet Name="FK__OrderDeta__food___48CFD27E" Association="Self.FK__OrderDeta__food___48CFD27E">
+            <End Role="Food" EntitySet="Foods" />
+            <End Role="OrderDetails" EntitySet="OrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PaymentDe__food___5812160E" Association="Self.FK__PaymentDe__food___5812160E">
+            <End Role="Food" EntitySet="Foods" />
+            <End Role="PaymentDetails" EntitySet="PaymentDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Order__customer___44FF419A" Association="Self.FK__Order__customer___44FF419A">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Order" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__OrderDeta__order__47DBAE45" Association="Self.FK__OrderDeta__order__47DBAE45">
+            <End Role="Order" EntitySet="Orders" />
+            <End Role="OrderDetails" EntitySet="OrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Payment__payment__52593CB8" Association="Self.FK__Payment__payment__52593CB8">
+            <End Role="PaymentMethod" EntitySet="PaymentMethods" />
+            <End Role="Payment" EntitySet="Payments" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Payment__payment__534D60F1" Association="Self.FK__Payment__payment__534D60F1">
+            <End Role="PaymentStatus" EntitySet="PaymentStatus" />
+            <End Role="Payment" EntitySet="Payments" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Payment__user_id__5441852A" Association="Self.FK__Payment__user_id__5441852A">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Payment" EntitySet="Payments" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PaymentDe__payme__571DF1D5" Association="Self.FK__PaymentDe__payme__571DF1D5">
+            <End Role="Payment" EntitySet="Payments" />
+            <End Role="PaymentDetails" EntitySet="PaymentDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Staff__position___2C3393D0" Association="Self.FK__Staff__position___2C3393D0">
+            <End Role="Position" EntitySet="Positions" />
+            <End Role="Staff" EntitySet="Staffs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ResetPass__user___35BCFE0A" Association="Self.FK__ResetPass__user___35BCFE0A">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="ResetPasswordToken" EntitySet="ResetPasswordTokens" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Staff__user_id__2B3F6F97" Association="Self.FK__Staff__user_id__2B3F6F97">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Staff" EntitySet="Staffs" />
+          </AssociationSet>
+          <AssociationSet Name="DeliveryChainDetails" Association="Self.DeliveryChainDetails">
+            <End Role="Delivery" EntitySet="Deliveries" />
+            <End Role="DeliveryChain" EntitySet="DeliveryChains" />
+          </AssociationSet>
+          <AssociationSet Name="MenuItems" Association="Self.MenuItems">
+            <End Role="Food" EntitySet="Foods" />
+            <End Role="Menu" EntitySet="Menus" />
+          </AssociationSet>
+          <AssociationSet Name="UserAddress" Association="Self.UserAddress">
+            <End Role="Address" EntitySet="Addresses" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FoodShopModelStoreContainer" CdmEntityContainer="FoodShopEntities1">
+          <EntitySetMapping Name="Addresses">
+            <EntityTypeMapping TypeName="FoodShopModel.Address">
+              <MappingFragment StoreEntitySet="Address">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="latitude" ColumnName="latitude" />
+                <ScalarProperty Name="longitude" ColumnName="longitude" />
+                <ScalarProperty Name="details" ColumnName="details" />
+                <ScalarProperty Name="street" ColumnName="street" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="poscode" ColumnName="poscode" />
+                <ScalarProperty Name="country" ColumnName="country" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Carts">
+            <EntityTypeMapping TypeName="FoodShopModel.Cart">
+              <MappingFragment StoreEntitySet="Cart">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CartDetails">
+            <EntityTypeMapping TypeName="FoodShopModel.CartDetail">
+              <MappingFragment StoreEntitySet="CartDetails">
+                <ScalarProperty Name="cart_id" ColumnName="cart_id" />
+                <ScalarProperty Name="food_id" ColumnName="food_id" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="add_datetime" ColumnName="add_datetime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Catergories">
+            <EntityTypeMapping TypeName="FoodShopModel.Catergory">
+              <MappingFragment StoreEntitySet="Catergory">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="description" ColumnName="description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="FoodShopModel.Customer">
+              <MappingFragment StoreEntitySet="Customer">
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="birthday_date" ColumnName="birthday_date" />
+                <ScalarProperty Name="membership_id" ColumnName="membership_id" />
+                <ScalarProperty Name="wallate_amount" ColumnName="wallate_amount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Deliveries">
+            <EntityTypeMapping TypeName="FoodShopModel.Delivery">
+              <MappingFragment StoreEntitySet="Delivery">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="source" ColumnName="source" />
+                <ScalarProperty Name="destination" ColumnName="destination" />
+                <ScalarProperty Name="delivery_note" ColumnName="delivery_note" />
+                <ScalarProperty Name="final_delivery_status" ColumnName="final_delivery_status" />
+                <ScalarProperty Name="delivery_company" ColumnName="delivery_company" />
+                <ScalarProperty Name="recive_dates" ColumnName="recive_dates" />
+                <ScalarProperty Name="recive_prove" ColumnName="recive_prove" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DeliveryChains">
+            <EntityTypeMapping TypeName="FoodShopModel.DeliveryChain">
+              <MappingFragment StoreEntitySet="DeliveryChain">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="arrival_dates" ColumnName="arrival_dates" />
+                <ScalarProperty Name="address_id" ColumnName="address_id" />
+                <ScalarProperty Name="delivery_status" ColumnName="delivery_status" />
+                <ScalarProperty Name="notes" ColumnName="notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DeliveryCompanies">
+            <EntityTypeMapping TypeName="FoodShopModel.DeliveryCompany">
+              <MappingFragment StoreEntitySet="DeliveryCompany">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="company_name" ColumnName="company_name" />
+                <ScalarProperty Name="company_phones" ColumnName="company_phones" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="rm_per_g" ColumnName="rm_per_g" />
+                <ScalarProperty Name="rm_per_cm3" ColumnName="rm_per_cm3" />
+                <ScalarProperty Name="gradient" ColumnName="gradient" />
+                <ScalarProperty Name="prefence_country" ColumnName="prefence_country" />
+                <ScalarProperty Name="oversea_support" ColumnName="oversea_support" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DeliveryStatus">
+            <EntityTypeMapping TypeName="FoodShopModel.DeliveryStatu">
+              <MappingFragment StoreEntitySet="DeliveryStatus">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="description" ColumnName="description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Foods">
+            <EntityTypeMapping TypeName="FoodShopModel.Food">
+              <MappingFragment StoreEntitySet="Food">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="duty_staff_id" ColumnName="duty_staff_id" />
+                <ScalarProperty Name="image" ColumnName="image" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="stock" ColumnName="stock" />
+                <ScalarProperty Name="add_date" ColumnName="add_date" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="descriptions" ColumnName="descriptions" />
+                <ScalarProperty Name="poscode" ColumnName="poscode" />
+                <ScalarProperty Name="catergory_id" ColumnName="catergory_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Memberships">
+            <EntityTypeMapping TypeName="FoodShopModel.Membership">
+              <MappingFragment StoreEntitySet="Membership">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="description" ColumnName="description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Menus">
+            <EntityTypeMapping TypeName="FoodShopModel.Menu">
+              <MappingFragment StoreEntitySet="Menu">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="start_date" ColumnName="start_date" />
+                <ScalarProperty Name="end_date" ColumnName="end_date" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="descriptions" ColumnName="descriptions" />
+                <ScalarProperty Name="enabled" ColumnName="enabled" />
+                <ScalarProperty Name="menu_image" ColumnName="menu_image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="FoodShopModel.Order">
+              <MappingFragment StoreEntitySet="Order">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+                <ScalarProperty Name="order_status" ColumnName="order_status" />
+                <ScalarProperty Name="datetime" ColumnName="datetime" />
+                <ScalarProperty Name="customer_note" ColumnName="customer_note" />
+                <ScalarProperty Name="payload" ColumnName="payload" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderDetails">
+            <EntityTypeMapping TypeName="FoodShopModel.OrderDetail">
+              <MappingFragment StoreEntitySet="OrderDetails">
+                <ScalarProperty Name="order_id" ColumnName="order_id" />
+                <ScalarProperty Name="food_id" ColumnName="food_id" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="add_datetime" ColumnName="add_datetime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Payments">
+            <EntityTypeMapping TypeName="FoodShopModel.Payment">
+              <MappingFragment StoreEntitySet="Payment">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="payment_method" ColumnName="payment_method" />
+                <ScalarProperty Name="payment_status" ColumnName="payment_status" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="tax_change" ColumnName="tax_change" />
+                <ScalarProperty Name="net_pay" ColumnName="net_pay" />
+                <ScalarProperty Name="discount" ColumnName="discount" />
+                <ScalarProperty Name="total_pay" ColumnName="total_pay" />
+                <ScalarProperty Name="customer_paid" ColumnName="customer_paid" />
+                <ScalarProperty Name="payment_date" ColumnName="payment_date" />
+                <ScalarProperty Name="payment_meta" ColumnName="payment_meta" />
+                <ScalarProperty Name="notes" ColumnName="notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PaymentDetails">
+            <EntityTypeMapping TypeName="FoodShopModel.PaymentDetail">
+              <MappingFragment StoreEntitySet="PaymentDetails">
+                <ScalarProperty Name="payment_id" ColumnName="payment_id" />
+                <ScalarProperty Name="food_id" ColumnName="food_id" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="add_date" ColumnName="add_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PaymentMethods">
+            <EntityTypeMapping TypeName="FoodShopModel.PaymentMethod">
+              <MappingFragment StoreEntitySet="PaymentMethod">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="meta_field" ColumnName="meta_field" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PaymentStatus">
+            <EntityTypeMapping TypeName="FoodShopModel.PaymentStatu">
+              <MappingFragment StoreEntitySet="PaymentStatus">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="description" ColumnName="description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Positions">
+            <EntityTypeMapping TypeName="FoodShopModel.Position">
+              <MappingFragment StoreEntitySet="Position">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="description" ColumnName="description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ResetPasswordTokens">
+            <EntityTypeMapping TypeName="FoodShopModel.ResetPasswordToken">
+              <MappingFragment StoreEntitySet="ResetPasswordToken">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="key" ColumnName="key" />
+                <ScalarProperty Name="exp_date" ColumnName="exp_date" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Staffs">
+            <EntityTypeMapping TypeName="FoodShopModel.Staff">
+              <MappingFragment StoreEntitySet="Staff">
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="priority" ColumnName="priority" />
+                <ScalarProperty Name="position_id" ColumnName="position_id" />
+                <ScalarProperty Name="salary" ColumnName="salary" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="FoodShopModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="user_email" ColumnName="user_email" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="last_name" ColumnName="last_name" />
+                <ScalarProperty Name="first_name" ColumnName="first_name" />
+                <ScalarProperty Name="user_role" ColumnName="user_role" />
+                <ScalarProperty Name="phone_num" ColumnName="phone_num" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="picture" ColumnName="picture" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="DeliveryChainDetails" TypeName="FoodShopModel.DeliveryChainDetails" StoreEntitySet="DeliveryChainDetails">
+            <EndProperty Name="Delivery">
+              <ScalarProperty Name="id" ColumnName="delivery_id" />
+            </EndProperty>
+            <EndProperty Name="DeliveryChain">
+              <ScalarProperty Name="id" ColumnName="tranfer_chain_id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="MenuItems" TypeName="FoodShopModel.MenuItems" StoreEntitySet="MenuItems">
+            <EndProperty Name="Food">
+              <ScalarProperty Name="id" ColumnName="food_id" />
+            </EndProperty>
+            <EndProperty Name="Menu">
+              <ScalarProperty Name="id" ColumnName="menu_id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="UserAddress" TypeName="FoodShopModel.UserAddress" StoreEntitySet="UserAddress">
+            <EndProperty Name="Address">
+              <ScalarProperty Name="id" ColumnName="address_id" />
+            </EndProperty>
+            <EndProperty Name="Users">
+              <ScalarProperty Name="user_id" ColumnName="user_id" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
