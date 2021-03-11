@@ -70,24 +70,28 @@
         btnProfile.FillColor = Color.White
         btnProfile.ForeColor = Color.Black
         checkNav(1)
+        switchPanel(profileform)
     End Sub
 
     Private Sub btnCart_Click(sender As Object, e As EventArgs) Handles btnCart.Click
         btnCart.FillColor = Color.White
         btnCart.ForeColor = Color.Black
         checkNav(2)
+        switchPanel(cartform)
     End Sub
 
     Private Sub btnOrder_Click(sender As Object, e As EventArgs) Handles btnOrder.Click
         btnOrder.FillColor = Color.White
         btnOrder.ForeColor = Color.Black
         checkNav(3)
+        switchPanel(orderform)
     End Sub
 
     Private Sub btnMenu_Click(sender As Object, e As EventArgs) Handles btnMenu.Click
         btnMenu.FillColor = Color.White
         btnMenu.ForeColor = Color.Black
         checkNav(4)
+        switchPanel(menuform)
     End Sub
 
     Private Sub checkNav(index As Integer)
@@ -99,6 +103,7 @@
                 btnOrder.ForeColor = Color.White
                 btnMenu.FillColor = Color.FromArgb(3, 139, 205)
                 btnMenu.ForeColor = Color.White
+
             Case 2
                 btnProfile.FillColor = Color.FromArgb(3, 139, 205)
                 btnProfile.ForeColor = Color.White
@@ -121,11 +126,14 @@
                 btnOrder.FillColor = Color.FromArgb(3, 139, 205)
                 btnOrder.ForeColor = Color.White
         End Select
-
-
     End Sub
 
-
+    Sub switchPanel(ByVal panel As Form)
+        Panel4.Controls.Clear()
+        panel.TopLevel = False
+        Panel4.Controls.Add(panel)
+        panel.Show()
+    End Sub
 
 
 

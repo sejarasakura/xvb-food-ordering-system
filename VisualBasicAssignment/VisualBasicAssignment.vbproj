@@ -77,6 +77,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="constant\VRColor.vb" />
+    <Compile Include="form\cartform.Designer.vb">
+      <DependentUpon>cartform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form\cartform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\menuform.Designer.vb">
+      <DependentUpon>menuform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form\menuform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\orderform.Designer.vb">
+      <DependentUpon>orderform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form\orderform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\profileform.Designer.vb">
+      <DependentUpon>profileform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form\profileform.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="kz\Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
@@ -132,6 +156,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="form\cartform.resx">
+      <DependentUpon>cartform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\menuform.resx">
+      <DependentUpon>menuform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\orderform.resx">
+      <DependentUpon>orderform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\profileform.resx">
+      <DependentUpon>profileform.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="kz\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
