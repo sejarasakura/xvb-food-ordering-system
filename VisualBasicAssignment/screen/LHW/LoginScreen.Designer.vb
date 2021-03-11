@@ -30,8 +30,8 @@ Partial Class LoginScreen
         Me.lblPassword = New System.Windows.Forms.Label()
         Me.cancleBtn = New Guna.UI2.WinForms.Guna2Button()
         Me.loginBtn = New Guna.UI2.WinForms.Guna2Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -139,6 +139,10 @@ Partial Class LoginScreen
         Me.loginBtn.TabIndex = 7
         Me.loginBtn.Text = "Login"
         '
+        'Guna2BorderlessForm1
+        '
+        Me.Guna2BorderlessForm1.ContainerControl = Me
+        '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
@@ -152,14 +156,11 @@ Partial Class LoginScreen
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
         '
-        'Guna2BorderlessForm1
-        '
-        Me.Guna2BorderlessForm1.ContainerControl = Me
-        '
         'LoginScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(619, 778)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.loginBtn)
