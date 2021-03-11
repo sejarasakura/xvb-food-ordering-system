@@ -77,28 +77,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="constant\VRColor.vb" />
-    <Compile Include="screen\LHW\LoginScreen.Designer.vb">
-      <DependentUpon>LoginScreen.vb</DependentUpon>
+    <Compile Include="screen\LHW\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
     </Compile>
-    <Compile Include="screen\LHW\LoginScreen.vb">
+    <Compile Include="screen\LHW\Login.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="screen\LHW\ProfileScreen.Designer.vb">
-      <DependentUpon>ProfileScreen.vb</DependentUpon>
+    <Compile Include="screen\LHW\Profile.Designer.vb">
+      <DependentUpon>Profile.vb</DependentUpon>
     </Compile>
-    <Compile Include="screen\LHW\ProfileScreen.vb">
+    <Compile Include="screen\LHW\Profile.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="screen\LHW\RegistrationScreenCustomer.Designer.vb">
-      <DependentUpon>RegistrationScreenCustomer.vb</DependentUpon>
+    <Compile Include="screen\LHW\Register.Designer.vb">
+      <DependentUpon>Register.vb</DependentUpon>
     </Compile>
-    <Compile Include="screen\LHW\RegistrationScreenCustomer.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="screen\LHW\RegistrationScreenStaff.Designer.vb">
-      <DependentUpon>RegistrationScreenStaff.vb</DependentUpon>
-    </Compile>
-    <Compile Include="screen\LHW\RegistrationScreenStaff.vb">
+    <Compile Include="screen\LHW\Register.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SplashScreen.vb">
@@ -138,17 +132,14 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="screen\LHW\LoginScreen.resx">
-      <DependentUpon>LoginScreen.vb</DependentUpon>
+    <EmbeddedResource Include="screen\LHW\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="screen\LHW\ProfileScreen.resx">
-      <DependentUpon>ProfileScreen.vb</DependentUpon>
+    <EmbeddedResource Include="screen\LHW\Profile.resx">
+      <DependentUpon>Profile.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="screen\LHW\RegistrationScreenCustomer.resx">
-      <DependentUpon>RegistrationScreenCustomer.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="screen\LHW\RegistrationScreenStaff.resx">
-      <DependentUpon>RegistrationScreenStaff.vb</DependentUpon>
+    <EmbeddedResource Include="screen\LHW\Register.resx">
+      <DependentUpon>Register.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
@@ -180,6 +171,8 @@
     <Content Include="asset\image\main\default_user.png" />
     <Content Include="asset\image\main\icon.ico" />
     <Content Include="asset\image\main\splash_screen.png" />
+    <None Include="Resources\profilePic.jpg" />
+    <None Include="Resources\profilePic.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
