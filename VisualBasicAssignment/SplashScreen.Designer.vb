@@ -23,6 +23,7 @@ Partial Class SplashScreen
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SplashScreen))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -32,7 +33,7 @@ Partial Class SplashScreen
         '
         'PictureBox1
         '
-        Me.PictureBox1.BackgroundImage = Global.VisualBasicAssignment.My.Resources.Resources.splash_screen
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
@@ -43,7 +44,7 @@ Partial Class SplashScreen
         '
         'Panel1
         '
-        Me.Panel1.BackColor = VRColor.DARK_COLOR_BG
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(46, Byte), Integer))
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel1.Location = New System.Drawing.Point(0, 389)
@@ -53,7 +54,7 @@ Partial Class SplashScreen
         '
         'Panel2
         '
-        Me.Panel2.BackColor = VRColor.HOVER_BUTTON_BG
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(148, Byte), Integer))
         Me.Panel2.Location = New System.Drawing.Point(0, 389)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(46, 11)
@@ -79,6 +80,7 @@ Partial Class SplashScreen
         Me.Text = "Form1"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+
     End Sub
 
     Friend WithEvents PictureBox1 As PictureBox
