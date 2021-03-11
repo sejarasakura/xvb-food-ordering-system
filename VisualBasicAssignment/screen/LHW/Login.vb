@@ -3,29 +3,41 @@
 Public Class Login
     Sub Page_Load(ByVal Sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        Me.cancleBtn.BackColor = VRColor.WARNING_COLOR
-        Me.loginBtn.BackColor = VRColor.COLORED_BG
+        Me.btnCancel.BackColor = VRColor.WARNING_COLOR
+        Me.btnLogin.BackColor = VRColor.COLORED_BG
         Me.MaximumSize = Me.Size
         'No Content
     End Sub
 
-    Private Sub cancleBtnOnclick(sender As Object, e As EventArgs) Handles cancleBtn.Click
+    Private Sub cancleBtnOnclick(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
     End Sub
 
-    Private Sub loginBtn_Click(sender As Object, e As EventArgs) Handles loginBtn.Click
-        Dim name = tbxName.Text.Replace(" ", "")
+    Private Sub loginBtn_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        Dim name = txtName.Text.Replace(" ", "")
         Dim err As New StringBuilder()
         Dim ctr As Control = Nothing
 
         If name = "" Then
             err.AppendLine("Please Insert Username!")
-            ctr = If(ctr, tbxName)
+            ctr = If(ctr, txtName)
+        End If
+        If txtPassword.Text = "" Then
+            err.AppendLine("Please Insert Password!")
+            ctr = If(ctr, txtPassword)
+        Else
+            Me.Hide()
+            Profile.Show()
+        End If
+        If err.Length > 0 Then
+            MessageBox.Show(err.ToString(), "Input Error!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            ctr.Focus()
+            Return
         End If
 
     End Sub
 
-    Private Sub tbxName_TextChanged(sender As Object, e As EventArgs) Handles tbxName.TextChanged
+    Private Sub tbxName_TextChanged(sender As Object, e As EventArgs) Handles txtName.TextChanged
 
     End Sub
 End Class

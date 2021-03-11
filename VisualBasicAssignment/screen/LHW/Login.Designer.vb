@@ -24,80 +24,80 @@ Partial Class Login
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
-        Me.tbxName = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.tbxPassword = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.lblName = New System.Windows.Forms.Label()
+        Me.txtName = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtPassword = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.lblUserName = New System.Windows.Forms.Label()
         Me.lblPassword = New System.Windows.Forms.Label()
-        Me.cancleBtn = New Guna.UI2.WinForms.Guna2Button()
-        Me.loginBtn = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnCancel = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnLogin = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Guna2ComboBox1 = New Guna.UI2.WinForms.Guna2ComboBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'tbxName
+        'txtName
         '
-        Me.tbxName.BackColor = System.Drawing.Color.Transparent
-        Me.tbxName.BorderRadius = 10
-        Me.tbxName.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.tbxName.DefaultText = ""
-        Me.tbxName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.tbxName.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.tbxName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbxName.DisabledState.Parent = Me.tbxName
-        Me.tbxName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbxName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbxName.FocusedState.Parent = Me.tbxName
-        Me.tbxName.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbxName.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbxName.HoverState.Parent = Me.tbxName
-        Me.tbxName.Location = New System.Drawing.Point(188, 288)
-        Me.tbxName.Margin = New System.Windows.Forms.Padding(2)
-        Me.tbxName.Name = "tbxName"
-        Me.tbxName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.tbxName.PlaceholderText = ""
-        Me.tbxName.SelectedText = ""
-        Me.tbxName.ShadowDecoration.Parent = Me.tbxName
-        Me.tbxName.Size = New System.Drawing.Size(465, 51)
-        Me.tbxName.TabIndex = 0
+        Me.txtName.BackColor = System.Drawing.Color.Transparent
+        Me.txtName.BorderRadius = 10
+        Me.txtName.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtName.DefaultText = ""
+        Me.txtName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtName.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtName.DisabledState.Parent = Me.txtName
+        Me.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtName.FocusedState.Parent = Me.txtName
+        Me.txtName.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtName.HoverState.Parent = Me.txtName
+        Me.txtName.Location = New System.Drawing.Point(188, 288)
+        Me.txtName.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtName.Name = "txtName"
+        Me.txtName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtName.PlaceholderText = ""
+        Me.txtName.SelectedText = ""
+        Me.txtName.ShadowDecoration.Parent = Me.txtName
+        Me.txtName.Size = New System.Drawing.Size(465, 51)
+        Me.txtName.TabIndex = 1
         '
-        'tbxPassword
+        'txtPassword
         '
-        Me.tbxPassword.BackColor = System.Drawing.Color.Transparent
-        Me.tbxPassword.BorderRadius = 10
-        Me.tbxPassword.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.tbxPassword.DefaultText = ""
-        Me.tbxPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.tbxPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.tbxPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbxPassword.DisabledState.Parent = Me.tbxPassword
-        Me.tbxPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbxPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbxPassword.FocusedState.Parent = Me.tbxPassword
-        Me.tbxPassword.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbxPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbxPassword.HoverState.Parent = Me.tbxPassword
-        Me.tbxPassword.Location = New System.Drawing.Point(188, 388)
-        Me.tbxPassword.Margin = New System.Windows.Forms.Padding(2)
-        Me.tbxPassword.Name = "tbxPassword"
-        Me.tbxPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.tbxPassword.PlaceholderText = ""
-        Me.tbxPassword.SelectedText = ""
-        Me.tbxPassword.ShadowDecoration.Parent = Me.tbxPassword
-        Me.tbxPassword.Size = New System.Drawing.Size(465, 51)
-        Me.tbxPassword.TabIndex = 1
+        Me.txtPassword.BackColor = System.Drawing.Color.Transparent
+        Me.txtPassword.BorderRadius = 10
+        Me.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtPassword.DefaultText = ""
+        Me.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtPassword.DisabledState.Parent = Me.txtPassword
+        Me.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtPassword.FocusedState.Parent = Me.txtPassword
+        Me.txtPassword.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtPassword.HoverState.Parent = Me.txtPassword
+        Me.txtPassword.Location = New System.Drawing.Point(188, 388)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtPassword.PlaceholderText = ""
+        Me.txtPassword.SelectedText = ""
+        Me.txtPassword.ShadowDecoration.Parent = Me.txtPassword
+        Me.txtPassword.Size = New System.Drawing.Size(465, 51)
+        Me.txtPassword.TabIndex = 2
         '
-        'lblName
+        'lblUserName
         '
-        Me.lblName.AutoSize = True
-        Me.lblName.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblName.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.lblName.Location = New System.Drawing.Point(184, 249)
-        Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(249, 20)
-        Me.lblName.TabIndex = 2
-        Me.lblName.Text = "Username / Registeration Name"
+        Me.lblUserName.AutoSize = True
+        Me.lblUserName.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUserName.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.lblUserName.Location = New System.Drawing.Point(184, 249)
+        Me.lblUserName.Name = "lblUserName"
+        Me.lblUserName.Size = New System.Drawing.Size(249, 20)
+        Me.lblUserName.TabIndex = 0
+        Me.lblUserName.Text = "Username / Registeration Name"
         '
         'lblPassword
         '
@@ -107,38 +107,38 @@ Partial Class Login
         Me.lblPassword.Location = New System.Drawing.Point(184, 354)
         Me.lblPassword.Name = "lblPassword"
         Me.lblPassword.Size = New System.Drawing.Size(83, 20)
-        Me.lblPassword.TabIndex = 3
+        Me.lblPassword.TabIndex = 0
         Me.lblPassword.Text = "Password"
         '
-        'cancleBtn
+        'btnCancel
         '
-        Me.cancleBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(78, Byte), Integer))
-        Me.cancleBtn.CheckedState.Parent = Me.cancleBtn
-        Me.cancleBtn.CustomImages.Parent = Me.cancleBtn
-        Me.cancleBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.cancleBtn.ForeColor = System.Drawing.Color.White
-        Me.cancleBtn.HoverState.Parent = Me.cancleBtn
-        Me.cancleBtn.Location = New System.Drawing.Point(188, 479)
-        Me.cancleBtn.Name = "cancleBtn"
-        Me.cancleBtn.ShadowDecoration.Parent = Me.cancleBtn
-        Me.cancleBtn.Size = New System.Drawing.Size(207, 62)
-        Me.cancleBtn.TabIndex = 7
-        Me.cancleBtn.Text = "Cancel"
+        Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(78, Byte), Integer))
+        Me.btnCancel.CheckedState.Parent = Me.btnCancel
+        Me.btnCancel.CustomImages.Parent = Me.btnCancel
+        Me.btnCancel.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.btnCancel.ForeColor = System.Drawing.Color.White
+        Me.btnCancel.HoverState.Parent = Me.btnCancel
+        Me.btnCancel.Location = New System.Drawing.Point(188, 479)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.ShadowDecoration.Parent = Me.btnCancel
+        Me.btnCancel.Size = New System.Drawing.Size(207, 62)
+        Me.btnCancel.TabIndex = 3
+        Me.btnCancel.Text = "Cancel"
         '
-        'loginBtn
+        'btnLogin
         '
-        Me.loginBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(205, Byte), Integer))
-        Me.loginBtn.CheckedState.Parent = Me.loginBtn
-        Me.loginBtn.CustomImages.Parent = Me.loginBtn
-        Me.loginBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.loginBtn.ForeColor = System.Drawing.Color.White
-        Me.loginBtn.HoverState.Parent = Me.loginBtn
-        Me.loginBtn.Location = New System.Drawing.Point(432, 479)
-        Me.loginBtn.Name = "loginBtn"
-        Me.loginBtn.ShadowDecoration.Parent = Me.loginBtn
-        Me.loginBtn.Size = New System.Drawing.Size(207, 62)
-        Me.loginBtn.TabIndex = 7
-        Me.loginBtn.Text = "Login"
+        Me.btnLogin.BackColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(205, Byte), Integer))
+        Me.btnLogin.CheckedState.Parent = Me.btnLogin
+        Me.btnLogin.CustomImages.Parent = Me.btnLogin
+        Me.btnLogin.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.btnLogin.ForeColor = System.Drawing.Color.White
+        Me.btnLogin.HoverState.Parent = Me.btnLogin
+        Me.btnLogin.Location = New System.Drawing.Point(432, 479)
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.ShadowDecoration.Parent = Me.btnLogin
+        Me.btnLogin.Size = New System.Drawing.Size(207, 62)
+        Me.btnLogin.TabIndex = 4
+        Me.btnLogin.Text = "Login"
         '
         'Guna2BorderlessForm1
         '
@@ -175,7 +175,7 @@ Partial Class Login
         Me.Guna2ComboBox1.Name = "Guna2ComboBox1"
         Me.Guna2ComboBox1.ShadowDecoration.Parent = Me.Guna2ComboBox1
         Me.Guna2ComboBox1.Size = New System.Drawing.Size(113, 36)
-        Me.Guna2ComboBox1.TabIndex = 8
+        Me.Guna2ComboBox1.TabIndex = 5
         '
         'Login
         '
@@ -185,12 +185,12 @@ Partial Class Login
         Me.ClientSize = New System.Drawing.Size(830, 566)
         Me.Controls.Add(Me.Guna2ComboBox1)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.loginBtn)
-        Me.Controls.Add(Me.cancleBtn)
+        Me.Controls.Add(Me.btnLogin)
+        Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.lblPassword)
-        Me.Controls.Add(Me.lblName)
-        Me.Controls.Add(Me.tbxPassword)
-        Me.Controls.Add(Me.tbxName)
+        Me.Controls.Add(Me.lblUserName)
+        Me.Controls.Add(Me.txtPassword)
+        Me.Controls.Add(Me.txtName)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Login"
@@ -202,12 +202,12 @@ Partial Class Login
 
     End Sub
 
-    Friend WithEvents tbxName As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents tbxPassword As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents lblName As Label
+    Friend WithEvents txtName As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtPassword As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents lblUserName As Label
     Friend WithEvents lblPassword As Label
-    Friend WithEvents cancleBtn As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents loginBtn As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnCancel As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnLogin As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
     Friend WithEvents Guna2ComboBox1 As Guna.UI2.WinForms.Guna2ComboBox
