@@ -164,6 +164,7 @@
   <ItemGroup>
     <Folder Include="commons\" />
     <Folder Include="model\" />
+    <Folder Include="Resources\" />
     <Folder Include="screen\LSK\" />
     <Folder Include="services\" />
   </ItemGroup>
@@ -171,8 +172,6 @@
     <Content Include="asset\image\main\default_user.png" />
     <Content Include="asset\image\main\icon.ico" />
     <Content Include="asset\image\main\splash_screen.png" />
-    <None Include="Resources\profilePic.jpg" />
-    <None Include="Resources\profilePic.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
