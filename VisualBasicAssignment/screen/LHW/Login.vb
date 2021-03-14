@@ -40,4 +40,9 @@ Public Class Login
     Private Sub tbxName_TextChanged(sender As Object, e As EventArgs) Handles txtName.TextChanged
 
     End Sub
+
+    Private Sub Guna2ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Guna2ComboBox1.SelectedIndexChanged
+        Me.Hide()
+        Register.Show()
+    End Sub
 End Class
