@@ -18,4 +18,9 @@
     Private Sub txtConfirmPassword_GotFocus(sender As Object, e As EventArgs) Handles txtConfirmPassword.GotFocus
         txtConfirmPassword.Text = ""
     End Sub
+
+    Private Sub btnCreate_Click(sender As Object, e As EventArgs) Handles btnCreate.Click
+        Me.Hide()
+        Profile.Show()
+    End Sub
 End Class
