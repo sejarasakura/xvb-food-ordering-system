@@ -100,40 +100,184 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FoodShopDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FoodShopDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="master\Master.Designer.vb">
+      <DependentUpon>Master.vb</DependentUpon>
+    </Compile>
+    <Compile Include="master\Master.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="model\Address.vb">
+      <DependentUpon>FoodShopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\Cart.vb">
+      <DependentUpon>FoodShopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\CartDetail.vb">
+      <DependentUpon>FoodShopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\Catergory.vb">
+      <DependentUpon>FoodShopModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="constant\VRColor.vb" />
+    <Compile Include="model\Customer.vb">
+      <DependentUpon>FoodShopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\Delivery.vb">
+      <DependentUpon>FoodShopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\DeliveryChain.vb">
+      <DependentUpon>FoodShopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\DeliveryCompany.vb">
+      <DependentUpon>FoodShopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\DeliveryStatu.vb">
+      <DependentUpon>FoodShopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\Food.vb">
+      <DependentUpon>FoodShopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\FoodShopModel.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FoodShopModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\FoodShopModel.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FoodShopModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="model\FoodShopModel.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FoodShopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\Membership.vb">
+      <DependentUpon>FoodShopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\Menu.vb">
+      <DependentUpon>FoodShopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\Order.vb">
+      <DependentUpon>FoodShopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\OrderDetail.vb">
+      <DependentUpon>FoodShopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\Payment.vb">
+      <DependentUpon>FoodShopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\PaymentDetail.vb">
+      <DependentUpon>FoodShopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\PaymentMethod.vb">
+      <DependentUpon>FoodShopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\PaymentStatu.vb">
+      <DependentUpon>FoodShopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\Position.vb">
+      <DependentUpon>FoodShopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\ResetPasswordToken.vb">
+      <DependentUpon>FoodShopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="screen\HomeScreen.Designer.vb">
+      <DependentUpon>HomeScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="screen\HomeScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="screen\LHW\LoginScreen.Designer.vb">
       <DependentUpon>LoginScreen.vb</DependentUpon>
     </Compile>
     <Compile Include="screen\LHW\LoginScreen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="screen\LHW\ProfileScreen.Designer.vb">
-      <DependentUpon>ProfileScreen.vb</DependentUpon>
+    <Compile Include="screen\sai_keat\OrderScreen.Designer.vb">
+      <DependentUpon>OrderScreen.vb</DependentUpon>
     </Compile>
-    <Compile Include="screen\LHW\ProfileScreen.vb">
+    <Compile Include="screen\sai_keat\OrderScreen.vb">
       <SubType>Form</SubType>
     </Compile>
-<<<<<<< Updated upstream
-    <Compile Include="screen\LHW\RegistrationScreenStaff.Designer.vb">
-      <DependentUpon>RegistrationScreenStaff.vb</DependentUpon>
-=======
-    <Compile Include="Model1.Context.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
+    <Compile Include="screen\sai_keat\widget\component\OrderGroup.Designer.vb">
+      <DependentUpon>OrderGroup.vb</DependentUpon>
     </Compile>
-    <Compile Include="Model1.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <Compile Include="screen\sai_keat\widget\component\OrderGroup.vb">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="screen\LHW\LoginScreen.Designer.vb">
-      <DependentUpon>LoginScreen.vb</DependentUpon>
->>>>>>> Stashed changes
+    <Compile Include="screen\sai_keat\widget\component\OrderItem.Designer.vb">
+      <DependentUpon>OrderItem.vb</DependentUpon>
     </Compile>
-    <Compile Include="screen\LHW\RegistrationScreenStaff.vb">
+    <Compile Include="screen\sai_keat\widget\component\OrderItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="screen\sai_keat\widget\delivery\DeliveryCompanySelections.Designer.vb">
+      <DependentUpon>DeliveryCompanySelections.vb</DependentUpon>
+    </Compile>
+    <Compile Include="screen\sai_keat\widget\delivery\DeliveryCompanySelections.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="screen\sai_keat\widget\delivery\DeliveryInfoForm.Designer.vb">
+      <DependentUpon>DeliveryInfoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="screen\sai_keat\widget\delivery\DeliveryInfoForm.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="screen\sai_keat\widget\delivery\MapPick.Designer.vb">
+      <DependentUpon>MapPick.vb</DependentUpon>
+    </Compile>
+    <Compile Include="screen\sai_keat\widget\delivery\MapPick.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="screen\sai_keat\widget\order\MyOder.Designer.vb">
+      <DependentUpon>MyOder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="screen\sai_keat\widget\order\MyOder.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="screen\sai_keat\widget\order\OrderDetails.Designer.vb">
+      <DependentUpon>OrderDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="screen\sai_keat\widget\order\OrderDetails.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="screen\sai_keat\PaymentScreen.Designer.vb">
+      <DependentUpon>PaymentScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="screen\sai_keat\PaymentScreen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="screen\sai_keat\widget\payment\PaymentComplete.Designer.vb">
+      <DependentUpon>PaymentComplete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="screen\sai_keat\widget\payment\PaymentComplete.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="screen\sai_keat\widget\payment\PaymentConfirm.Designer.vb">
+      <DependentUpon>PaymentConfirm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="screen\sai_keat\widget\payment\PaymentConfirm.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="screen\sai_keat\widget\payment\PaymentInfo.Designer.vb">
+      <DependentUpon>PaymentInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="screen\sai_keat\widget\payment\PaymentInfo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="screen\sai_keat\widget\payment\PaymentMethods.Designer.vb">
+      <DependentUpon>PaymentMethods.vb</DependentUpon>
+    </Compile>
+    <Compile Include="screen\sai_keat\widget\payment\PaymentMethods.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="screen\Screen.vb" />
     <Compile Include="SplashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -145,7 +289,6 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -157,28 +300,61 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="model\Staff.vb">
+      <DependentUpon>FoodShopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\User.vb">
+      <DependentUpon>FoodShopModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="user_control\basic\VRButton.Designer.vb">
       <DependentUpon>VRButton.vb</DependentUpon>
     </Compile>
     <Compile Include="user_control\basic\VRButton.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="user_control\MasterWidgetItem.Designer.vb">
+      <DependentUpon>MasterWidgetItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="user_control\MasterWidgetItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="master\Master.resx">
+      <DependentUpon>Master.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="screen\HomeScreen.resx">
+      <DependentUpon>HomeScreen.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="screen\LHW\LoginScreen.resx">
       <DependentUpon>LoginScreen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="screen\LHW\ProfileScreen.resx">
-      <DependentUpon>ProfileScreen.vb</DependentUpon>
+    <EmbeddedResource Include="screen\sai_keat\OrderScreen.resx">
+      <DependentUpon>OrderScreen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="screen\LHW\RegistrationScreenStaff.resx">
-      <DependentUpon>RegistrationScreenStaff.vb</DependentUpon>
+    <EmbeddedResource Include="screen\sai_keat\PaymentScreen.resx">
+      <DependentUpon>PaymentScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screen\sai_keat\widget\component\OrderGroup.resx">
+      <DependentUpon>OrderGroup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screen\sai_keat\widget\component\OrderItem.resx">
+      <DependentUpon>OrderItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screen\sai_keat\widget\order\MyOder.resx">
+      <DependentUpon>MyOder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screen\sai_keat\widget\payment\PaymentConfirm.resx">
+      <DependentUpon>PaymentConfirm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screen\sai_keat\widget\payment\PaymentInfo.resx">
+      <DependentUpon>PaymentInfo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
@@ -186,14 +362,28 @@
     <EmbeddedResource Include="user_control\basic\VRButton.resx">
       <DependentUpon>VRButton.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="user_control\MasterWidgetItem.resx">
+      <DependentUpon>MasterWidgetItem.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Model1.edmx">
+    <EntityDeploy Include="model\FoodShopModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.vb</LastGenOutput>
+      <LastGenOutput>FoodShopModel.Designer.vb</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <None Include="FoodShopDataSet.xsc">
+      <DependentUpon>FoodShopDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FoodShopDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FoodShopDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FoodShopDataSet.xss">
+      <DependentUpon>FoodShopDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="model\FoodShopModel.edmx.diagram">
+      <DependentUpon>FoodShopModel.edmx</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -219,14 +409,44 @@
     <Content Include="FoodShop.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="model\FoodShopModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FoodShopModel.edmx</DependentUpon>
+      <LastGenOutput>FoodShopModel.Context.vb</LastGenOutput>
+    </Content>
+    <Content Include="model\FoodShopModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FoodShopModel.edmx</DependentUpon>
+      <LastGenOutput>FoodShopModel.vb</LastGenOutput>
+    </Content>
     <Content Include="FoodShop_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>FoodShop.mdf</DependentUpon>
     </Content>
-    <Content Include="Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.vb</LastGenOutput>
-    </Content>
+    <Content Include="master\Resources\cart.png" />
+    <Content Include="master\Resources\cart1.png" />
+    <Content Include="master\Resources\icon1.png" />
+    <Content Include="master\Resources\icon2.bmp" />
+    <Content Include="master\Resources\icon2.png" />
+    <Content Include="master\Resources\icon21.png" />
+    <Content Include="master\Resources\icon22.png" />
+    <Content Include="master\Resources\image.close_window_96_1.png" />
+    <Content Include="master\Resources\image.close_window_96.png" />
+    <Content Include="master\Resources\image.macos_minimize_90.png" />
+    <Content Include="master\Resources\image.macos_minimize_96_1.png" />
+    <Content Include="master\Resources\menu.png" />
+    <Content Include="master\Resources\nav.png" />
+    <Content Include="master\Resources\nav1.gif" />
+    <Content Include="master\Resources\nav2.bmp" />
+    <Content Include="master\Resources\nav2.gif" />
+    <Content Include="master\Resources\payment.png" />
+    <Content Include="master\Resources\profile.png" />
+    <Content Include="master\Resources\profile1.png" />
+    <None Include="Resources\visa.png" />
+    <None Include="Resources\mastercard.png" />
+    <None Include="Resources\ebay.png" />
+    <None Include="Resources\paypal %281%29.png" />
+    <None Include="Resources\vav.bmp" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

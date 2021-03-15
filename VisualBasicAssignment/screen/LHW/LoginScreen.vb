@@ -8,7 +8,11 @@
     End Sub
 
     Private Sub cancleBtnOnclick(sender As Object, e As EventArgs) Handles cancleBtn.Click
+        Me.Hide()
+    End Sub
 
-        Me.Close()
+    Private Sub loginBtn_Click(sender As Object, e As EventArgs) Handles loginBtn.Click
+        Screen.NAV_HOME_SCREEN.Show()
+        Me.Hide()
     End Sub
 End Class

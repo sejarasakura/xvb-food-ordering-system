@@ -12,7 +12,7 @@
         End If
         If (Panel2.Width >= 650) Then
             Timer1.Stop()
-            LoginScreen.Show()
+            Screen.NAV_LOGIN_SCREEN.Show()
             Me.Hide()
         End If
     End Sub
