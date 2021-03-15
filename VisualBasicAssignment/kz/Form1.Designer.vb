@@ -40,12 +40,17 @@ Partial Class Form1
         Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.Guna2DragControl2 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.picIcon, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        Me.Panel5.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -190,7 +195,7 @@ Partial Class Form1
         Me.btnNav.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnNav.ForeColor = System.Drawing.Color.White
         Me.btnNav.HoverState.Parent = Me.btnNav
-        Me.btnNav.Image = Global.assignment.My.Resources.Resources.nav
+        Me.btnNav.Image = Global.VisualBasicAssignment.My.Resources.Resources.nav
         Me.btnNav.Location = New System.Drawing.Point(0, 0)
         Me.btnNav.Name = "btnNav"
         Me.btnNav.ShadowDecoration.Parent = Me.btnNav
@@ -255,13 +260,38 @@ Partial Class Form1
         '
         'Panel5
         '
-        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(148, Byte), Integer))
+        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(205, Byte), Integer))
         Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel5.Controls.Add(Me.Label2)
+        Me.Panel5.Controls.Add(Me.Label1)
+        Me.Panel5.Controls.Add(Me.PictureBox1)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel5.Location = New System.Drawing.Point(170, 26)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(830, 124)
         Me.Panel5.TabIndex = 7
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(186, 75)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(256, 20)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Hi This is TarUc food Ordering system"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(205, Byte), Integer))
+        Me.PictureBox1.Image = Global.VisualBasicAssignment.My.Resources.Resources.default_user
+        Me.PictureBox1.Location = New System.Drawing.Point(51, 18)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(90, 89)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'Timer1
         '
@@ -269,12 +299,24 @@ Partial Class Form1
         '
         'Panel4
         '
+        Me.Panel4.BackColor = System.Drawing.SystemColors.Window
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel4.Location = New System.Drawing.Point(170, 150)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(830, 450)
         Me.Panel4.TabIndex = 8
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(186, 18)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(101, 19)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "UserName 123"
         '
         'Form1
         '
@@ -293,6 +335,9 @@ Partial Class Form1
         CType(Me.picIcon, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -314,4 +359,7 @@ Partial Class Form1
     Friend WithEvents picIcon As PictureBox
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Panel4 As Panel
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
 End Class

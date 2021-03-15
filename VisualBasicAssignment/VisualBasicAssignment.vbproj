@@ -77,16 +77,40 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="constant\VRColor.vb" />
-    <Compile Include="master\Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="form\cartform.Designer.vb">
+      <DependentUpon>cartform.vb</DependentUpon>
     </Compile>
-    <Compile Include="master\Form1.vb">
+    <Compile Include="form\cartform.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="master\Form2.Designer.vb">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <Compile Include="form\menuform.Designer.vb">
+      <DependentUpon>menuform.vb</DependentUpon>
     </Compile>
-    <Compile Include="master\Form2.vb">
+    <Compile Include="form\menuform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\orderform.Designer.vb">
+      <DependentUpon>orderform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form\orderform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\profileform.Designer.vb">
+      <DependentUpon>profileform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form\profileform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kz\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="kz\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kz\loginform.Designer.vb">
+      <DependentUpon>loginform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="kz\loginform.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="screen\LHW\LoginScreen.Designer.vb">
@@ -106,6 +130,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -125,11 +150,23 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="master\Form1.resx">
+    <EmbeddedResource Include="form\cartform.resx">
+      <DependentUpon>cartform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\menuform.resx">
+      <DependentUpon>menuform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\orderform.resx">
+      <DependentUpon>orderform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\profileform.resx">
+      <DependentUpon>profileform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kz\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="master\Form2.resx">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <EmbeddedResource Include="kz\loginform.resx">
+      <DependentUpon>loginform.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -162,6 +199,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="commons\" />
+    <Folder Include="master\" />
     <Folder Include="model\" />
     <Folder Include="screen\LSK\" />
     <Folder Include="services\" />
@@ -170,6 +208,18 @@
     <Content Include="asset\image\main\default_user.png" />
     <Content Include="asset\image\main\icon.ico" />
     <Content Include="asset\image\main\splash_screen.png" />
+    <None Include="Resources\cart.png" />
+    <None Include="Resources\profile.png" />
+    <None Include="Resources\payment.png" />
+    <None Include="Resources\nav.png" />
+    <None Include="Resources\menu.png" />
+    <None Include="Resources\icons8-macos-minimize-96 %281%29.png" />
+    <None Include="Resources\icons8-macos-minimize-90.png" />
+    <None Include="Resources\icons8-close-window-96.png" />
+    <None Include="Resources\icons8-close-window-96 %281%29.png" />
+    <None Include="Resources\icon2.png" />
+    <None Include="Resources\icon1.png" />
+    <None Include="Resources\Image1.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
