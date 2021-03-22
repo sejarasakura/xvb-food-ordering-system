@@ -7,24 +7,23 @@
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
-        Me.Close()
-        Me.Dispose()
+        Me.Hide()
     End Sub
 
     Private Sub btnClose_MouseHover(sender As Object, e As EventArgs) Handles btnClose.MouseHover
-        btnClose.Image = CType(resources.GetObject("image._close_window_96"), Image)
+        btnClose.Image = CType(resources.GetObject("image.close_b"), Image)
     End Sub
 
     Private Sub btnClose_MouseLeave(sender As Object, e As EventArgs) Handles btnClose.MouseLeave
-        btnClose.Image = CType(resources.GetObject("image._close_window_96_1"), Image)
+        btnClose.Image = CType(resources.GetObject("image.close_w"), Image)
     End Sub
 
     Private Sub btnMini_MouseHover(sender As Object, e As EventArgs) Handles btnMini.MouseHover
-        btnMini.Image = CType(resources.GetObject("image.macos_minimize_90"), Image)
+        btnMini.Image = CType(resources.GetObject("image.min_b"), Image)
     End Sub
 
     Private Sub btnMini_MouseLeave(sender As Object, e As EventArgs) Handles btnMini.MouseLeave
-        btnMini.Image = CType(resources.GetObject("image.macos_minimize_90_1"), Image)
+        btnMini.Image = CType(resources.GetObject("image.min_w"), Image)
     End Sub
 
     Private Sub picIcon_MouseHover(sender As Object, e As EventArgs) Handles picIcon.MouseHover

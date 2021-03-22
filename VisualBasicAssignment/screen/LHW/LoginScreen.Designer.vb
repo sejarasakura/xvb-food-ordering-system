@@ -30,8 +30,10 @@ Partial Class LoginScreen
         Me.lblPassword = New System.Windows.Forms.Label()
         Me.cancleBtn = New Guna.UI2.WinForms.Guna2Button()
         Me.loginBtn = New Guna.UI2.WinForms.Guna2Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.lblDebug = New System.Windows.Forms.LinkLabel()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -139,6 +141,10 @@ Partial Class LoginScreen
         Me.loginBtn.TabIndex = 7
         Me.loginBtn.Text = "Login"
         '
+        'Guna2BorderlessForm1
+        '
+        Me.Guna2BorderlessForm1.ContainerControl = Me
+        '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
@@ -152,15 +158,33 @@ Partial Class LoginScreen
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
         '
-        'Guna2BorderlessForm1
+        'LinkLabel1
         '
-        Me.Guna2BorderlessForm1.ContainerControl = Me
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Location = New System.Drawing.Point(71, 363)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(125, 17)
+        Me.LinkLabel1.TabIndex = 8
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "Forgot password ?"
+        '
+        'lblDebug
+        '
+        Me.lblDebug.AutoSize = True
+        Me.lblDebug.Location = New System.Drawing.Point(559, 752)
+        Me.lblDebug.Name = "lblDebug"
+        Me.lblDebug.Size = New System.Drawing.Size(48, 17)
+        Me.lblDebug.TabIndex = 9
+        Me.lblDebug.TabStop = True
+        Me.lblDebug.Text = "debug"
         '
         'LoginScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(619, 778)
+        Me.Controls.Add(Me.lblDebug)
+        Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.loginBtn)
         Me.Controls.Add(Me.cancleBtn)
@@ -187,4 +211,6 @@ Partial Class LoginScreen
     Friend WithEvents loginBtn As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
+    Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents lblDebug As LinkLabel
 End Class

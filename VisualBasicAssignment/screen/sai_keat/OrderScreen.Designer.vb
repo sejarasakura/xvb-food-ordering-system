@@ -19,7 +19,9 @@ Partial Class OrderScreen
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.MyOder1 = New VisualBasicAssignment.MyOder()
+        Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
         Me.SuspendLayout()
         '
         'MyOder1
@@ -30,6 +32,10 @@ Partial Class OrderScreen
         Me.MyOder1.Name = "MyOder1"
         Me.MyOder1.Size = New System.Drawing.Size(1087, 535)
         Me.MyOder1.TabIndex = 8
+        '
+        'Guna2BorderlessForm1
+        '
+        Me.Guna2BorderlessForm1.ContainerControl = Me
         '
         'OrderScreen
         '
@@ -43,4 +49,5 @@ Partial Class OrderScreen
     End Sub
 
     Friend WithEvents MyOder1 As MyOder
+    Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
 End Class

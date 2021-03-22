@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class OrderGroup
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,40 +20,14 @@ Partial Class OrderGroup
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.OrderItem1 = New VisualBasicAssignment.OrderItem()
-        Me.OrderItem2 = New VisualBasicAssignment.OrderItem()
-        Me.OrderItem3 = New VisualBasicAssignment.OrderItem()
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.SuspendLayout()
-        '
-        'OrderItem1
-        '
-        Me.OrderItem1.BackColor = System.Drawing.Color.White
-        Me.OrderItem1.Location = New System.Drawing.Point(8, 53)
-        Me.OrderItem1.Name = "OrderItem1"
-        Me.OrderItem1.Size = New System.Drawing.Size(716, 138)
-        Me.OrderItem1.TabIndex = 0
-        '
-        'OrderItem2
-        '
-        Me.OrderItem2.BackColor = System.Drawing.Color.White
-        Me.OrderItem2.Location = New System.Drawing.Point(8, 197)
-        Me.OrderItem2.Name = "OrderItem2"
-        Me.OrderItem2.Size = New System.Drawing.Size(716, 138)
-        Me.OrderItem2.TabIndex = 1
-        '
-        'OrderItem3
-        '
-        Me.OrderItem3.BackColor = System.Drawing.Color.White
-        Me.OrderItem3.Location = New System.Drawing.Point(7, 341)
-        Me.OrderItem3.Name = "OrderItem3"
-        Me.OrderItem3.Size = New System.Drawing.Size(717, 143)
-        Me.OrderItem3.TabIndex = 2
         '
         'Guna2HtmlLabel1
         '
@@ -106,30 +80,34 @@ Partial Class OrderGroup
         Me.Guna2Button2.TabIndex = 6
         Me.Guna2Button2.Text = "View"
         '
+        'Panel1
+        '
+        Me.Panel1.AutoSize = True
+        Me.Panel1.Location = New System.Drawing.Point(10, 54)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(714, 427)
+        Me.Panel1.TabIndex = 7
+        '
         'OrderGroup
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
         Me.BackColor = System.Drawing.Color.Gainsboro
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Guna2Button2)
         Me.Controls.Add(Me.Guna2Button1)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Guna2HtmlLabel1)
-        Me.Controls.Add(Me.OrderItem3)
-        Me.Controls.Add(Me.OrderItem2)
-        Me.Controls.Add(Me.OrderItem1)
         Me.Name = "OrderGroup"
         Me.Size = New System.Drawing.Size(728, 491)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents OrderItem1 As OrderItem
-    Friend WithEvents OrderItem2 As OrderItem
-    Friend WithEvents OrderItem3 As OrderItem
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Panel1 As Panel
 End Class

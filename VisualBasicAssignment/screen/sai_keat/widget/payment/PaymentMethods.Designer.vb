@@ -37,12 +37,12 @@ Partial Class PaymentMethods
         Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2Button1.ForeColor = System.Drawing.Color.White
         Me.Guna2Button1.HoverState.Parent = Me.Guna2Button1
-        Me.Guna2Button1.Location = New System.Drawing.Point(250, 472)
+        Me.Guna2Button1.Location = New System.Drawing.Point(183, 472)
         Me.Guna2Button1.Name = "Guna2Button1"
         Me.Guna2Button1.ShadowDecoration.Parent = Me.Guna2Button1
-        Me.Guna2Button1.Size = New System.Drawing.Size(180, 45)
+        Me.Guna2Button1.Size = New System.Drawing.Size(258, 45)
         Me.Guna2Button1.TabIndex = 0
-        Me.Guna2Button1.Text = "Paypal checkout"
+        Me.Guna2Button1.Text = "Touch and GO checkout"
         '
         'Guna2Button2
         '
@@ -52,12 +52,12 @@ Partial Class PaymentMethods
         Me.Guna2Button2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2Button2.ForeColor = System.Drawing.Color.White
         Me.Guna2Button2.HoverState.Parent = Me.Guna2Button2
-        Me.Guna2Button2.Location = New System.Drawing.Point(436, 472)
+        Me.Guna2Button2.Location = New System.Drawing.Point(447, 472)
         Me.Guna2Button2.Name = "Guna2Button2"
         Me.Guna2Button2.ShadowDecoration.Parent = Me.Guna2Button2
         Me.Guna2Button2.Size = New System.Drawing.Size(180, 45)
         Me.Guna2Button2.TabIndex = 1
-        Me.Guna2Button2.Text = "EBay checkout"
+        Me.Guna2Button2.Text = "Cash checkout"
         '
         'Guna2Button3
         '
@@ -67,7 +67,7 @@ Partial Class PaymentMethods
         Me.Guna2Button3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2Button3.ForeColor = System.Drawing.Color.White
         Me.Guna2Button3.HoverState.Parent = Me.Guna2Button3
-        Me.Guna2Button3.Location = New System.Drawing.Point(622, 472)
+        Me.Guna2Button3.Location = New System.Drawing.Point(633, 472)
         Me.Guna2Button3.Name = "Guna2Button3"
         Me.Guna2Button3.ShadowDecoration.Parent = Me.Guna2Button3
         Me.Guna2Button3.Size = New System.Drawing.Size(230, 45)

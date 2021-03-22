@@ -15,4 +15,8 @@
         Screen.NAV_HOME_SCREEN.Show()
         Me.Hide()
     End Sub
+
+    Private Sub lblDebug_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lblDebug.LinkClicked
+        Screen.NAV_DEBUG_SCREEN.Show()
+    End Sub
 End Class

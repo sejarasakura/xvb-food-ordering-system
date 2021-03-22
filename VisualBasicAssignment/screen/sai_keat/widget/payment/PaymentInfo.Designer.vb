@@ -20,10 +20,10 @@ Partial Class PaymentInfo
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PaymentInfo))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PaymentInfo))
         Me.Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.Guna2ShadowPanel1 = New Guna.UI2.WinForms.Guna2ShadowPanel()
@@ -41,27 +41,27 @@ Partial Class PaymentInfo
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txbPhoneNumber = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2ShadowPanel2 = New Guna.UI2.WinForms.Guna2ShadowPanel()
-        Me.Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(Me.components)
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.btnCheckout = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2DataGridView1 = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.FoodShopDataSet = New VisualBasicAssignment.FoodShopDataSet()
-        Me.FoodBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.FoodTableAdapter = New VisualBasicAssignment.FoodShopDataSetTableAdapters.FoodTableAdapter()
         Me.TitleDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.price = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FoodBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.FoodShopDataSet = New VisualBasicAssignment.FoodShopDataSet()
+        Me.Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(Me.components)
+        Me.btnCheckout = New Guna.UI2.WinForms.Guna2Button()
+        Me.FoodTableAdapter = New VisualBasicAssignment.FoodShopDataSetTableAdapters.FoodTableAdapter()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Guna2ShadowPanel1.SuspendLayout()
         Me.Guna2ShadowPanel2.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FoodShopDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FoodBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FoodShopDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Separator1
@@ -220,9 +220,10 @@ Partial Class PaymentInfo
         Me.ckbHavingHere.CheckedState.BorderRadius = 0
         Me.ckbHavingHere.CheckedState.BorderThickness = 0
         Me.ckbHavingHere.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ckbHavingHere.Location = New System.Drawing.Point(474, 397)
+        Me.ckbHavingHere.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ckbHavingHere.Location = New System.Drawing.Point(428, 397)
         Me.ckbHavingHere.Name = "ckbHavingHere"
-        Me.ckbHavingHere.Size = New System.Drawing.Size(145, 21)
+        Me.ckbHavingHere.Size = New System.Drawing.Size(191, 29)
         Me.ckbHavingHere.TabIndex = 7
         Me.ckbHavingHere.Text = "Having lunch here"
         Me.ckbHavingHere.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
@@ -345,62 +346,6 @@ Partial Class PaymentInfo
         Me.Guna2ShadowPanel2.Size = New System.Drawing.Size(396, 320)
         Me.Guna2ShadowPanel2.TabIndex = 3
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(651, 471)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(81, 51)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 4
-        Me.PictureBox1.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(757, 471)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(93, 51)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 5
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(876, 471)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(81, 51)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 6
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(963, 471)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(67, 51)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 7
-        Me.PictureBox4.TabStop = False
-        '
-        'btnCheckout
-        '
-        Me.btnCheckout.BorderRadius = 5
-        Me.btnCheckout.CheckedState.Parent = Me.btnCheckout
-        Me.btnCheckout.CustomImages.Parent = Me.btnCheckout
-        Me.btnCheckout.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnCheckout.Font = New System.Drawing.Font("Segoe UI Black", 16.0!, System.Drawing.FontStyle.Bold)
-        Me.btnCheckout.ForeColor = System.Drawing.Color.White
-        Me.btnCheckout.HoverState.Parent = Me.btnCheckout
-        Me.btnCheckout.Location = New System.Drawing.Point(652, 401)
-        Me.btnCheckout.Name = "btnCheckout"
-        Me.btnCheckout.ShadowDecoration.Parent = Me.btnCheckout
-        Me.btnCheckout.Size = New System.Drawing.Size(395, 64)
-        Me.btnCheckout.TabIndex = 8
-        Me.btnCheckout.Text = "Checkout"
-        '
         'Guna2DataGridView1
         '
         Me.Guna2DataGridView1.AllowUserToAddRows = False
@@ -421,7 +366,7 @@ Partial Class PaymentInfo
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.Guna2DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.Guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Guna2DataGridView1.ColumnHeadersHeight = 27
         Me.Guna2DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.TitleDataGridViewTextBoxColumn, Me.price})
         Me.Guna2DataGridView1.DataSource = Me.FoodBindingSource
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -454,7 +399,7 @@ Partial Class PaymentInfo
         Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
         Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 27
         Me.Guna2DataGridView1.ThemeStyle.ReadOnly = False
         Me.Guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
@@ -464,20 +409,6 @@ Partial Class PaymentInfo
         Me.Guna2DataGridView1.ThemeStyle.RowsStyle.Height = 24
         Me.Guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        '
-        'FoodShopDataSet
-        '
-        Me.FoodShopDataSet.DataSetName = "FoodShopDataSet"
-        Me.FoodShopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'FoodBindingSource
-        '
-        Me.FoodBindingSource.DataMember = "Food"
-        Me.FoodBindingSource.DataSource = Me.FoodShopDataSet
-        '
-        'FoodTableAdapter
-        '
-        Me.FoodTableAdapter.ClearBeforeFill = True
         '
         'TitleDataGridViewTextBoxColumn
         '
@@ -492,6 +423,76 @@ Partial Class PaymentInfo
         Me.price.HeaderText = "price"
         Me.price.MinimumWidth = 6
         Me.price.Name = "price"
+        '
+        'FoodBindingSource
+        '
+        Me.FoodBindingSource.DataMember = "Food"
+        Me.FoodBindingSource.DataSource = Me.FoodShopDataSet
+        '
+        'FoodShopDataSet
+        '
+        Me.FoodShopDataSet.DataSetName = "FoodShopDataSet"
+        Me.FoodShopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'btnCheckout
+        '
+        Me.btnCheckout.BorderRadius = 5
+        Me.btnCheckout.CheckedState.Parent = Me.btnCheckout
+        Me.btnCheckout.CustomImages.Parent = Me.btnCheckout
+        Me.btnCheckout.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnCheckout.Font = New System.Drawing.Font("Segoe UI Black", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.btnCheckout.ForeColor = System.Drawing.Color.White
+        Me.btnCheckout.HoverState.Parent = Me.btnCheckout
+        Me.btnCheckout.Location = New System.Drawing.Point(652, 401)
+        Me.btnCheckout.Name = "btnCheckout"
+        Me.btnCheckout.ShadowDecoration.Parent = Me.btnCheckout
+        Me.btnCheckout.Size = New System.Drawing.Size(395, 64)
+        Me.btnCheckout.TabIndex = 8
+        Me.btnCheckout.Text = "Checkout"
+        '
+        'FoodTableAdapter
+        '
+        Me.FoodTableAdapter.ClearBeforeFill = True
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
+        Me.PictureBox4.Location = New System.Drawing.Point(963, 471)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(67, 51)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox4.TabIndex = 7
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(876, 471)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(81, 51)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 6
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(757, 471)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(93, 51)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 5
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(651, 471)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(81, 51)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 4
+        Me.PictureBox1.TabStop = False
         '
         'PaymentInfo
         '
@@ -510,13 +511,13 @@ Partial Class PaymentInfo
         Me.Guna2ShadowPanel1.ResumeLayout(False)
         Me.Guna2ShadowPanel1.PerformLayout()
         Me.Guna2ShadowPanel2.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Guna2DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FoodShopDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FoodBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FoodShopDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

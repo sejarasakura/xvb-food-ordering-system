@@ -28,12 +28,14 @@ Partial Class PaymentConfirm
         Me.LinkLabel4 = New System.Windows.Forms.LinkLabel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.OrderGroup1 = New VisualBasicAssignment.OrderGroup()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2HtmlLabel6 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.OrderItem1 = New VisualBasicAssignment.OrderItem()
+        Me.OrderItem2 = New VisualBasicAssignment.OrderItem()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -99,30 +101,23 @@ Partial Class PaymentConfirm
         '
         Me.Panel1.AutoScroll = True
         Me.Panel1.AutoSize = True
+        Me.Panel1.Controls.Add(Me.OrderItem2)
+        Me.Panel1.Controls.Add(Me.OrderItem1)
         Me.Panel1.Controls.Add(Me.OrderGroup1)
         Me.Panel1.Location = New System.Drawing.Point(37, 96)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(795, 531)
+        Me.Panel1.Size = New System.Drawing.Size(1023, 531)
         Me.Panel1.TabIndex = 9
         '
         'OrderGroup1
         '
+        Me.OrderGroup1.AutoSize = True
         Me.OrderGroup1.BackColor = System.Drawing.Color.Gainsboro
         Me.OrderGroup1.Location = New System.Drawing.Point(20, 20)
         Me.OrderGroup1.Margin = New System.Windows.Forms.Padding(20)
         Me.OrderGroup1.Name = "OrderGroup1"
         Me.OrderGroup1.Size = New System.Drawing.Size(728, 491)
         Me.OrderGroup1.TabIndex = 0
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(861, 140)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(177, 143)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 10
-        Me.PictureBox1.TabStop = False
         '
         'Guna2HtmlLabel2
         '
@@ -174,6 +169,30 @@ Partial Class PaymentConfirm
         Me.Guna2HtmlLabel6.TabIndex = 14
         Me.Guna2HtmlLabel6.Text = "Delivary Fees: RM 3.00"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(861, 140)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(177, 143)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 10
+        Me.PictureBox1.TabStop = False
+        '
+        'OrderItem1
+        '
+        Me.OrderItem1.Location = New System.Drawing.Point(26, 81)
+        Me.OrderItem1.Name = "OrderItem1"
+        Me.OrderItem1.Size = New System.Drawing.Size(716, 138)
+        Me.OrderItem1.TabIndex = 1
+        '
+        'OrderItem2
+        '
+        Me.OrderItem2.Location = New System.Drawing.Point(26, 225)
+        Me.OrderItem2.Name = "OrderItem2"
+        Me.OrderItem2.Size = New System.Drawing.Size(716, 138)
+        Me.OrderItem2.TabIndex = 2
+        '
         'PaymentConfirm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -192,6 +211,7 @@ Partial Class PaymentConfirm
         Me.Controls.Add(Me.Guna2Separator1)
         Me.Name = "PaymentConfirm"
         Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -205,11 +225,13 @@ Partial Class PaymentConfirm
     Friend WithEvents LinkLabel3 As LinkLabel
     Friend WithEvents LinkLabel4 As LinkLabel
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents OrderGroup1 As OrderGroup
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel5 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel6 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents OrderGroup1 As OrderGroup
+    Friend WithEvents OrderItem2 As OrderItem
+    Friend WithEvents OrderItem1 As OrderItem
 End Class

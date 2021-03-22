@@ -446,12 +446,11 @@
   </data>
   <data name="btnNav.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAADfSURBVHhe7drBSsNQFEXRgF+j0m+3Oqr9qWI7c6LnjjqJbcgr3IBrwZ72wQs0GZwJAAAAAAAA
-        gH/vNX2kr/Sjm9UdvaeX9BC7dElzh+nv6s7q7oYd09wBut9nGvKUvtPcj+t+dXd1h6t5AGMNP4DiL2h9
-        hzTMS3hd5/SQl3CpT6p9OqW5w3St7ugtPScAAAAAAIDF7IKWZxe0keyCNpBdUHN2Qc3ZBTVnF9SYXVBT
-        dkEAAAAAAMAqdkHLswvaSHZBG8guqDm7oObsgpqzC2rMLqgpuyAAAAAAAAAAYpp+AQpXUNDHEYppAAAA
-        AElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAAAN9JREFUeF7t
+        2sFKw1AURdGAX6PSb7c6qv2pYjtzoueOOoltyCvcgGvBnvbBCzQZnAkAAAAAAACAf+81faSv9KOb1R29
+        p5f0ELt0SXOH6e/qzuruhh3T3AG632ca8pS+09yP6351d3WHq3kAYw0/gOIvaH2HNMxLeF3n9JCXcKlP
+        qn06pbnDdK3u6C09JwAAAAAAgMXsgpZnF7SR7II2kF1Qc3ZBzdkFNWcX1JhdUFN2QQAAAAAAwCp2Qcuz
+        C9pIdkEbyC6oObug5uyCmrMLaswuqCm7IAAAAAAAAABimn4BCldQ0McRimkAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="btnMini.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -516,16 +515,36 @@
         SZIkSZLkcXJx8R2d2KrvFxwvTwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="Guna2DragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="Guna2DragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>17, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.TrayHeight" type="System.Int32, mscorlib">
     <value>39</value>
-  </metadata>
-  <metadata name="Guna2DragControl2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="Guna2DragControl2.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>178, 17</value>
-  </metadata>
-  <metadata name="Timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="Timer1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>339, 17</value>
-  </metadata>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>resources\icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>resources\icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image.close_b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>resources\image.close_window_96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image.close_w" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>resources\image.close_window_96_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image.min_b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>resources\image.macos_minimize_90.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image.min_w" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>resources\image.macos_minimize_96_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

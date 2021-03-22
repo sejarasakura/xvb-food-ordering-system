@@ -187,6 +187,12 @@
     <Compile Include="model\ResetPasswordToken.vb">
       <DependentUpon>FoodShopModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="screen\DebugScreen.Designer.vb">
+      <DependentUpon>DebugScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="screen\DebugScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="screen\HomeScreen.Designer.vb">
       <DependentUpon>HomeScreen.vb</DependentUpon>
     </Compile>
@@ -197,6 +203,18 @@
       <DependentUpon>LoginScreen.vb</DependentUpon>
     </Compile>
     <Compile Include="screen\LHW\LoginScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="screen\LHW\ProfileScreen.Designer.vb">
+      <DependentUpon>ProfileScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="screen\LHW\ProfileScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="screen\LHW\RegistrationScreenStaff.Designer.vb">
+      <DependentUpon>RegistrationScreenStaff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="screen\LHW\RegistrationScreenStaff.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="screen\sai_keat\OrderScreen.Designer.vb">
@@ -278,6 +296,18 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="screen\Screen.vb" />
+    <Compile Include="services\Alertdebug.designer.vb">
+      <DependentUpon>Alertdebug.vb</DependentUpon>
+    </Compile>
+    <Compile Include="services\Alertdebug.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="services\Form_Alert.designer.vb">
+      <DependentUpon>Form_Alert.vb</DependentUpon>
+    </Compile>
+    <Compile Include="services\Form_Alert.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SplashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -289,6 +319,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -329,11 +360,20 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="screen\DebugScreen.resx">
+      <DependentUpon>DebugScreen.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="screen\HomeScreen.resx">
       <DependentUpon>HomeScreen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="screen\LHW\LoginScreen.resx">
       <DependentUpon>LoginScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screen\LHW\ProfileScreen.resx">
+      <DependentUpon>ProfileScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screen\LHW\RegistrationScreenStaff.resx">
+      <DependentUpon>RegistrationScreenStaff.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="screen\sai_keat\OrderScreen.resx">
       <DependentUpon>OrderScreen.vb</DependentUpon>
@@ -355,6 +395,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="screen\sai_keat\widget\payment\PaymentInfo.resx">
       <DependentUpon>PaymentInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screen\sai_keat\widget\payment\PaymentMethods.resx">
+      <DependentUpon>PaymentMethods.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="services\Alertdebug.resx">
+      <DependentUpon>Alertdebug.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="services\Form_Alert.resx">
+      <DependentUpon>Form_Alert.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
@@ -400,7 +449,7 @@
   <ItemGroup>
     <Folder Include="commons\" />
     <Folder Include="screen\LSK\" />
-    <Folder Include="services\" />
+    <Folder Include="screen\sai_keat\widget\payment\methods\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="asset\image\main\default_user.png" />
@@ -442,6 +491,10 @@
     <Content Include="master\Resources\payment.png" />
     <Content Include="master\Resources\profile.png" />
     <Content Include="master\Resources\profile1.png" />
+    <None Include="Resources\error.png" />
+    <None Include="Resources\warning.png" />
+    <None Include="Resources\success.png" />
+    <None Include="Resources\info.png" />
     <None Include="Resources\visa.png" />
     <None Include="Resources\mastercard.png" />
     <None Include="Resources\ebay.png" />

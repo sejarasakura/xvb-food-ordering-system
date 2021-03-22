@@ -29,14 +29,17 @@ Partial Class HomeScreen
         '
         Me.Panel4.Controls.Add(Me.Guna2HtmlLabel1)
         Me.Panel4.Location = New System.Drawing.Point(234, 191)
+        Me.Panel4.MaximumSize = New System.Drawing.Size(1087, 535)
+        Me.Panel4.MinimumSize = New System.Drawing.Size(1087, 535)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(1087, 535)
         Me.Panel4.TabIndex = 8
         '
         'Guna2HtmlLabel1
         '
+        Me.Guna2HtmlLabel1.AutoSize = False
         Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(3, 3)
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(3, 2)
         Me.Guna2HtmlLabel1.MaximumSize = New System.Drawing.Size(1085, 533)
         Me.Guna2HtmlLabel1.MinimumSize = New System.Drawing.Size(1085, 533)
         Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
@@ -52,7 +55,6 @@ Partial Class HomeScreen
         Me.Name = "HomeScreen"
         Me.Controls.SetChildIndex(Me.Panel4, 0)
         Me.Panel4.ResumeLayout(False)
-        Me.Panel4.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
