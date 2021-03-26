@@ -21,8 +21,8 @@ Public Class Login
         If name = "" Then
             err.AppendLine("Please Insert Username!")
             ctr = If(ctr, txtName)
-        End If
-        If txtPassword.Text = "" Then
+
+        ElseIf txtPassword.Text = "" Then
             err.AppendLine("Please Insert Password!")
             ctr = If(ctr, txtPassword)
         Else
