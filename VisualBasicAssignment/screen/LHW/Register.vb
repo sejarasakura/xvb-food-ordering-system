@@ -1,24 +1,52 @@
 ﻿Public Class Register
     Dim err As New ErrorProvider
 
-    Private Sub RegistrationScreenCustomer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
     Private Sub txtUserName_GotFocus(sender As Object, e As EventArgs) Handles txtUserName.GotFocus
-        txtUserName.Text = ""
+        If txtUserName.Text = "" Or txtUserName.Text = "Username" Then
+            txtUserName.Text = ""
+        End If
     End Sub
 
     Private Sub txtEmail_GotFocus(sender As Object, e As EventArgs) Handles txtEmail.GotFocus
-        txtEmail.Text = ""
+        If txtEmail.Text = "" Or txtEmail.Text = "Email" Then
+            txtEmail.Text = ""
+        End If
     End Sub
 
     Private Sub txtPassword_GotFocus(sender As Object, e As EventArgs) Handles txtPassword.GotFocus
-        txtPassword.Text = ""
+        If txtPassword.Text = "" Or txtPassword.Text = "Password" Then
+            txtPassword.Text = ""
+        End If
     End Sub
 
     Private Sub txtConfirmPassword_GotFocus(sender As Object, e As EventArgs) Handles txtConfirmPassword.GotFocus
-        txtConfirmPassword.Text = ""
+        If txtConfirmPassword.Text = "" Or txtConfirmPassword.Text = "Confirm Password" Then
+            txtConfirmPassword.Text = ""
+        End If
+    End Sub
+
+    Private Sub txtUserName_LostFocus(sender As Object, e As EventArgs) Handles txtUserName.LostFocus
+        If txtUserName.Text = "" Or txtUserName.Text = "Username" Then
+            txtUserName.Text = "Username"
+        End If
+    End Sub
+
+    Private Sub txtEmail_LostFocus(sender As Object, e As EventArgs) Handles txtEmail.LostFocus
+        If txtEmail.Text = "" Or txtEmail.Text = "Email" Then
+            txtEmail.Text = "Email"
+        End If
+    End Sub
+
+    Private Sub txtPassword_LostFocus(sender As Object, e As EventArgs) Handles txtPassword.LostFocus
+        If txtPassword.Text = "" Or txtPassword.Text = "Password" Then
+            txtPassword.Text = "Password"
+        End If
+    End Sub
+
+    Private Sub txtConfirmPassword_LostFocus(sender As Object, e As EventArgs) Handles txtConfirmPassword.LostFocus
+        If txtConfirmPassword.Text = "" Or txtConfirmPassword.Text = "Confirm Password" Then
+            txtConfirmPassword.Text = "Confirm Password"
+        End If
     End Sub
 
     Private Sub btnCreate_Click(sender As Object, e As EventArgs) Handles btnCreate.Click
