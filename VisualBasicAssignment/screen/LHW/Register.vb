@@ -49,6 +49,11 @@
         End If
     End Sub
 
+    Private Function IsDuplicatedEmail(strEmail As String) As Boolean
+        Dim db As New FoodShopDataContext()
+        Return db.Customers.Any(Function(o) o.cust_email = strEmail)
+    End Function
+
     Private Sub btnCreate_Click(sender As Object, e As EventArgs) Handles btnCreate.Click
         Dim strName As String = txtUserName.Text()
         Dim strEmail As String = txtEmail.Text()
@@ -66,6 +71,9 @@
         If strEmail = "" Then
             err.SetError(txtEmail, "Please type [Email]")
             err.Tag = If(Err.Tag, txtEmail)
+        ElseIf IsDuplicatedEmail(strEmail) Then
+            err.SetError(txtEmail, "[Email] already registered")
+            err.Tag = If(err.Tag, txtEmail)
         Else
             err.SetError(txtEmail, Nothing)
         End If
