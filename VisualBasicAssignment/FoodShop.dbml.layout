@@ -2,10 +2,10 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="FoodShop">
   <DataContextMoniker Name="/FoodShopDataContext" />
   <nestedChildShapes>
-    <classShape Id="c73e46cf-7cda-43bf-a763-fe01d0b6acea" absoluteBounds="0.5, 0.5, 2, 2.1554996744791666">
+    <classShape Id="f952ade2-63ce-4be0-9ac3-39d0325c1bb1" absoluteBounds="0.5, 0.5, 2, 2.1554996744791666">
       <DataClassMoniker Name="/FoodShopDataContext/Customer" />
       <nestedChildShapes>
-        <elementListCompartment Id="33e84a22-9c02-48cf-9de6-62278e8ebebb" absoluteBounds="0.51499999999999968, 0.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="8359ffa6-daaf-436a-a18a-ee299a937926" absoluteBounds="0.51499999999999968, 0.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

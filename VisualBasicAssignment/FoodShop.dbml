@@ -2,11 +2,11 @@
   <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\FoodShop.mdf;Integrated Security=True" SettingsObjectName="VisualBasicAssignment.My.MySettings" SettingsPropertyName="FoodShopConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Customer" Member="Customers">
     <Type Name="Customer">
-      <Column Name="user_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_id" Type="System.String" DbType="VarChar(23) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="birthday_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="membership_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="wallate_amount" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="cust_name" Type="System.String" DbType="VarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="cust_name" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
       <Column Name="cust_email" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
       <Column Name="cust_password" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
     </Type>

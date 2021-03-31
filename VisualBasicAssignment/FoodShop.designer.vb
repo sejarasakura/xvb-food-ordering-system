@@ -77,7 +77,7 @@ Partial Public Class Customer
 	
 	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
 	
-	Private _user_id As System.Nullable(Of Integer)
+	Private _user_id As String
 	
 	Private _birthday_date As System.Nullable(Of Date)
 	
@@ -98,7 +98,7 @@ Partial Public Class Customer
     End Sub
     Partial Private Sub OnCreated()
     End Sub
-    Partial Private Sub Onuser_idChanging(value As System.Nullable(Of Integer))
+    Partial Private Sub Onuser_idChanging(value As String)
     End Sub
     Partial Private Sub Onuser_idChanged()
     End Sub
@@ -133,13 +133,13 @@ Partial Public Class Customer
 		OnCreated
 	End Sub
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_user_id", DbType:="Int")>  _
-	Public Property user_id() As System.Nullable(Of Integer)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_user_id", DbType:="VarChar(23) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
+	Public Property user_id() As String
 		Get
 			Return Me._user_id
 		End Get
 		Set
-			If (Me._user_id.Equals(value) = false) Then
+			If (String.Equals(Me._user_id, value) = false) Then
 				Me.Onuser_idChanging(value)
 				Me.SendPropertyChanging
 				Me._user_id = value
@@ -197,7 +197,7 @@ Partial Public Class Customer
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_cust_name", DbType:="VarChar(30) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_cust_name", DbType:="VarChar(30) NOT NULL", CanBeNull:=false)>  _
 	Public Property cust_name() As String
 		Get
 			Return Me._cust_name
