@@ -24,18 +24,24 @@ Partial Class Register
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.lblCustId = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.btnCreate = New Guna.UI2.WinForms.Guna2Button()
         Me.txtConfirmPassword = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtPassword = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtEmail = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtUserName = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2AnimateWindow1 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
+        Me.err = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.GroupBox1.SuspendLayout()
+        CType(Me.err, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.White
+        Me.GroupBox1.Controls.Add(Me.Guna2HtmlLabel1)
+        Me.GroupBox1.Controls.Add(Me.lblCustId)
         Me.GroupBox1.Controls.Add(Me.btnCreate)
         Me.GroupBox1.Controls.Add(Me.txtConfirmPassword)
         Me.GroupBox1.Controls.Add(Me.txtPassword)
@@ -51,6 +57,28 @@ Partial Class Register
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Registration"
         '
+        'Guna2HtmlLabel1
+        '
+        Me.Guna2HtmlLabel1.AutoSize = False
+        Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!)
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(149, 52)
+        Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
+        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(122, 43)
+        Me.Guna2HtmlLabel1.TabIndex = 6
+        Me.Guna2HtmlLabel1.Text = "Customer Id:"
+        '
+        'lblCustId
+        '
+        Me.lblCustId.AutoSize = False
+        Me.lblCustId.BackColor = System.Drawing.Color.Transparent
+        Me.lblCustId.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!)
+        Me.lblCustId.Location = New System.Drawing.Point(283, 52)
+        Me.lblCustId.Name = "lblCustId"
+        Me.lblCustId.Size = New System.Drawing.Size(331, 43)
+        Me.lblCustId.TabIndex = 6
+        Me.lblCustId.Text = Nothing
+        '
         'btnCreate
         '
         Me.btnCreate.BackColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(205, Byte), Integer))
@@ -59,7 +87,7 @@ Partial Class Register
         Me.btnCreate.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.btnCreate.ForeColor = System.Drawing.Color.White
         Me.btnCreate.HoverState.Parent = Me.btnCreate
-        Me.btnCreate.Location = New System.Drawing.Point(287, 319)
+        Me.btnCreate.Location = New System.Drawing.Point(283, 338)
         Me.btnCreate.Name = "btnCreate"
         Me.btnCreate.ShadowDecoration.Parent = Me.btnCreate
         Me.btnCreate.Size = New System.Drawing.Size(207, 62)
@@ -82,7 +110,7 @@ Partial Class Register
         Me.txtConfirmPassword.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtConfirmPassword.HoverState.Parent = Me.txtConfirmPassword
-        Me.txtConfirmPassword.Location = New System.Drawing.Point(149, 233)
+        Me.txtConfirmPassword.Location = New System.Drawing.Point(149, 282)
         Me.txtConfirmPassword.Margin = New System.Windows.Forms.Padding(2)
         Me.txtConfirmPassword.Name = "txtConfirmPassword"
         Me.txtConfirmPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -109,7 +137,7 @@ Partial Class Register
         Me.txtPassword.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtPassword.HoverState.Parent = Me.txtPassword
-        Me.txtPassword.Location = New System.Drawing.Point(149, 167)
+        Me.txtPassword.Location = New System.Drawing.Point(149, 227)
         Me.txtPassword.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -136,7 +164,7 @@ Partial Class Register
         Me.txtEmail.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtEmail.HoverState.Parent = Me.txtEmail
-        Me.txtEmail.Location = New System.Drawing.Point(149, 101)
+        Me.txtEmail.Location = New System.Drawing.Point(149, 172)
         Me.txtEmail.Margin = New System.Windows.Forms.Padding(2)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -163,7 +191,7 @@ Partial Class Register
         Me.txtUserName.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUserName.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtUserName.HoverState.Parent = Me.txtUserName
-        Me.txtUserName.Location = New System.Drawing.Point(149, 33)
+        Me.txtUserName.Location = New System.Drawing.Point(149, 117)
         Me.txtUserName.Margin = New System.Windows.Forms.Padding(2)
         Me.txtUserName.Name = "txtUserName"
         Me.txtUserName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -173,6 +201,11 @@ Partial Class Register
         Me.txtUserName.ShadowDecoration.Parent = Me.txtUserName
         Me.txtUserName.Size = New System.Drawing.Size(465, 51)
         Me.txtUserName.TabIndex = 1
+        '
+        'err
+        '
+        Me.err.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink
+        Me.err.ContainerControl = Me
         '
         'Register
         '
@@ -188,6 +221,7 @@ Partial Class Register
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Register"
         Me.GroupBox1.ResumeLayout(False)
+        CType(Me.err, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -199,4 +233,7 @@ Partial Class Register
     Friend WithEvents txtPassword As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtEmail As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2AnimateWindow1 As Guna.UI2.WinForms.Guna2AnimateWindow
+    Friend WithEvents lblCustId As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents err As ErrorProvider
 End Class
