@@ -64,7 +64,7 @@ Partial Class Register
         Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!)
         Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(149, 52)
         Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(122, 43)
+        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(161, 43)
         Me.Guna2HtmlLabel1.TabIndex = 6
         Me.Guna2HtmlLabel1.Text = "Customer Id:"
         '
@@ -73,9 +73,9 @@ Partial Class Register
         Me.lblCustId.AutoSize = False
         Me.lblCustId.BackColor = System.Drawing.Color.Transparent
         Me.lblCustId.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!)
-        Me.lblCustId.Location = New System.Drawing.Point(283, 52)
+        Me.lblCustId.Location = New System.Drawing.Point(316, 52)
         Me.lblCustId.Name = "lblCustId"
-        Me.lblCustId.Size = New System.Drawing.Size(331, 43)
+        Me.lblCustId.Size = New System.Drawing.Size(269, 43)
         Me.lblCustId.TabIndex = 6
         Me.lblCustId.Text = Nothing
         '

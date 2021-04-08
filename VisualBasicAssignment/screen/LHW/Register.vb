@@ -1,9 +1,10 @@
 ﻿Public Class Register
+
     Dim db As New FoodShopDataContext()
 
     Private Sub AutoGenerateCustId()
-        Dim rs = (From c In db.Customers).Count()
-        lblCustId.Text = "c" & (100000000 + rs).ToString()
+        Dim rs = (From c In db.Users).Count()
+        lblCustId.Text = (100000000 + rs).ToString()
     End Sub
 
     Private Sub Register_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -60,12 +61,12 @@
 
     Private Function IsDuplicatedName(strName As String) As Boolean
         Dim db As New FoodShopDataContext()
-        Return db.Customers.Any(Function(o) o.cust_name = strName)
+        Return db.Users.Any(Function(o) o.username = strName)
     End Function
 
     Private Function IsDuplicatedEmail(strEmail As String) As Boolean
         Dim db As New FoodShopDataContext()
-        Return db.Customers.Any(Function(o) o.cust_email = strEmail)
+        Return db.Users.Any(Function(o) o.user_email = strEmail)
     End Function
 
     Private Sub btnCreate_Click(sender As Object, e As EventArgs) Handles btnCreate.Click
@@ -78,24 +79,24 @@
         err.Tag = Nothing
 
         If strName = "Username" Then
-                err.SetError(txtUserName, "Please type [Username]")
-                err.Tag = If(err.Tag, txtUserName)
-            ElseIf IsDuplicatedName(strName) Then
-                err.SetError(txtUserName, "This [Username] is already taken")
-                err.Tag = If(err.Tag, txtUserName)
-            Else
-                err.SetError(txtUserName, Nothing)
-            End If
+            err.SetError(txtUserName, "Please type [Username]")
+            err.Tag = If(err.Tag, txtUserName)
+        ElseIf IsDuplicatedName(strName) Then
+            err.SetError(txtUserName, "This [Username] is already taken")
+            err.Tag = If(err.Tag, txtUserName)
+        Else
+            err.SetError(txtUserName, Nothing)
+        End If
 
-            If strEmail = "Email" Then
-                err.SetError(txtEmail, "Please type [Email]")
-                err.Tag = If(err.Tag, txtEmail)
-            ElseIf IsDuplicatedEmail(strEmail) Then
-                err.SetError(txtEmail, "[Email] is already registered")
-                err.Tag = If(err.Tag, txtEmail)
-            Else
-                err.SetError(txtEmail, Nothing)
-            End If
+        If strEmail = "Email" Then
+            err.SetError(txtEmail, "Please type [Email]")
+            err.Tag = If(err.Tag, txtEmail)
+        ElseIf IsDuplicatedEmail(strEmail) Then
+            err.SetError(txtEmail, "[Email] is already registered")
+            err.Tag = If(err.Tag, txtEmail)
+        Else
+            err.SetError(txtEmail, Nothing)
+        End If
 
         If strPassword = "Password" And strCPassword = "Confirm Password" Then
             err.SetError(txtPassword, "Please type [Password]")
@@ -111,21 +112,21 @@
             MessageBox.Show("Comfirm Password does not match!" & vbNewLine & "Please fill up again!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
         If err.Tag IsNot Nothing Then
-                CType(err.Tag, Control).Focus()
-                Return
-            End If
+            CType(err.Tag, Control).Focus()
+            Return
+        End If
 
-            Dim c As New Customer()
-            c.user_id = lblCustId.Text
-            c.cust_name = strName
-            c.cust_email = strEmail
-            c.cust_password = strPassword
+        Dim c As New User()
+        c.user_id = lblCustId.Text
+        c.username = strName
+        c.user_email = strEmail
+        c.password = strPassword
 
-            Dim db As New FoodShopDataContext()
-            db.Customers.InsertOnSubmit(c)
-            db.SubmitChanges()
+        Dim db As New FoodShopDataContext()
+        db.Users.InsertOnSubmit(c)
+        db.SubmitChanges()
 
-            MessageBox.Show("Successfully Registered", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        MessageBox.Show("Successfully Registered", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
     End Sub
 
