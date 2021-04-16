@@ -1,7 +1,7 @@
-﻿Imports System.ComponentModel
-Public Class Master
+﻿Public Class Form2
+
     Dim statusMax As Boolean = True
-    Dim resources As ComponentResourceManager = New ComponentResourceManager(GetType(Master))
+    Private navindex As Integer
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -11,10 +11,30 @@ Public Class Master
         Me.Hide()
     End Sub
 
-    Private Sub btn_Click(sender As Object, e As EventArgs) Handles btnProfile.MouseClick, btnMenu.MouseClick, btnOrder.MouseClick, btnCart.MouseClick
-        btnProfile.FillColor = Color.White
-        btnProfile.ForeColor = Color.Black
+    Private Sub btnClose_MouseHover(sender As Object, e As EventArgs) Handles btnClose.MouseHover
+        'btnClose.Image = My.Resources.icons8_close_window_96
     End Sub
+
+    Private Sub btnClose_MouseLeave(sender As Object, e As EventArgs) Handles btnClose.MouseLeave
+        'btnClose.Image = My.Resources.icons8_close_window_96__1_
+    End Sub
+
+    Private Sub btnMini_MouseHover(sender As Object, e As EventArgs) Handles btnMini.MouseHover
+        'btnMini.Image = My.Resources.icons8_macos_minimize_90
+    End Sub
+
+    Private Sub btnMini_MouseLeave(sender As Object, e As EventArgs) Handles btnMini.MouseLeave
+        'btnMini.Image = My.Resources.icons8_macos_minimize_96__1_
+    End Sub
+
+    Private Sub picIcon_MouseHover(sender As Object, e As EventArgs) Handles picIcon.MouseHover
+        'picIcon.Image = My.Resources.icon2
+    End Sub
+
+    Private Sub picIcon_MouseLeave(sender As Object, e As EventArgs) Handles picIcon.MouseLeave
+        'picIcon.Image = My.Resources.icon1
+    End Sub
+
 
     Private Sub btnNav_Click(sender As Object, e As EventArgs) Handles btnNav.Click
         Timer1.Start()
@@ -26,7 +46,7 @@ Public Class Master
         If statusMax = True Then
             btnProfile.Text = ""
             btnMenu.Text = ""
-            btnCart.Text = ""
+            btnAddfood.Text = ""
             btnOrder.Text = ""
             Panel1.Width -= 10
             If Panel1.Size = Panel1.MinimumSize Then
@@ -36,7 +56,7 @@ Public Class Master
         Else
             btnProfile.Text = "PROFILE"
             btnMenu.Text = "MENU"
-            btnCart.Text = "CART"
+            btnAddfood.Text = "CART"
             btnOrder.Text = "ORDER"
             Panel1.Width += 10
             If Panel1.Size = Panel1.MaximumSize Then
@@ -54,11 +74,11 @@ Public Class Master
         switchPanel(Profile)
     End Sub
 
-    Private Sub btnCart_Click(sender As Object, e As EventArgs) Handles btnCart.Click
-        btnCart.FillColor = Color.White
-        btnCart.ForeColor = Color.Black
+    Private Sub btnAddFood_Click(sender As Object, e As EventArgs) Handles btnAddfood.Click
+        btnAddfood.FillColor = Color.White
+        btnAddfood.ForeColor = Color.Black
         checkNav(2)
-        'switchPanel(cartform)
+        switchPanel(addfood)
     End Sub
 
     Private Sub btnOrder_Click(sender As Object, e As EventArgs) Handles btnOrder.Click
@@ -78,8 +98,8 @@ Public Class Master
     Private Sub checkNav(index As Integer)
         Select Case index
             Case 1
-                btnCart.FillColor = Color.FromArgb(3, 139, 205)
-                btnCart.ForeColor = Color.White
+                btnAddfood.FillColor = Color.FromArgb(3, 139, 205)
+                btnAddfood.ForeColor = Color.White
                 btnOrder.FillColor = Color.FromArgb(3, 139, 205)
                 btnOrder.ForeColor = Color.White
                 btnMenu.FillColor = Color.FromArgb(3, 139, 205)
@@ -95,15 +115,15 @@ Public Class Master
             Case 3
                 btnProfile.FillColor = Color.FromArgb(3, 139, 205)
                 btnProfile.ForeColor = Color.White
-                btnCart.FillColor = Color.FromArgb(3, 139, 205)
-                btnCart.ForeColor = Color.White
+                btnAddfood.FillColor = Color.FromArgb(3, 139, 205)
+                btnAddfood.ForeColor = Color.White
                 btnMenu.FillColor = Color.FromArgb(3, 139, 205)
                 btnMenu.ForeColor = Color.White
             Case 4
                 btnProfile.FillColor = Color.FromArgb(3, 139, 205)
                 btnProfile.ForeColor = Color.White
-                btnCart.FillColor = Color.FromArgb(3, 139, 205)
-                btnCart.ForeColor = Color.White
+                btnAddfood.FillColor = Color.FromArgb(3, 139, 205)
+                btnAddfood.ForeColor = Color.White
                 btnOrder.FillColor = Color.FromArgb(3, 139, 205)
                 btnOrder.ForeColor = Color.White
         End Select
@@ -114,7 +134,12 @@ Public Class Master
         panel.TopLevel = False
         Panel4.Controls.Add(panel)
         panel.Show()
+
     End Sub
+
+
+
+
 
     'Private Sub Form1_Paint(sender As Object, e As System.Windows.Forms.PaintEventArgs) Handles Me.Paint
     '    ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.Black, 1, ButtonBorderStyle.Solid,

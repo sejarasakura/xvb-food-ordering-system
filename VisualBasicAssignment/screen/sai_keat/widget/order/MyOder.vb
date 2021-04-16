@@ -6,7 +6,7 @@
             Try
                 Me.dgvOrder.DataSource = (
                                       From d In db.Payments
-                                      Where d.user_id = 1
+                                      Where d.user_id = u.user_id
                                       Order By d.payment_date Descending
                                       Select New With {d.id, d.total_pay, d.payment_status}
                                       ).ToList()

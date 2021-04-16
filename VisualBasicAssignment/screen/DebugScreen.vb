@@ -20,6 +20,14 @@
     End Sub
 
     Private Sub Guna2Button7_Click(sender As Object, e As EventArgs) Handles Guna2Button7.Click
-        Screen.ALERT_DEBUG.Show()
+        'Screen.ALERT_DEBUG.Show()
+    End Sub
+
+    Private Sub Guna2Button8_Click(sender As Object, e As EventArgs) Handles Guna2Button8.Click
+        Screen.NAV_FORM1_CUST.Show()
+    End Sub
+
+    Private Sub Guna2Button6_Click(sender As Object, e As EventArgs) Handles Guna2Button6.Click
+        Screen.NAV_FORM2_STAFF.Show()
     End Sub
 End Class

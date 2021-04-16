@@ -5,12 +5,17 @@
     Private Sub ProfileScreen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim u As User = db.Users.FirstOrDefault(Function(i) i.username = username)
         loaddata()
-        If u.user_role = "s" Then
-            grpBox.Text = "Staff Information"
-        Else
-            If u.user_role = "c" Then
-                grpBox.Text = "Customer Information"
+
+        If u IsNot Nothing Then
+
+            If u.user_role = "s" Then
+                grpBox.Text = "Staff Information"
+            Else
+                If u.user_role = "c" Then
+                    grpBox.Text = "Customer Information"
+                End If
             End If
+
         End If
     End Sub
 

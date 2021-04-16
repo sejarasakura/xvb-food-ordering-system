@@ -22,6 +22,7 @@ Partial Class HomeScreen
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HomeScreen))
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.DataRepeater1 = New Microsoft.VisualBasic.PowerPacks.DataRepeater()
         Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -47,6 +48,14 @@ Partial Class HomeScreen
         Me.Guna2HtmlLabel1.TabIndex = 0
         Me.Guna2HtmlLabel1.Text = resources.GetString("Guna2HtmlLabel1.Text")
         '
+        'DataRepeater1
+        '
+        Me.DataRepeater1.Controls.Add(Me.DataRepeater1.ItemTemplate)
+        Me.DataRepeater1.Location = New System.Drawing.Point(0, 0)
+        Me.DataRepeater1.Name = "DataRepeater1"
+        Me.DataRepeater1.Size = New System.Drawing.Size(240, 150)
+        Me.DataRepeater1.TabIndex = 0
+        '
         'HomeScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -61,4 +70,5 @@ Partial Class HomeScreen
 
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents DataRepeater1 As PowerPacks.DataRepeater
 End Class

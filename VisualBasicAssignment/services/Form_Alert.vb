@@ -1,7 +1,6 @@
 ﻿Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
-Imports CustomAlertBoxDemo.Properties
 
 Namespace CustomAlertBoxDemo
     Public Partial Class Form_Alert

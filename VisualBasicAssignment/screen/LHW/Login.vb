@@ -42,10 +42,12 @@
                 ElseIf dbName.user_role = "c" Then
                     Me.Hide()
                     Profile.username = name
+                    DatabaseConnections.SetLoginUser(dbName)
                     UserRecordReport.Show()
                 ElseIf dbName.user_role = "s" Then
                     Me.Hide()
                     Profile.username = name
+                    DatabaseConnections.SetLoginUser(dbName)
                     UserRecordReport.Show()
                 End If
             End If

@@ -11,6 +11,7 @@ Public Class UserRecordReport
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
         username = ""
         Me.Close()
+        DatabaseConnections.SetLoginUser(Nothing)
         Login.Show()
     End Sub
 
@@ -29,7 +30,7 @@ Public Class UserRecordReport
                  o.gender,
                  o.password
                  }
-        dgv.DataSource = rs
+        dgv.DataSource = rs.ToList()
         updateItem()
     End Sub
     Private Sub updateItem()
@@ -62,7 +63,7 @@ Public Class UserRecordReport
                      o.gender,
                      o.password
                      }
-        dgv.DataSource = rs
+        dgv.DataSource = rs.ToList()
 
         updateItem()
     End Sub
