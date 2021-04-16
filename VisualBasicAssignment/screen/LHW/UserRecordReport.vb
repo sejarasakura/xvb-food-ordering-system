@@ -3,7 +3,7 @@ Imports System.Data.DataTable
 Imports System.Data.SqlClient
 
 Public Class UserRecordReport
-    Dim db As New FoodShopDataContext()
+    Dim db As New FoodShopEntities1()
     Public username As String
     Private Sub Admin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
     End Sub

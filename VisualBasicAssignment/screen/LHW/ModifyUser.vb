@@ -1,6 +1,6 @@
 ﻿Public Class ModifyUser
     Public fid As String
-    Dim db As New FoodShopDataContext()
+    Dim db As New FoodShopEntities1()
     Private Sub ModifyUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim rs = From u In db.Users Where u.user_id = fid
         For Each result In rs
@@ -29,7 +29,7 @@
             u.gender = txtGender.Text
             u.password = txtPassword.Text
             u.user_role = txtRole.Text
-            db.SubmitChanges()
+            db.SaveChanges()
             MessageBox.Show("The data have been updated!!!", "Update Succesful", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Catch ex As Exception
             MessageBox.Show("Invalid!!!" & vbNewLine & "Please fill up all, thanks.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)

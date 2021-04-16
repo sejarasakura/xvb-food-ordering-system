@@ -1,5 +1,5 @@
 ﻿Public Class Profile
-    Dim db As New FoodShopDataContext()
+    Dim db As New FoodShopEntities1()
     Public username As String
 
     Private Sub ProfileScreen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -32,7 +32,7 @@
         Else
             If txtName.Text <> u.username Then
                 u.username = txtName.Text
-                db.SubmitChanges()
+                db.SaveChanges()
                 MessageBox.Show("The User Name already change!!!", "Successful Change User Name", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
         End If
@@ -41,7 +41,7 @@
         Else
             If txtEmail.Text <> u.user_email Then
                 u.user_email = txtEmail.Text
-                db.SubmitChanges()
+                db.SaveChanges()
                 MessageBox.Show("The Email already change!!!", "Successful Change Email", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
         End If
@@ -50,7 +50,7 @@
         Else
             If txtHPNumber.Text <> u.phone_num Then
                 u.phone_num = txtHPNumber.Text
-                db.SubmitChanges()
+                db.SaveChanges()
                 MessageBox.Show("The H/P Number already change!!!", "Successful Change H/P Number", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
         End If
@@ -59,7 +59,7 @@
         Else
             If txtLName.Text <> u.last_name Then
                 u.last_name = txtLName.Text
-                db.SubmitChanges()
+                db.SaveChanges()
                 MessageBox.Show("The Last Name already change!!!", "Successful Change Last Name", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
         End If
@@ -69,7 +69,7 @@
         Else
             If txtFName.Text <> u.first_name Then
                 u.first_name = txtFName.Text
-                db.SubmitChanges()
+                db.SaveChanges()
                 MessageBox.Show("The First Name already change!!!", "Successful Change First Name", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
         End If
@@ -79,7 +79,7 @@
         Else
             If txtGender.Text <> u.gender Then
                 u.gender = txtGender.Text
-                db.SubmitChanges()
+                db.SaveChanges()
                 MessageBox.Show("The Gender already change!!!", "Successful Change Gender", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
         End If
@@ -90,7 +90,7 @@
             If txtCPassword.Text <> "" Then
                 If txtCPassword.Text = txtPassword.Text Then
                     u.password = txtPassword.Text
-                    db.SubmitChanges()
+                    db.SaveChanges()
                     MessageBox.Show("The Password already change!!!", "Successful Change Password", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     txtCPassword.Text = ""
                 Else

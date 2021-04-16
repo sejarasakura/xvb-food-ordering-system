@@ -1,5 +1,5 @@
 ﻿Public Class Login
-    Dim db As New FoodShopDataContext()
+    Dim db As New FoodShopEntities1()
 
     Sub Page_Load(ByVal Sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         txtPassword.PasswordChar = "*"
@@ -16,7 +16,7 @@
     End Sub
 
     Private Sub loginBtn_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        Dim db As New FoodShopDataContext()
+        Dim db As New FoodShopEntities1()
         Dim name As String = txtName.Text()
         Dim password As String = txtPassword.Text()
         Dim dbName As User = db.Users.SingleOrDefault(Function(c) c.username = name)

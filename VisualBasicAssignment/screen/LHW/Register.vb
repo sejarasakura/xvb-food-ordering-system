@@ -1,6 +1,6 @@
 ﻿Public Class Register
 
-    Dim db As New FoodShopDataContext()
+    Dim db As New FoodShopEntities1()
 
     Private Sub AutoGenerateCustId()
         Dim rs = (From c In db.Users).Count()
@@ -13,12 +13,12 @@
     End Sub
 
     Private Function IsDuplicatedName(strName As String) As Boolean
-        Dim db As New FoodShopDataContext()
+        Dim db As New FoodShopEntities1()
         Return db.Users.Any(Function(o) o.username = strName)
     End Function
 
     Private Function IsDuplicatedEmail(strEmail As String) As Boolean
-        Dim db As New FoodShopDataContext()
+        Dim db As New FoodShopEntities1()
         Return db.Users.Any(Function(o) o.user_email = strEmail)
     End Function
 
@@ -75,9 +75,9 @@
         u.password = strPassword
         u.user_role = "c"
 
-        Dim db As New FoodShopDataContext()
-        db.Users.InsertOnSubmit(u)
-        db.SubmitChanges()
+        Dim db As New FoodShopEntities1()
+        db.Users.Add(u)
+        db.SaveChanges()
         MessageBox.Show("Successfully Registered", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
     End Sub

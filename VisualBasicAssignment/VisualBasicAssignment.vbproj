@@ -106,11 +106,6 @@
   <ItemGroup>
     <Compile Include="commons\DatabaseConnections.vb" />
     <Compile Include="commons\validations\ValidatePayment.vb" />
-    <Compile Include="FoodShop.designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FoodShop.dbml</DependentUpon>
-    </Compile>
     <Compile Include="FoodShopDataSet.Designer.vb">
       <DependentUpon>FoodShopDataSet.xsd</DependentUpon>
       <DesignTime>True</DesignTime>
@@ -469,14 +464,6 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>FoodShopModel.Designer.vb</LastGenOutput>
     </EntityDeploy>
-    <None Include="FoodShop.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>FoodShop.designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="FoodShop.dbml.layout">
-      <DependentUpon>FoodShop.dbml</DependentUpon>
-    </None>
     <None Include="FoodShopDataSet.xsc">
       <DependentUpon>FoodShopDataSet.xsd</DependentUpon>
     </None>

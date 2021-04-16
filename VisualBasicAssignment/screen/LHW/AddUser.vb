@@ -1,5 +1,5 @@
 ﻿Public Class AddUser
-    Dim db As New FoodShopDataContext()
+    Dim db As New FoodShopEntities1()
     Public username As String
     Private Sub AddUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         AutoGenerateId()
@@ -21,8 +21,8 @@
             u.first_name = txtFName.Text
             u.gender = txtGender.Text
             u.user_role = txtRole.Text
-            db.Users.InsertOnSubmit(u)
-            db.SubmitChanges()
+            db.Users.Add(u)
+            db.SaveChanges()
             MessageBox.Show("User has been added.", "Add Data Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
             AutoGenerateId()
             clear()

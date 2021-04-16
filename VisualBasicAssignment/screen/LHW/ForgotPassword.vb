@@ -1,5 +1,5 @@
 ﻿Public Class ForgotPassword
-    Dim db As New FoodShopDataContext()
+    Dim db As New FoodShopEntities1()
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
         Try
             Dim rs = From u In db.Users
