@@ -23,7 +23,6 @@ Partial Class NewOder
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(NewOder))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.btnAdd = New Guna.UI2.WinForms.Guna2Button()
@@ -47,14 +46,11 @@ Partial Class NewOder
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
-        Me.Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Guna2HtmlLabel6 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.FoodTableAdapter = New VisualBasicAssignment.FoodShopDataSetTableAdapters.FoodTableAdapter()
         Me.btnClear = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
+        Me.lblTotal = New System.Windows.Forms.Label()
+        Me.lblTotalText = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.nudQuantity, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvOrder, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -62,7 +58,6 @@ Partial Class NewOder
         CType(Me.FoodShopDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FoodShopDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvOrderDetails, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -369,71 +364,6 @@ Partial Class NewOder
         Me.Guna2Separator1.Size = New System.Drawing.Size(1056, 10)
         Me.Guna2Separator1.TabIndex = 16
         '
-        'Guna2HtmlLabel5
-        '
-        Me.Guna2HtmlLabel5.AutoSize = False
-        Me.Guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.8!)
-        Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(845, 385)
-        Me.Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
-        Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(189, 22)
-        Me.Guna2HtmlLabel5.TabIndex = 28
-        Me.Guna2HtmlLabel5.Text = "Recived: (7)"
-        '
-        'Guna2HtmlLabel6
-        '
-        Me.Guna2HtmlLabel6.AutoSize = False
-        Me.Guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.8!)
-        Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(845, 343)
-        Me.Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
-        Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(190, 22)
-        Me.Guna2HtmlLabel6.TabIndex = 27
-        Me.Guna2HtmlLabel6.Text = "To Deliveried: (2)"
-        '
-        'Guna2HtmlLabel4
-        '
-        Me.Guna2HtmlLabel4.AutoSize = False
-        Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.8!)
-        Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(845, 296)
-        Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
-        Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(189, 22)
-        Me.Guna2HtmlLabel4.TabIndex = 26
-        Me.Guna2HtmlLabel4.Text = "To pay: (1 order)"
-        '
-        'Guna2HtmlLabel3
-        '
-        Me.Guna2HtmlLabel3.AutoSize = False
-        Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.8!)
-        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(845, 254)
-        Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
-        Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(189, 22)
-        Me.Guna2HtmlLabel3.TabIndex = 25
-        Me.Guna2HtmlLabel3.Text = "All: (10 order)"
-        '
-        'Guna2HtmlLabel2
-        '
-        Me.Guna2HtmlLabel2.AutoSize = False
-        Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(835, 44)
-        Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(199, 38)
-        Me.Guna2HtmlLabel2.TabIndex = 24
-        Me.Guna2HtmlLabel2.Text = "Overall"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(874, 88)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(160, 143)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 23
-        Me.PictureBox1.TabStop = False
-        '
         'FoodTableAdapter
         '
         Me.FoodTableAdapter.ClearBeforeFill = True
@@ -452,9 +382,44 @@ Partial Class NewOder
         Me.btnClear.TabIndex = 35
         Me.btnClear.Text = "Clear"
         '
+        'Guna2Button2
+        '
+        Me.Guna2Button2.CheckedState.Parent = Me.Guna2Button2
+        Me.Guna2Button2.CustomImages.Parent = Me.Guna2Button2
+        Me.Guna2Button2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2Button2.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button2.HoverState.Parent = Me.Guna2Button2
+        Me.Guna2Button2.Location = New System.Drawing.Point(818, 479)
+        Me.Guna2Button2.Name = "Guna2Button2"
+        Me.Guna2Button2.ShadowDecoration.Parent = Me.Guna2Button2
+        Me.Guna2Button2.Size = New System.Drawing.Size(258, 35)
+        Me.Guna2Button2.TabIndex = 36
+        Me.Guna2Button2.Text = "Procide Payment"
+        '
+        'lblTotal
+        '
+        Me.lblTotal.AutoSize = True
+        Me.lblTotal.Location = New System.Drawing.Point(815, 47)
+        Me.lblTotal.Name = "lblTotal"
+        Me.lblTotal.Size = New System.Drawing.Size(127, 17)
+        Me.lblTotal.TabIndex = 37
+        Me.lblTotal.Text = "Total Payment: 0.0"
+        '
+        'lblTotalText
+        '
+        Me.lblTotalText.AutoSize = True
+        Me.lblTotalText.Location = New System.Drawing.Point(815, 93)
+        Me.lblTotalText.Name = "lblTotalText"
+        Me.lblTotalText.Size = New System.Drawing.Size(95, 17)
+        Me.lblTotalText.TabIndex = 38
+        Me.lblTotalText.Text = "Total Tax: 0.0"
+        '
         'NewOder
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.Controls.Add(Me.lblTotalText)
+        Me.Controls.Add(Me.lblTotal)
+        Me.Controls.Add(Me.Guna2Button2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.LinkLabel4)
         Me.Controls.Add(Me.LinkLabel3)
@@ -462,12 +427,6 @@ Partial Class NewOder
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Guna2HtmlLabel1)
         Me.Controls.Add(Me.Guna2Separator1)
-        Me.Controls.Add(Me.Guna2HtmlLabel5)
-        Me.Controls.Add(Me.Guna2HtmlLabel6)
-        Me.Controls.Add(Me.Guna2HtmlLabel4)
-        Me.Controls.Add(Me.Guna2HtmlLabel3)
-        Me.Controls.Add(Me.Guna2HtmlLabel2)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Name = "NewOder"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -477,7 +436,6 @@ Partial Class NewOder
         CType(Me.FoodShopDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FoodShopDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvOrderDetails, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -490,12 +448,6 @@ Partial Class NewOder
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2Separator1 As Guna.UI2.WinForms.Guna2Separator
-    Friend WithEvents Guna2HtmlLabel5 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel6 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents dgvOrder As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents Guna2HtmlLabel7 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents dgvOrderDetails As DataGridView
@@ -514,4 +466,7 @@ Partial Class NewOder
     Friend WithEvents FoodShopDataSet As FoodShopDataSet
     Friend WithEvents FoodTableAdapter As FoodShopDataSetTableAdapters.FoodTableAdapter
     Friend WithEvents btnClear As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents lblTotal As Label
+    Friend WithEvents lblTotalText As Label
 End Class
