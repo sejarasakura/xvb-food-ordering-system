@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class MyOder
+Partial Class NewOder
     Inherits VisualBasicAssignment.MasterWidgetItem
 
     'Form overrides dispose to clean up the component list.
@@ -23,16 +23,22 @@ Partial Class MyOder
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MyOder))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(NewOder))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.btnAdd = New Guna.UI2.WinForms.Guna2Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.nudQuantity = New Guna.UI2.WinForms.Guna2NumericUpDown()
-        Me.Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txbSearch = New Guna.UI2.WinForms.Guna2TextBox()
         Me.dgvOrder = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TitleDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ImageDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.PriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FoodBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.FoodShopDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.FoodShopDataSet = New VisualBasicAssignment.FoodShopDataSet()
         Me.Guna2HtmlLabel7 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.dgvOrderDetails = New System.Windows.Forms.DataGridView()
         Me.LinkLabel4 = New System.Windows.Forms.LinkLabel()
@@ -47,32 +53,27 @@ Partial Class MyOder
         Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.FoodShopDataSet = New VisualBasicAssignment.FoodShopDataSet()
-        Me.FoodShopDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PaymentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PaymentTableAdapter = New VisualBasicAssignment.FoodShopDataSetTableAdapters.PaymentTableAdapter()
-        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TotalpayDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NotesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FoodTableAdapter = New VisualBasicAssignment.FoodShopDataSetTableAdapters.FoodTableAdapter()
+        Me.btnClear = New Guna.UI2.WinForms.Guna2Button()
         Me.Panel1.SuspendLayout()
         CType(Me.nudQuantity, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvOrder, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FoodBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FoodShopDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FoodShopDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvOrderDetails, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FoodShopDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FoodShopDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PaymentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.AutoScroll = True
         Me.Panel1.AutoSize = True
+        Me.Panel1.Controls.Add(Me.btnClear)
         Me.Panel1.Controls.Add(Me.Guna2Button1)
         Me.Panel1.Controls.Add(Me.btnAdd)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.nudQuantity)
-        Me.Panel1.Controls.Add(Me.Guna2HtmlLabel8)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.txbSearch)
         Me.Panel1.Controls.Add(Me.dgvOrder)
@@ -114,7 +115,7 @@ Partial Class MyOder
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(658, 63)
+        Me.Label2.Location = New System.Drawing.Point(352, 87)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(61, 17)
         Me.Label2.TabIndex = 32
@@ -134,21 +135,12 @@ Partial Class MyOder
         Me.nudQuantity.FocusedState.Parent = Me.nudQuantity
         Me.nudQuantity.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.nudQuantity.ForeColor = System.Drawing.Color.FromArgb(CType(CType(126, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.nudQuantity.Location = New System.Drawing.Point(661, 87)
+        Me.nudQuantity.Location = New System.Drawing.Point(455, 87)
         Me.nudQuantity.Name = "nudQuantity"
         Me.nudQuantity.ShadowDecoration.Parent = Me.nudQuantity
         Me.nudQuantity.Size = New System.Drawing.Size(116, 36)
         Me.nudQuantity.TabIndex = 31
-        '
-        'Guna2HtmlLabel8
-        '
-        Me.Guna2HtmlLabel8.AutoSize = False
-        Me.Guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel8.Location = New System.Drawing.Point(355, 67)
-        Me.Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
-        Me.Guna2HtmlLabel8.Size = New System.Drawing.Size(295, 137)
-        Me.Guna2HtmlLabel8.TabIndex = 30
-        Me.Guna2HtmlLabel8.Text = "Guna2HtmlLabel8"
+        Me.nudQuantity.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'Label1
         '
@@ -206,8 +198,8 @@ Partial Class MyOder
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvOrder.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvOrder.ColumnHeadersHeight = 30
-        Me.dgvOrder.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.TotalpayDataGridViewTextBoxColumn, Me.NotesDataGridViewTextBoxColumn})
-        Me.dgvOrder.DataSource = Me.PaymentBindingSource
+        Me.dgvOrder.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.TitleDataGridViewTextBoxColumn, Me.ImageDataGridViewImageColumn, Me.PriceDataGridViewTextBoxColumn})
+        Me.dgvOrder.DataSource = Me.FoodBindingSource
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
@@ -221,6 +213,7 @@ Partial Class MyOder
         Me.dgvOrder.Location = New System.Drawing.Point(3, 3)
         Me.dgvOrder.Name = "dgvOrder"
         Me.dgvOrder.ReadOnly = True
+        Me.dgvOrder.RowHeadersVisible = False
         Me.dgvOrder.RowHeadersWidth = 51
         Me.dgvOrder.RowTemplate.Height = 24
         Me.dgvOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -248,6 +241,53 @@ Partial Class MyOder
         Me.dgvOrder.ThemeStyle.RowsStyle.Height = 24
         Me.dgvOrder.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgvOrder.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        '
+        'IdDataGridViewTextBoxColumn
+        '
+        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "id"
+        Me.IdDataGridViewTextBoxColumn.HeaderText = "id"
+        Me.IdDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
+        Me.IdDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'TitleDataGridViewTextBoxColumn
+        '
+        Me.TitleDataGridViewTextBoxColumn.DataPropertyName = "title"
+        Me.TitleDataGridViewTextBoxColumn.HeaderText = "title"
+        Me.TitleDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.TitleDataGridViewTextBoxColumn.Name = "TitleDataGridViewTextBoxColumn"
+        Me.TitleDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ImageDataGridViewImageColumn
+        '
+        Me.ImageDataGridViewImageColumn.DataPropertyName = "image"
+        Me.ImageDataGridViewImageColumn.HeaderText = "image"
+        Me.ImageDataGridViewImageColumn.MinimumWidth = 6
+        Me.ImageDataGridViewImageColumn.Name = "ImageDataGridViewImageColumn"
+        Me.ImageDataGridViewImageColumn.ReadOnly = True
+        '
+        'PriceDataGridViewTextBoxColumn
+        '
+        Me.PriceDataGridViewTextBoxColumn.DataPropertyName = "price"
+        Me.PriceDataGridViewTextBoxColumn.HeaderText = "price"
+        Me.PriceDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.PriceDataGridViewTextBoxColumn.Name = "PriceDataGridViewTextBoxColumn"
+        Me.PriceDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'FoodBindingSource
+        '
+        Me.FoodBindingSource.DataMember = "Food"
+        Me.FoodBindingSource.DataSource = Me.FoodShopDataSetBindingSource
+        '
+        'FoodShopDataSetBindingSource
+        '
+        Me.FoodShopDataSetBindingSource.DataSource = Me.FoodShopDataSet
+        Me.FoodShopDataSetBindingSource.Position = 0
+        '
+        'FoodShopDataSet
+        '
+        Me.FoodShopDataSet.DataSetName = "FoodShopDataSet"
+        Me.FoodShopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Guna2HtmlLabel7
         '
@@ -331,108 +371,88 @@ Partial Class MyOder
         '
         'Guna2HtmlLabel5
         '
+        Me.Guna2HtmlLabel5.AutoSize = False
         Me.Guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.8!)
-        Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(881, 385)
+        Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(845, 385)
         Me.Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
-        Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(87, 22)
+        Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(189, 22)
         Me.Guna2HtmlLabel5.TabIndex = 28
         Me.Guna2HtmlLabel5.Text = "Recived: (7)"
         '
         'Guna2HtmlLabel6
         '
+        Me.Guna2HtmlLabel6.AutoSize = False
         Me.Guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.8!)
-        Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(881, 343)
+        Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(845, 343)
         Me.Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
-        Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(121, 22)
+        Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(190, 22)
         Me.Guna2HtmlLabel6.TabIndex = 27
         Me.Guna2HtmlLabel6.Text = "To Deliveried: (2)"
         '
         'Guna2HtmlLabel4
         '
+        Me.Guna2HtmlLabel4.AutoSize = False
         Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.8!)
-        Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(881, 296)
+        Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(845, 296)
         Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
-        Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(118, 22)
+        Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(189, 22)
         Me.Guna2HtmlLabel4.TabIndex = 26
         Me.Guna2HtmlLabel4.Text = "To pay: (1 order)"
         '
         'Guna2HtmlLabel3
         '
+        Me.Guna2HtmlLabel3.AutoSize = False
         Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.8!)
-        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(881, 254)
+        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(845, 254)
         Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
-        Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(97, 22)
+        Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(189, 22)
         Me.Guna2HtmlLabel3.TabIndex = 25
         Me.Guna2HtmlLabel3.Text = "All: (10 order)"
         '
         'Guna2HtmlLabel2
         '
+        Me.Guna2HtmlLabel2.AutoSize = False
         Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(871, 44)
+        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(835, 44)
         Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(96, 38)
+        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(199, 38)
         Me.Guna2HtmlLabel2.TabIndex = 24
         Me.Guna2HtmlLabel2.Text = "Overall"
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(910, 88)
+        Me.PictureBox1.Location = New System.Drawing.Point(874, 88)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(160, 143)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 23
         Me.PictureBox1.TabStop = False
         '
-        'FoodShopDataSet
+        'FoodTableAdapter
         '
-        Me.FoodShopDataSet.DataSetName = "FoodShopDataSet"
-        Me.FoodShopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.FoodTableAdapter.ClearBeforeFill = True
         '
-        'FoodShopDataSetBindingSource
+        'btnClear
         '
-        Me.FoodShopDataSetBindingSource.DataSource = Me.FoodShopDataSet
-        Me.FoodShopDataSetBindingSource.Position = 0
+        Me.btnClear.CheckedState.Parent = Me.btnClear
+        Me.btnClear.CustomImages.Parent = Me.btnClear
+        Me.btnClear.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnClear.ForeColor = System.Drawing.Color.White
+        Me.btnClear.HoverState.Parent = Me.btnClear
+        Me.btnClear.Location = New System.Drawing.Point(539, 191)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.ShadowDecoration.Parent = Me.btnClear
+        Me.btnClear.Size = New System.Drawing.Size(116, 35)
+        Me.btnClear.TabIndex = 35
+        Me.btnClear.Text = "Clear"
         '
-        'PaymentBindingSource
-        '
-        Me.PaymentBindingSource.DataMember = "Payment"
-        Me.PaymentBindingSource.DataSource = Me.FoodShopDataSetBindingSource
-        '
-        'PaymentTableAdapter
-        '
-        Me.PaymentTableAdapter.ClearBeforeFill = True
-        '
-        'IdDataGridViewTextBoxColumn
-        '
-        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "id"
-        Me.IdDataGridViewTextBoxColumn.HeaderText = "id"
-        Me.IdDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        Me.IdDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'TotalpayDataGridViewTextBoxColumn
-        '
-        Me.TotalpayDataGridViewTextBoxColumn.DataPropertyName = "total_pay"
-        Me.TotalpayDataGridViewTextBoxColumn.HeaderText = "total_pay"
-        Me.TotalpayDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.TotalpayDataGridViewTextBoxColumn.Name = "TotalpayDataGridViewTextBoxColumn"
-        Me.TotalpayDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NotesDataGridViewTextBoxColumn
-        '
-        Me.NotesDataGridViewTextBoxColumn.DataPropertyName = "notes"
-        Me.NotesDataGridViewTextBoxColumn.HeaderText = "notes"
-        Me.NotesDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.NotesDataGridViewTextBoxColumn.Name = "NotesDataGridViewTextBoxColumn"
-        Me.NotesDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'MyOder
+        'NewOder
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.Controls.Add(Me.Panel1)
@@ -448,16 +468,16 @@ Partial Class MyOder
         Me.Controls.Add(Me.Guna2HtmlLabel3)
         Me.Controls.Add(Me.Guna2HtmlLabel2)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Name = "MyOder"
+        Me.Name = "NewOder"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.nudQuantity, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvOrder, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FoodBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FoodShopDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FoodShopDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvOrderDetails, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FoodShopDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FoodShopDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PaymentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -482,15 +502,16 @@ Partial Class MyOder
     Friend WithEvents btnAdd As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label2 As Label
     Friend WithEvents nudQuantity As Guna.UI2.WinForms.Guna2NumericUpDown
-    Friend WithEvents Guna2HtmlLabel8 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Label1 As Label
     Friend WithEvents txbSearch As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents IdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TotalpayDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents NotesDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents PaymentBindingSource As BindingSource
+    Friend WithEvents TitleDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ImageDataGridViewImageColumn As DataGridViewImageColumn
+    Friend WithEvents PriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FoodBindingSource As BindingSource
     Friend WithEvents FoodShopDataSetBindingSource As BindingSource
     Friend WithEvents FoodShopDataSet As FoodShopDataSet
-    Friend WithEvents PaymentTableAdapter As FoodShopDataSetTableAdapters.PaymentTableAdapter
+    Friend WithEvents FoodTableAdapter As FoodShopDataSetTableAdapters.FoodTableAdapter
+    Friend WithEvents btnClear As Guna.UI2.WinForms.Guna2Button
 End Class

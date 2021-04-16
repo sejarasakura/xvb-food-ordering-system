@@ -25,26 +25,28 @@ Partial Class Master
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Master))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btnOrder = New Guna.UI2.WinForms.Guna2Button()
-        Me.btnCart = New Guna.UI2.WinForms.Guna2Button()
-        Me.btnMenu = New Guna.UI2.WinForms.Guna2Button()
-        Me.btnProfile = New Guna.UI2.WinForms.Guna2Button()
         Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.picIcon = New System.Windows.Forms.PictureBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.btnNav = New Guna.UI2.WinForms.Guna2Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.btnMini = New Guna.UI2.WinForms.Guna2Button()
-        Me.btnClose = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.Guna2DragControl2 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.btnMini = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnClose = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnOrder = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnCart = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnMenu = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnProfile = New Guna.UI2.WinForms.Guna2Button()
+        Me.picIcon = New System.Windows.Forms.PictureBox()
+        Me.btnNav = New Guna.UI2.WinForms.Guna2Button()
+        Me.panelMessage = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel1.SuspendLayout()
-        CType(Me.picIcon, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        Me.Panel5.SuspendLayout()
+        CType(Me.picIcon, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -67,82 +69,6 @@ Partial Class Master
         Me.Panel1.Size = New System.Drawing.Size(227, 738)
         Me.Panel1.TabIndex = 2
         '
-        'btnOrder
-        '
-        Me.btnOrder.CheckedState.Parent = Me.btnOrder
-        Me.btnOrder.CustomImages.Parent = Me.btnOrder
-        Me.btnOrder.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnOrder.FillColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(205, Byte), Integer))
-        Me.btnOrder.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btnOrder.ForeColor = System.Drawing.Color.White
-        Me.btnOrder.HoverState.Parent = Me.btnOrder
-        Me.btnOrder.Image = CType(resources.GetObject("btnOrder.Image"), System.Drawing.Image)
-        Me.btnOrder.Location = New System.Drawing.Point(0, 371)
-        Me.btnOrder.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.btnOrder.Name = "btnOrder"
-        Me.btnOrder.ShadowDecoration.Parent = Me.btnOrder
-        Me.btnOrder.Size = New System.Drawing.Size(227, 62)
-        Me.btnOrder.TabIndex = 18
-        Me.btnOrder.Text = "ORDER"
-        Me.btnOrder.TextFormatNoPrefix = True
-        '
-        'btnCart
-        '
-        Me.btnCart.CheckedState.Parent = Me.btnCart
-        Me.btnCart.CustomImages.Parent = Me.btnCart
-        Me.btnCart.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnCart.FillColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(205, Byte), Integer))
-        Me.btnCart.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btnCart.ForeColor = System.Drawing.Color.White
-        Me.btnCart.HoverState.Parent = Me.btnCart
-        Me.btnCart.Image = CType(resources.GetObject("btnCart.Image"), System.Drawing.Image)
-        Me.btnCart.Location = New System.Drawing.Point(0, 309)
-        Me.btnCart.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.btnCart.Name = "btnCart"
-        Me.btnCart.ShadowDecoration.Parent = Me.btnCart
-        Me.btnCart.Size = New System.Drawing.Size(227, 62)
-        Me.btnCart.TabIndex = 17
-        Me.btnCart.Text = "CART"
-        Me.btnCart.TextFormatNoPrefix = True
-        '
-        'btnMenu
-        '
-        Me.btnMenu.CheckedState.Parent = Me.btnMenu
-        Me.btnMenu.CustomImages.Parent = Me.btnMenu
-        Me.btnMenu.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnMenu.FillColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(205, Byte), Integer))
-        Me.btnMenu.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btnMenu.ForeColor = System.Drawing.Color.White
-        Me.btnMenu.HoverState.Parent = Me.btnMenu
-        Me.btnMenu.Image = CType(resources.GetObject("btnMenu.Image"), System.Drawing.Image)
-        Me.btnMenu.Location = New System.Drawing.Point(0, 247)
-        Me.btnMenu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.btnMenu.Name = "btnMenu"
-        Me.btnMenu.ShadowDecoration.Parent = Me.btnMenu
-        Me.btnMenu.Size = New System.Drawing.Size(227, 62)
-        Me.btnMenu.TabIndex = 16
-        Me.btnMenu.Text = "MENU"
-        Me.btnMenu.TextFormatNoPrefix = True
-        '
-        'btnProfile
-        '
-        Me.btnProfile.CheckedState.Parent = Me.btnProfile
-        Me.btnProfile.CustomImages.Parent = Me.btnProfile
-        Me.btnProfile.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnProfile.FillColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(205, Byte), Integer))
-        Me.btnProfile.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btnProfile.ForeColor = System.Drawing.Color.White
-        Me.btnProfile.HoverState.Parent = Me.btnProfile
-        Me.btnProfile.Image = CType(resources.GetObject("btnProfile.Image"), System.Drawing.Image)
-        Me.btnProfile.Location = New System.Drawing.Point(0, 185)
-        Me.btnProfile.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.btnProfile.Name = "btnProfile"
-        Me.btnProfile.ShadowDecoration.Parent = Me.btnProfile
-        Me.btnProfile.Size = New System.Drawing.Size(227, 62)
-        Me.btnProfile.TabIndex = 15
-        Me.btnProfile.Text = "PROFILE"
-        Me.btnProfile.TextFormatNoPrefix = True
-        '
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(148, Byte), Integer))
@@ -152,22 +78,6 @@ Partial Class Master
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(227, 20)
         Me.Panel7.TabIndex = 14
-        '
-        'picIcon
-        '
-        Me.picIcon.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(148, Byte), Integer))
-        Me.picIcon.Cursor = System.Windows.Forms.Cursors.Default
-        Me.picIcon.Dock = System.Windows.Forms.DockStyle.Top
-        Me.picIcon.ErrorImage = Nothing
-        Me.picIcon.Image = CType(resources.GetObject("picIcon.Image"), System.Drawing.Image)
-        Me.picIcon.InitialImage = Nothing
-        Me.picIcon.Location = New System.Drawing.Point(0, 55)
-        Me.picIcon.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.picIcon.Name = "picIcon"
-        Me.picIcon.Size = New System.Drawing.Size(227, 110)
-        Me.picIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picIcon.TabIndex = 13
-        Me.picIcon.TabStop = False
         '
         'Panel6
         '
@@ -189,23 +99,6 @@ Partial Class Master
         Me.Panel2.Size = New System.Drawing.Size(227, 32)
         Me.Panel2.TabIndex = 1
         '
-        'btnNav
-        '
-        Me.btnNav.CheckedState.Parent = Me.btnNav
-        Me.btnNav.CustomImages.Parent = Me.btnNav
-        Me.btnNav.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnNav.FillColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(205, Byte), Integer))
-        Me.btnNav.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btnNav.ForeColor = System.Drawing.Color.White
-        Me.btnNav.HoverState.Parent = Me.btnNav
-        Me.btnNav.Image = CType(resources.GetObject("btnNav.Image"), System.Drawing.Image)
-        Me.btnNav.Location = New System.Drawing.Point(0, 0)
-        Me.btnNav.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.btnNav.Name = "btnNav"
-        Me.btnNav.ShadowDecoration.Parent = Me.btnNav
-        Me.btnNav.Size = New System.Drawing.Size(227, 37)
-        Me.btnNav.TabIndex = 0
-        '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer))
@@ -217,6 +110,31 @@ Partial Class Master
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(1106, 32)
         Me.Panel3.TabIndex = 6
+        '
+        'Guna2DragControl1
+        '
+        Me.Guna2DragControl1.ContainerControl = Me
+        Me.Guna2DragControl1.TargetControl = Me.Panel3
+        '
+        'Guna2DragControl2
+        '
+        Me.Guna2DragControl2.ContainerControl = Me
+        '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(148, Byte), Integer))
+        Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel5.Controls.Add(Me.panelMessage)
+        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel5.Location = New System.Drawing.Point(227, 32)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(1106, 152)
+        Me.Panel5.TabIndex = 7
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 10
         '
         'btnMini
         '
@@ -231,7 +149,7 @@ Partial Class Master
         Me.btnMini.Image = CType(resources.GetObject("btnMini.Image"), System.Drawing.Image)
         Me.btnMini.ImageSize = New System.Drawing.Size(26, 26)
         Me.btnMini.Location = New System.Drawing.Point(1029, 0)
-        Me.btnMini.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnMini.Margin = New System.Windows.Forms.Padding(4)
         Me.btnMini.Name = "btnMini"
         Me.btnMini.ShadowDecoration.Parent = Me.btnMini
         Me.btnMini.Size = New System.Drawing.Size(40, 32)
@@ -250,35 +168,128 @@ Partial Class Master
         Me.btnClose.Image = CType(resources.GetObject("btnClose.Image"), System.Drawing.Image)
         Me.btnClose.ImageSize = New System.Drawing.Size(26, 26)
         Me.btnClose.Location = New System.Drawing.Point(1069, 0)
-        Me.btnClose.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnClose.Margin = New System.Windows.Forms.Padding(4)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.ShadowDecoration.Parent = Me.btnClose
         Me.btnClose.Size = New System.Drawing.Size(37, 32)
         Me.btnClose.TabIndex = 5
         '
-        'Guna2DragControl1
+        'btnOrder
         '
-        Me.Guna2DragControl1.ContainerControl = Me
-        Me.Guna2DragControl1.TargetControl = Me.Panel3
+        Me.btnOrder.CheckedState.Parent = Me.btnOrder
+        Me.btnOrder.CustomImages.Parent = Me.btnOrder
+        Me.btnOrder.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnOrder.FillColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(205, Byte), Integer))
+        Me.btnOrder.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnOrder.ForeColor = System.Drawing.Color.White
+        Me.btnOrder.HoverState.Parent = Me.btnOrder
+        Me.btnOrder.Image = CType(resources.GetObject("btnOrder.Image"), System.Drawing.Image)
+        Me.btnOrder.Location = New System.Drawing.Point(0, 371)
+        Me.btnOrder.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnOrder.Name = "btnOrder"
+        Me.btnOrder.ShadowDecoration.Parent = Me.btnOrder
+        Me.btnOrder.Size = New System.Drawing.Size(227, 62)
+        Me.btnOrder.TabIndex = 18
+        Me.btnOrder.Text = "ORDER"
+        Me.btnOrder.TextFormatNoPrefix = True
         '
-        'Guna2DragControl2
+        'btnCart
         '
-        Me.Guna2DragControl2.ContainerControl = Me
+        Me.btnCart.CheckedState.Parent = Me.btnCart
+        Me.btnCart.CustomImages.Parent = Me.btnCart
+        Me.btnCart.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnCart.FillColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(205, Byte), Integer))
+        Me.btnCart.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnCart.ForeColor = System.Drawing.Color.White
+        Me.btnCart.HoverState.Parent = Me.btnCart
+        Me.btnCart.Image = CType(resources.GetObject("btnCart.Image"), System.Drawing.Image)
+        Me.btnCart.Location = New System.Drawing.Point(0, 309)
+        Me.btnCart.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnCart.Name = "btnCart"
+        Me.btnCart.ShadowDecoration.Parent = Me.btnCart
+        Me.btnCart.Size = New System.Drawing.Size(227, 62)
+        Me.btnCart.TabIndex = 17
+        Me.btnCart.Text = "CART"
+        Me.btnCart.TextFormatNoPrefix = True
         '
-        'Panel5
+        'btnMenu
         '
-        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(148, Byte), Integer))
-        Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel5.Location = New System.Drawing.Point(227, 32)
-        Me.Panel5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(1106, 152)
-        Me.Panel5.TabIndex = 7
+        Me.btnMenu.CheckedState.Parent = Me.btnMenu
+        Me.btnMenu.CustomImages.Parent = Me.btnMenu
+        Me.btnMenu.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnMenu.FillColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(205, Byte), Integer))
+        Me.btnMenu.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnMenu.ForeColor = System.Drawing.Color.White
+        Me.btnMenu.HoverState.Parent = Me.btnMenu
+        Me.btnMenu.Image = CType(resources.GetObject("btnMenu.Image"), System.Drawing.Image)
+        Me.btnMenu.Location = New System.Drawing.Point(0, 247)
+        Me.btnMenu.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnMenu.Name = "btnMenu"
+        Me.btnMenu.ShadowDecoration.Parent = Me.btnMenu
+        Me.btnMenu.Size = New System.Drawing.Size(227, 62)
+        Me.btnMenu.TabIndex = 16
+        Me.btnMenu.Text = "MENU"
+        Me.btnMenu.TextFormatNoPrefix = True
         '
-        'Timer1
+        'btnProfile
         '
-        Me.Timer1.Interval = 10
+        Me.btnProfile.CheckedState.Parent = Me.btnProfile
+        Me.btnProfile.CustomImages.Parent = Me.btnProfile
+        Me.btnProfile.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnProfile.FillColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(205, Byte), Integer))
+        Me.btnProfile.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnProfile.ForeColor = System.Drawing.Color.White
+        Me.btnProfile.HoverState.Parent = Me.btnProfile
+        Me.btnProfile.Image = CType(resources.GetObject("btnProfile.Image"), System.Drawing.Image)
+        Me.btnProfile.Location = New System.Drawing.Point(0, 185)
+        Me.btnProfile.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnProfile.Name = "btnProfile"
+        Me.btnProfile.ShadowDecoration.Parent = Me.btnProfile
+        Me.btnProfile.Size = New System.Drawing.Size(227, 62)
+        Me.btnProfile.TabIndex = 15
+        Me.btnProfile.Text = "PROFILE"
+        Me.btnProfile.TextFormatNoPrefix = True
+        '
+        'picIcon
+        '
+        Me.picIcon.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(148, Byte), Integer))
+        Me.picIcon.Cursor = System.Windows.Forms.Cursors.Default
+        Me.picIcon.Dock = System.Windows.Forms.DockStyle.Top
+        Me.picIcon.ErrorImage = Nothing
+        Me.picIcon.Image = CType(resources.GetObject("picIcon.Image"), System.Drawing.Image)
+        Me.picIcon.InitialImage = Nothing
+        Me.picIcon.Location = New System.Drawing.Point(0, 55)
+        Me.picIcon.Margin = New System.Windows.Forms.Padding(4)
+        Me.picIcon.Name = "picIcon"
+        Me.picIcon.Size = New System.Drawing.Size(227, 110)
+        Me.picIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picIcon.TabIndex = 13
+        Me.picIcon.TabStop = False
+        '
+        'btnNav
+        '
+        Me.btnNav.CheckedState.Parent = Me.btnNav
+        Me.btnNav.CustomImages.Parent = Me.btnNav
+        Me.btnNav.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnNav.FillColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(205, Byte), Integer))
+        Me.btnNav.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnNav.ForeColor = System.Drawing.Color.White
+        Me.btnNav.HoverState.Parent = Me.btnNav
+        Me.btnNav.Image = CType(resources.GetObject("btnNav.Image"), System.Drawing.Image)
+        Me.btnNav.Location = New System.Drawing.Point(0, 0)
+        Me.btnNav.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnNav.Name = "btnNav"
+        Me.btnNav.ShadowDecoration.Parent = Me.btnNav
+        Me.btnNav.Size = New System.Drawing.Size(227, 37)
+        Me.btnNav.TabIndex = 0
+        '
+        'FlowLayoutPanel1
+        '
+        Me.panelMessage.Dock = System.Windows.Forms.DockStyle.Right
+        Me.panelMessage.Location = New System.Drawing.Point(693, 0)
+        Me.panelMessage.Name = "FlowLayoutPanel1"
+        Me.panelMessage.Size = New System.Drawing.Size(411, 150)
+        Me.panelMessage.TabIndex = 0
         '
         'Master
         '
@@ -294,9 +305,10 @@ Partial Class Master
         Me.Name = "Master"
         Me.Text = "Form1"
         Me.Panel1.ResumeLayout(False)
-        CType(Me.picIcon, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
+        Me.Panel5.ResumeLayout(False)
+        CType(Me.picIcon, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -317,4 +329,5 @@ Partial Class Master
     Friend WithEvents Panel7 As Panel
     Friend WithEvents picIcon As PictureBox
     Friend WithEvents Panel6 As Panel
+    Friend WithEvents panelMessage As FlowLayoutPanel
 End Class

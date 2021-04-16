@@ -79,6 +79,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -100,6 +101,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="commons\DatabaseConnections.vb" />
+    <Compile Include="commons\validations\ValidatePayment.vb" />
     <Compile Include="FoodShopDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -253,6 +256,12 @@
     <Compile Include="screen\sai_keat\widget\delivery\MapPick.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="screen\sai_keat\widget\order\NewOrder.Designer.vb">
+      <DependentUpon>NewOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="screen\sai_keat\widget\order\NewOrder.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="screen\sai_keat\widget\order\MyOder.Designer.vb">
       <DependentUpon>MyOder.vb</DependentUpon>
     </Compile>
@@ -270,6 +279,24 @@
     </Compile>
     <Compile Include="screen\sai_keat\PaymentScreen.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="screen\sai_keat\widget\payment\methods\Bank.Designer.vb">
+      <DependentUpon>Bank.vb</DependentUpon>
+    </Compile>
+    <Compile Include="screen\sai_keat\widget\payment\methods\Bank.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="screen\sai_keat\widget\payment\methods\Card.Designer.vb">
+      <DependentUpon>Card.vb</DependentUpon>
+    </Compile>
+    <Compile Include="screen\sai_keat\widget\payment\methods\Card.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="screen\sai_keat\widget\payment\methods\TouchNGo.Designer.vb">
+      <DependentUpon>TouchNGo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="screen\sai_keat\widget\payment\methods\TouchNGo.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="screen\sai_keat\widget\payment\PaymentComplete.Designer.vb">
       <DependentUpon>PaymentComplete.vb</DependentUpon>
@@ -337,10 +364,10 @@
     <Compile Include="model\User.vb">
       <DependentUpon>FoodShopModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="user_control\basic\VRButton.Designer.vb">
-      <DependentUpon>VRButton.vb</DependentUpon>
+    <Compile Include="user_control\basic\Messages.Designer.vb">
+      <DependentUpon>Messages.vb</DependentUpon>
     </Compile>
-    <Compile Include="user_control\basic\VRButton.vb">
+    <Compile Include="user_control\basic\Messages.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="user_control\MasterWidgetItem.Designer.vb">
@@ -387,8 +414,14 @@
     <EmbeddedResource Include="screen\sai_keat\widget\component\OrderItem.resx">
       <DependentUpon>OrderItem.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="screen\sai_keat\widget\order\NewOrder.resx">
+      <DependentUpon>NewOrder.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="screen\sai_keat\widget\order\MyOder.resx">
       <DependentUpon>MyOder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screen\sai_keat\widget\payment\methods\Bank.resx">
+      <DependentUpon>Bank.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="screen\sai_keat\widget\payment\PaymentConfirm.resx">
       <DependentUpon>PaymentConfirm.vb</DependentUpon>
@@ -408,8 +441,8 @@
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="user_control\basic\VRButton.resx">
-      <DependentUpon>VRButton.vb</DependentUpon>
+    <EmbeddedResource Include="user_control\basic\Messages.resx">
+      <DependentUpon>Messages.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="user_control\MasterWidgetItem.resx">
       <DependentUpon>MasterWidgetItem.vb</DependentUpon>
@@ -447,9 +480,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="commons\" />
     <Folder Include="screen\LSK\" />
-    <Folder Include="screen\sai_keat\widget\payment\methods\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="asset\image\main\default_user.png" />
@@ -495,6 +526,7 @@
     <None Include="Resources\warning.png" />
     <None Include="Resources\success.png" />
     <None Include="Resources\info.png" />
+    <None Include="Resources\icons8_cancel_25px.png" />
     <None Include="Resources\visa.png" />
     <None Include="Resources\mastercard.png" />
     <None Include="Resources\ebay.png" />

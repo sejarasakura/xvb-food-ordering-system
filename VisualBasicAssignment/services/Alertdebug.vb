@@ -12,6 +12,7 @@ Namespace CustomAlertBoxDemo
         Public Sub Alert(ByVal msg As String, ByVal type As Form_Alert.enmType)
             Dim frm = New Form_Alert()
             frm.showAlert(msg, type)
+            frm.Show()
         End Sub
 
         Private Sub button1_Click(ByVal sender As Object, ByVal e As EventArgs)

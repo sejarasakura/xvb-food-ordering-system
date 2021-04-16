@@ -1,6 +1,7 @@
-﻿Public Class Master
+﻿Imports System.ComponentModel
+Public Class Master
     Dim statusMax As Boolean = True
-    Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Master))
+    Dim resources As ComponentResourceManager = New ComponentResourceManager(GetType(Master))
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -8,30 +9,6 @@
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Me.Hide()
-    End Sub
-
-    Private Sub btnClose_MouseHover(sender As Object, e As EventArgs) Handles btnClose.MouseHover
-        btnClose.Image = CType(resources.GetObject("image.close_b"), Image)
-    End Sub
-
-    Private Sub btnClose_MouseLeave(sender As Object, e As EventArgs) Handles btnClose.MouseLeave
-        btnClose.Image = CType(resources.GetObject("image.close_w"), Image)
-    End Sub
-
-    Private Sub btnMini_MouseHover(sender As Object, e As EventArgs) Handles btnMini.MouseHover
-        btnMini.Image = CType(resources.GetObject("image.min_b"), Image)
-    End Sub
-
-    Private Sub btnMini_MouseLeave(sender As Object, e As EventArgs) Handles btnMini.MouseLeave
-        btnMini.Image = CType(resources.GetObject("image.min_w"), Image)
-    End Sub
-
-    Private Sub picIcon_MouseHover(sender As Object, e As EventArgs) Handles picIcon.MouseHover
-        picIcon.Image = CType(resources.GetObject("icon2"), Image)
-    End Sub
-
-    Private Sub picIcon_MouseLeave(sender As Object, e As EventArgs) Handles picIcon.MouseLeave
-        picIcon.Image = CType(resources.GetObject("icon1"), Image)
     End Sub
 
     Private Sub btn_Click(sender As Object, e As EventArgs) Handles btnProfile.MouseClick, btnMenu.MouseClick, btnOrder.MouseClick, btnCart.MouseClick
@@ -67,6 +44,10 @@
                 Timer1.Stop()
             End If
         End If
+
+    End Sub
+
+    Private Sub FlowLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles panelMessage.Paint
 
     End Sub
 

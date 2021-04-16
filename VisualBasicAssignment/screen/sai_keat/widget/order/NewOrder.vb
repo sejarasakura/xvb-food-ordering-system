@@ -1,4 +1,4 @@
-﻿Public Class MyOder
+﻿Public Class NewOder
 
     Private Sub Page_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Dim u As User = DatabaseConnections.GetLoginUser()
