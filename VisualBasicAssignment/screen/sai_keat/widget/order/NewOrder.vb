@@ -32,7 +32,7 @@
 
         Using db As FoodShopEntities1 = New FoodShopEntities1()
             Try
-                Me.dgvOrderDetails.DataSource = (From d In DatabaseConnections.db.PaymentDetails
+                Me.dgvOrderDetails.DataSource = (From d In db.PaymentDetails
                                                  Where d.payment_id = Guid.Parse(dgvOrder.Rows.Item(e.RowIndex).Cells(0).Value)
                                                  Order By d.food_id Ascending
                                                  Select New With {d.food_id, d.Food.title, d.quantity, d.Food.price}).ToList()
@@ -41,5 +41,4 @@
             End Try
         End Using
     End Sub
-
 End Class

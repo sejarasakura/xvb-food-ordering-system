@@ -24,6 +24,8 @@ Partial Class NewOder
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.btnClear = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.btnAdd = New Guna.UI2.WinForms.Guna2Button()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -47,7 +49,6 @@ Partial Class NewOder
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
         Me.FoodTableAdapter = New VisualBasicAssignment.FoodShopDataSetTableAdapters.FoodTableAdapter()
-        Me.btnClear = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
         Me.lblTotal = New System.Windows.Forms.Label()
         Me.lblTotalText = New System.Windows.Forms.Label()
@@ -64,6 +65,7 @@ Partial Class NewOder
         '
         Me.Panel1.AutoScroll = True
         Me.Panel1.AutoSize = True
+        Me.Panel1.Controls.Add(Me.Guna2HtmlLabel2)
         Me.Panel1.Controls.Add(Me.btnClear)
         Me.Panel1.Controls.Add(Me.Guna2Button1)
         Me.Panel1.Controls.Add(Me.btnAdd)
@@ -78,6 +80,30 @@ Partial Class NewOder
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(784, 475)
         Me.Panel1.TabIndex = 22
+        '
+        'Guna2HtmlLabel2
+        '
+        Me.Guna2HtmlLabel2.AutoSize = False
+        Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(581, 87)
+        Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
+        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(187, 98)
+        Me.Guna2HtmlLabel2.TabIndex = 36
+        Me.Guna2HtmlLabel2.Text = "Guna2HtmlLabel2"
+        '
+        'btnClear
+        '
+        Me.btnClear.CheckedState.Parent = Me.btnClear
+        Me.btnClear.CustomImages.Parent = Me.btnClear
+        Me.btnClear.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnClear.ForeColor = System.Drawing.Color.White
+        Me.btnClear.HoverState.Parent = Me.btnClear
+        Me.btnClear.Location = New System.Drawing.Point(539, 191)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.ShadowDecoration.Parent = Me.btnClear
+        Me.btnClear.Size = New System.Drawing.Size(116, 35)
+        Me.btnClear.TabIndex = 35
+        Me.btnClear.Text = "Clear"
         '
         'Guna2Button1
         '
@@ -368,20 +394,6 @@ Partial Class NewOder
         '
         Me.FoodTableAdapter.ClearBeforeFill = True
         '
-        'btnClear
-        '
-        Me.btnClear.CheckedState.Parent = Me.btnClear
-        Me.btnClear.CustomImages.Parent = Me.btnClear
-        Me.btnClear.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btnClear.ForeColor = System.Drawing.Color.White
-        Me.btnClear.HoverState.Parent = Me.btnClear
-        Me.btnClear.Location = New System.Drawing.Point(539, 191)
-        Me.btnClear.Name = "btnClear"
-        Me.btnClear.ShadowDecoration.Parent = Me.btnClear
-        Me.btnClear.Size = New System.Drawing.Size(116, 35)
-        Me.btnClear.TabIndex = 35
-        Me.btnClear.Text = "Clear"
-        '
         'Guna2Button2
         '
         Me.Guna2Button2.CheckedState.Parent = Me.Guna2Button2
@@ -469,4 +481,5 @@ Partial Class NewOder
     Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents lblTotal As Label
     Friend WithEvents lblTotalText As Label
+    Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class

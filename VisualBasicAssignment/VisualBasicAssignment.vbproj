@@ -108,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="commons\DatabaseConnections.vb" />
+    <Compile Include="commons\ExFunctions.vb" />
     <Compile Include="commons\validations\ValidatePayment.vb" />
     <Compile Include="FoodShopDataSet.Designer.vb">
       <DependentUpon>FoodShopDataSet.xsd</DependentUpon>
@@ -234,6 +235,10 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="screen\kangtze\menuform.vb" />
+    <Compile Include="screen\kangtze\staffmenu.Designer.vb" />
+    <Compile Include="screen\kangtze\staffmenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="screen\LHW\AddUser.Designer.vb" />
     <Compile Include="screen\LHW\AddUser.vb">
       <SubType>Form</SubType>
@@ -273,36 +278,6 @@
     </Compile>
     <Compile Include="screen\sai_keat\OrderScreen.vb">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="screen\sai_keat\widget\component\OrderGroup.Designer.vb">
-      <DependentUpon>OrderGroup.vb</DependentUpon>
-    </Compile>
-    <Compile Include="screen\sai_keat\widget\component\OrderGroup.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="screen\sai_keat\widget\component\OrderItem.Designer.vb">
-      <DependentUpon>OrderItem.vb</DependentUpon>
-    </Compile>
-    <Compile Include="screen\sai_keat\widget\component\OrderItem.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="screen\sai_keat\widget\delivery\DeliveryCompanySelections.Designer.vb">
-      <DependentUpon>DeliveryCompanySelections.vb</DependentUpon>
-    </Compile>
-    <Compile Include="screen\sai_keat\widget\delivery\DeliveryCompanySelections.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="screen\sai_keat\widget\delivery\DeliveryInfoForm.Designer.vb">
-      <DependentUpon>DeliveryInfoForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="screen\sai_keat\widget\delivery\DeliveryInfoForm.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="screen\sai_keat\widget\delivery\MapPick.Designer.vb">
-      <DependentUpon>MapPick.vb</DependentUpon>
-    </Compile>
-    <Compile Include="screen\sai_keat\widget\delivery\MapPick.vb">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="screen\sai_keat\widget\order\NewOrder.Designer.vb">
       <DependentUpon>NewOrder.vb</DependentUpon>
@@ -442,6 +417,7 @@
     <EmbeddedResource Include="screen\kangtze\detail.resx" />
     <EmbeddedResource Include="screen\kangtze\edit.resx" />
     <EmbeddedResource Include="screen\kangtze\menuform.resx" />
+    <EmbeddedResource Include="screen\kangtze\staffmenu.resx" />
     <EmbeddedResource Include="screen\LHW\AddUser.resx" />
     <EmbeddedResource Include="screen\LHW\ForgotPassword.resx" />
     <EmbeddedResource Include="screen\LHW\Login.resx" />
@@ -457,12 +433,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="screen\sai_keat\PaymentScreen.resx">
       <DependentUpon>PaymentScreen.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="screen\sai_keat\widget\component\OrderGroup.resx">
-      <DependentUpon>OrderGroup.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="screen\sai_keat\widget\component\OrderItem.resx">
-      <DependentUpon>OrderItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="screen\sai_keat\widget\order\NewOrder.resx">
       <DependentUpon>NewOrder.vb</DependentUpon>

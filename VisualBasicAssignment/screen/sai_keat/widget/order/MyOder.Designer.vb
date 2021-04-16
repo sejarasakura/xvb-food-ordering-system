@@ -19,7 +19,6 @@ Partial Class MyOder
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -47,21 +46,11 @@ Partial Class MyOder
         Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.FoodShopDataSet = New VisualBasicAssignment.FoodShopDataSet()
-        Me.FoodShopDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PaymentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PaymentTableAdapter = New VisualBasicAssignment.FoodShopDataSetTableAdapters.PaymentTableAdapter()
-        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TotalpayDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NotesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.nudQuantity, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvOrder, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvOrderDetails, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FoodShopDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FoodShopDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PaymentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -191,7 +180,6 @@ Partial Class MyOder
         Me.dgvOrder.AllowUserToOrderColumns = True
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
         Me.dgvOrder.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvOrder.AutoGenerateColumns = False
         Me.dgvOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvOrder.BackgroundColor = System.Drawing.Color.White
         Me.dgvOrder.BorderStyle = System.Windows.Forms.BorderStyle.None
@@ -206,8 +194,6 @@ Partial Class MyOder
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvOrder.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvOrder.ColumnHeadersHeight = 30
-        Me.dgvOrder.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.TotalpayDataGridViewTextBoxColumn, Me.NotesDataGridViewTextBoxColumn})
-        Me.dgvOrder.DataSource = Me.PaymentBindingSource
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
@@ -221,6 +207,7 @@ Partial Class MyOder
         Me.dgvOrder.Location = New System.Drawing.Point(3, 3)
         Me.dgvOrder.Name = "dgvOrder"
         Me.dgvOrder.ReadOnly = True
+        Me.dgvOrder.RowHeadersVisible = False
         Me.dgvOrder.RowHeadersWidth = 51
         Me.dgvOrder.RowTemplate.Height = 24
         Me.dgvOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -389,49 +376,6 @@ Partial Class MyOder
         Me.PictureBox1.TabIndex = 23
         Me.PictureBox1.TabStop = False
         '
-        'FoodShopDataSet
-        '
-        Me.FoodShopDataSet.DataSetName = "FoodShopDataSet"
-        Me.FoodShopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'FoodShopDataSetBindingSource
-        '
-        Me.FoodShopDataSetBindingSource.DataSource = Me.FoodShopDataSet
-        Me.FoodShopDataSetBindingSource.Position = 0
-        '
-        'PaymentBindingSource
-        '
-        Me.PaymentBindingSource.DataMember = "Payment"
-        Me.PaymentBindingSource.DataSource = Me.FoodShopDataSetBindingSource
-        '
-        'PaymentTableAdapter
-        '
-        Me.PaymentTableAdapter.ClearBeforeFill = True
-        '
-        'IdDataGridViewTextBoxColumn
-        '
-        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "id"
-        Me.IdDataGridViewTextBoxColumn.HeaderText = "id"
-        Me.IdDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        Me.IdDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'TotalpayDataGridViewTextBoxColumn
-        '
-        Me.TotalpayDataGridViewTextBoxColumn.DataPropertyName = "total_pay"
-        Me.TotalpayDataGridViewTextBoxColumn.HeaderText = "total_pay"
-        Me.TotalpayDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.TotalpayDataGridViewTextBoxColumn.Name = "TotalpayDataGridViewTextBoxColumn"
-        Me.TotalpayDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NotesDataGridViewTextBoxColumn
-        '
-        Me.NotesDataGridViewTextBoxColumn.DataPropertyName = "notes"
-        Me.NotesDataGridViewTextBoxColumn.HeaderText = "notes"
-        Me.NotesDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.NotesDataGridViewTextBoxColumn.Name = "NotesDataGridViewTextBoxColumn"
-        Me.NotesDataGridViewTextBoxColumn.ReadOnly = True
-        '
         'MyOder
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -455,9 +399,6 @@ Partial Class MyOder
         CType(Me.dgvOrder, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvOrderDetails, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FoodShopDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FoodShopDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PaymentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -486,11 +427,4 @@ Partial Class MyOder
     Friend WithEvents Label1 As Label
     Friend WithEvents txbSearch As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents IdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TotalpayDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents NotesDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents PaymentBindingSource As BindingSource
-    Friend WithEvents FoodShopDataSetBindingSource As BindingSource
-    Friend WithEvents FoodShopDataSet As FoodShopDataSet
-    Friend WithEvents PaymentTableAdapter As FoodShopDataSetTableAdapters.PaymentTableAdapter
 End Class

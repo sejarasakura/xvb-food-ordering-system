@@ -171,7 +171,6 @@ Partial Class addfood
         Me.cmbCategory.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cmbCategory.HoverState.Parent = Me.cmbCategory
         Me.cmbCategory.ItemHeight = 30
-        Me.cmbCategory.Items.AddRange(New Object() {"Western Food", "Shushi", "BBQ", "Steam Food", "Korean Food", "Chinese Food", "Halal Food"})
         Me.cmbCategory.ItemsAppearance.Parent = Me.cmbCategory
         Me.cmbCategory.Location = New System.Drawing.Point(183, 193)
         Me.cmbCategory.Name = "cmbCategory"

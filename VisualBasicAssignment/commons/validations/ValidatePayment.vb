@@ -50,21 +50,30 @@ Public Class ValidatePayment
 
     'Visacard Checker
     Shared Function isPaymentEnough(ByVal paymentId As Integer, ByVal payTotal As Double) As Boolean
-        Dim p As Payment = DatabaseConnections.db.Payments.Find(paymentId)
-        'Dim pDetails As List(Of PaymentDetail) = p.PaymentDetails.ToList
 
-        If p Is Nothing Then
-            Return False
-        End If
 
-        If p.total_pay > payTotal Then
-            Return False
-        Else
-            Return True
-        End If
-        'For i = 0 To p.PaymentDetails.Count
-        'pDetails.ElementAt(i).
-        'Next
+        Using db As FoodShopEntities1 = New FoodShopEntities1()
+            Try
+                Dim p As Payment = db.Payments.Find(paymentId)
+                'Dim pDetails As List(Of PaymentDetail) = p.PaymentDetails.ToList
+
+                If p Is Nothing Then
+                    Return False
+                End If
+
+                If p.total_pay > payTotal Then
+                    Return False
+                Else
+                    Return True
+                End If
+                'For i = 0 To p.PaymentDetails.Count
+                'pDetails.ElementAt(i).
+                'Next
+
+            Catch ex As Exception
+                Console.WriteLine("Exception caught: {0}", ex)
+            End Try
+        End Using
     End Function
 
 End Class

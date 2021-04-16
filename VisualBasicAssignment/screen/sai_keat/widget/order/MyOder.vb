@@ -31,9 +31,10 @@
     Private Sub dgvOrder_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvOrder.CellClick
 
         Using db As FoodShopEntities1 = New FoodShopEntities1()
+            Dim pid As Guid = dgvOrder.SelectedRows.Item(0).Cells.Item(0).Value
             Try
-                Me.dgvOrderDetails.DataSource = (From d In DatabaseConnections.db.PaymentDetails
-                                                 Where d.payment_id = Guid.Parse(dgvOrder.Rows.Item(e.RowIndex).Cells(0).Value)
+                Me.dgvOrderDetails.DataSource = (From d In db.PaymentDetails
+                                                 Where d.payment_id = pid
                                                  Order By d.food_id Ascending
                                                  Select New With {d.food_id, d.Food.title, d.quantity, d.Food.price}).ToList()
             Catch ex As Exception

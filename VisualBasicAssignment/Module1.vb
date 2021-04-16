@@ -4,7 +4,7 @@
     Public detailid As String
 
     Public Function openconnect() As Boolean
-        Dim connString As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Documents\GitHub\xvb-food-ordering-system\VisualBasicAssignment\KZDB.mdf;Integrated Security=TrueData Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Documents\GitHub\xvb-food-ordering-system\VisualBasicAssignment\KZDB.mdf;Integrated Security=True"
+        Dim connString As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\FoodShop.mdf;Integrated Security=True"
         Try
             con.ConnectionString = connString
             con.Open()
