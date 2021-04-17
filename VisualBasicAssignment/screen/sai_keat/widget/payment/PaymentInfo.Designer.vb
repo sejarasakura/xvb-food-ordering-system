@@ -27,12 +27,11 @@ Partial Class PaymentInfo
         Me.Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.Guna2ShadowPanel1 = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.txbAddressDetails2 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txbCompanyName = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txbNote = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.btnAddAddress = New Guna.UI2.WinForms.Guna2Button()
-        Me.ddlAddressDetails = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.ckbHavingHere = New Guna.UI2.WinForms.Guna2CheckBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txbAddressDetails = New Guna.UI2.WinForms.Guna2TextBox()
@@ -41,27 +40,22 @@ Partial Class PaymentInfo
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txbPhoneNumber = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2ShadowPanel2 = New Guna.UI2.WinForms.Guna2ShadowPanel()
-        Me.Guna2DataGridView1 = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.TitleDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.price = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FoodBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.FoodShopDataSet = New VisualBasicAssignment.FoodShopDataSet()
+        Me.dgvPaymnet = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(Me.components)
         Me.btnCheckout = New Guna.UI2.WinForms.Guna2Button()
-        Me.FoodTableAdapter = New VisualBasicAssignment.FoodShopDataSetTableAdapters.FoodTableAdapter()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.err = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Guna2ShadowPanel1.SuspendLayout()
         Me.Guna2ShadowPanel2.SuspendLayout()
-        CType(Me.Guna2DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FoodBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FoodShopDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvPaymnet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.err, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Separator1
@@ -84,12 +78,11 @@ Partial Class PaymentInfo
         'Guna2ShadowPanel1
         '
         Me.Guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ShadowPanel1.Controls.Add(Me.txbAddressDetails2)
         Me.Guna2ShadowPanel1.Controls.Add(Me.Label5)
         Me.Guna2ShadowPanel1.Controls.Add(Me.txbCompanyName)
         Me.Guna2ShadowPanel1.Controls.Add(Me.Label4)
         Me.Guna2ShadowPanel1.Controls.Add(Me.txbNote)
-        Me.Guna2ShadowPanel1.Controls.Add(Me.btnAddAddress)
-        Me.Guna2ShadowPanel1.Controls.Add(Me.ddlAddressDetails)
         Me.Guna2ShadowPanel1.Controls.Add(Me.ckbHavingHere)
         Me.Guna2ShadowPanel1.Controls.Add(Me.Label3)
         Me.Guna2ShadowPanel1.Controls.Add(Me.txbAddressDetails)
@@ -104,6 +97,30 @@ Partial Class PaymentInfo
         Me.Guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black
         Me.Guna2ShadowPanel1.Size = New System.Drawing.Size(632, 448)
         Me.Guna2ShadowPanel1.TabIndex = 2
+        '
+        'txbAddressDetails2
+        '
+        Me.txbAddressDetails2.BorderRadius = 5
+        Me.txbAddressDetails2.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txbAddressDetails2.DefaultText = ""
+        Me.txbAddressDetails2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txbAddressDetails2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txbAddressDetails2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txbAddressDetails2.DisabledState.Parent = Me.txbAddressDetails2
+        Me.txbAddressDetails2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txbAddressDetails2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txbAddressDetails2.FocusedState.Parent = Me.txbAddressDetails2
+        Me.txbAddressDetails2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txbAddressDetails2.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txbAddressDetails2.HoverState.Parent = Me.txbAddressDetails2
+        Me.txbAddressDetails2.Location = New System.Drawing.Point(149, 159)
+        Me.txbAddressDetails2.Name = "txbAddressDetails2"
+        Me.txbAddressDetails2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txbAddressDetails2.PlaceholderText = "none"
+        Me.txbAddressDetails2.SelectedText = ""
+        Me.txbAddressDetails2.ShadowDecoration.Parent = Me.txbAddressDetails2
+        Me.txbAddressDetails2.Size = New System.Drawing.Size(470, 32)
+        Me.txbAddressDetails2.TabIndex = 14
         '
         'Label5
         '
@@ -173,45 +190,6 @@ Partial Class PaymentInfo
         Me.txbNote.ShadowDecoration.Parent = Me.txbNote
         Me.txbNote.Size = New System.Drawing.Size(470, 32)
         Me.txbNote.TabIndex = 10
-        '
-        'btnAddAddress
-        '
-        Me.btnAddAddress.BorderRadius = 5
-        Me.btnAddAddress.CheckedState.Parent = Me.btnAddAddress
-        Me.btnAddAddress.CustomImages.Parent = Me.btnAddAddress
-        Me.btnAddAddress.FillColor = System.Drawing.Color.LimeGreen
-        Me.btnAddAddress.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btnAddAddress.ForeColor = System.Drawing.Color.White
-        Me.btnAddAddress.HoverState.Parent = Me.btnAddAddress
-        Me.btnAddAddress.Location = New System.Drawing.Point(291, 206)
-        Me.btnAddAddress.Name = "btnAddAddress"
-        Me.btnAddAddress.ShadowDecoration.Parent = Me.btnAddAddress
-        Me.btnAddAddress.Size = New System.Drawing.Size(328, 34)
-        Me.btnAddAddress.TabIndex = 9
-        Me.btnAddAddress.Text = "No prefence address? add new address now"
-        '
-        'ddlAddressDetails
-        '
-        Me.ddlAddressDetails.BackColor = System.Drawing.Color.Transparent
-        Me.ddlAddressDetails.BorderRadius = 5
-        Me.ddlAddressDetails.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.ddlAddressDetails.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ddlAddressDetails.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ddlAddressDetails.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ddlAddressDetails.FocusedState.Parent = Me.ddlAddressDetails
-        Me.ddlAddressDetails.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.ddlAddressDetails.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.ddlAddressDetails.HoverState.Parent = Me.ddlAddressDetails
-        Me.ddlAddressDetails.ItemHeight = 30
-        Me.ddlAddressDetails.ItemsAppearance.Parent = Me.ddlAddressDetails
-        Me.ddlAddressDetails.Location = New System.Drawing.Point(149, 153)
-        Me.ddlAddressDetails.Name = "ddlAddressDetails"
-        Me.ddlAddressDetails.ShadowDecoration.Parent = Me.ddlAddressDetails
-        Me.ddlAddressDetails.Size = New System.Drawing.Size(470, 36)
-        Me.ddlAddressDetails.TabIndex = 8
-        Me.ddlAddressDetails.Tag = ""
-        Me.ddlAddressDetails.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.ddlAddressDetails.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase
         '
         'ckbHavingHere
         '
@@ -327,7 +305,7 @@ Partial Class PaymentInfo
         Me.txbPhoneNumber.Location = New System.Drawing.Point(149, 259)
         Me.txbPhoneNumber.Name = "txbPhoneNumber"
         Me.txbPhoneNumber.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txbPhoneNumber.PlaceholderText = "eg. 6018-392-7135"
+        Me.txbPhoneNumber.PlaceholderText = "eg. 60183927135"
         Me.txbPhoneNumber.SelectedText = ""
         Me.txbPhoneNumber.ShadowDecoration.Parent = Me.txbPhoneNumber
         Me.txbPhoneNumber.Size = New System.Drawing.Size(470, 32)
@@ -337,7 +315,7 @@ Partial Class PaymentInfo
         '
         Me.Guna2ShadowPanel2.AutoScroll = True
         Me.Guna2ShadowPanel2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2ShadowPanel2.Controls.Add(Me.Guna2DataGridView1)
+        Me.Guna2ShadowPanel2.Controls.Add(Me.dgvPaymnet)
         Me.Guna2ShadowPanel2.FillColor = System.Drawing.Color.White
         Me.Guna2ShadowPanel2.Location = New System.Drawing.Point(651, 74)
         Me.Guna2ShadowPanel2.Name = "Guna2ShadowPanel2"
@@ -346,18 +324,17 @@ Partial Class PaymentInfo
         Me.Guna2ShadowPanel2.Size = New System.Drawing.Size(396, 320)
         Me.Guna2ShadowPanel2.TabIndex = 3
         '
-        'Guna2DataGridView1
+        'dgvPaymnet
         '
-        Me.Guna2DataGridView1.AllowUserToAddRows = False
-        Me.Guna2DataGridView1.AllowUserToDeleteRows = False
+        Me.dgvPaymnet.AllowUserToAddRows = False
+        Me.dgvPaymnet.AllowUserToDeleteRows = False
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.Guna2DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.Guna2DataGridView1.AutoGenerateColumns = False
-        Me.Guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.Guna2DataGridView1.BackgroundColor = System.Drawing.Color.White
-        Me.Guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.Guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.Guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgvPaymnet.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvPaymnet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvPaymnet.BackgroundColor = System.Drawing.Color.White
+        Me.dgvPaymnet.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvPaymnet.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.dgvPaymnet.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
@@ -365,10 +342,8 @@ Partial Class PaymentInfo
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Guna2DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.Guna2DataGridView1.ColumnHeadersHeight = 27
-        Me.Guna2DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.TitleDataGridViewTextBoxColumn, Me.price})
-        Me.Guna2DataGridView1.DataSource = Me.FoodBindingSource
+        Me.dgvPaymnet.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvPaymnet.ColumnHeadersHeight = 27
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
@@ -376,63 +351,40 @@ Partial Class PaymentInfo
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Guna2DataGridView1.DefaultCellStyle = DataGridViewCellStyle3
-        Me.Guna2DataGridView1.EnableHeadersVisualStyles = False
-        Me.Guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2DataGridView1.Location = New System.Drawing.Point(16, 12)
-        Me.Guna2DataGridView1.Name = "Guna2DataGridView1"
-        Me.Guna2DataGridView1.RowHeadersVisible = False
-        Me.Guna2DataGridView1.RowHeadersWidth = 51
-        Me.Guna2DataGridView1.RowTemplate.Height = 24
-        Me.Guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.Guna2DataGridView1.Size = New System.Drawing.Size(363, 292)
-        Me.Guna2DataGridView1.TabIndex = 1
-        Me.Guna2DataGridView1.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.[Default]
-        Me.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
-        Me.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        Me.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
-        Me.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
-        Me.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-        Me.Guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White
-        Me.Guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 27
-        Me.Guna2DataGridView1.ThemeStyle.ReadOnly = False
-        Me.Guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
-        Me.Guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.Guna2DataGridView1.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        Me.Guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.Guna2DataGridView1.ThemeStyle.RowsStyle.Height = 24
-        Me.Guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        '
-        'TitleDataGridViewTextBoxColumn
-        '
-        Me.TitleDataGridViewTextBoxColumn.DataPropertyName = "title"
-        Me.TitleDataGridViewTextBoxColumn.HeaderText = "title"
-        Me.TitleDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.TitleDataGridViewTextBoxColumn.Name = "TitleDataGridViewTextBoxColumn"
-        '
-        'price
-        '
-        Me.price.DataPropertyName = "price"
-        Me.price.HeaderText = "price"
-        Me.price.MinimumWidth = 6
-        Me.price.Name = "price"
-        '
-        'FoodBindingSource
-        '
-        Me.FoodBindingSource.DataMember = "Food"
-        Me.FoodBindingSource.DataSource = Me.FoodShopDataSet
-        '
-        'FoodShopDataSet
-        '
-        Me.FoodShopDataSet.DataSetName = "FoodShopDataSet"
-        Me.FoodShopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.dgvPaymnet.DefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvPaymnet.EnableHeadersVisualStyles = False
+        Me.dgvPaymnet.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvPaymnet.Location = New System.Drawing.Point(16, 12)
+        Me.dgvPaymnet.Name = "dgvPaymnet"
+        Me.dgvPaymnet.ReadOnly = True
+        Me.dgvPaymnet.RowHeadersVisible = False
+        Me.dgvPaymnet.RowHeadersWidth = 51
+        Me.dgvPaymnet.RowTemplate.Height = 24
+        Me.dgvPaymnet.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvPaymnet.Size = New System.Drawing.Size(363, 292)
+        Me.dgvPaymnet.TabIndex = 1
+        Me.dgvPaymnet.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.[Default]
+        Me.dgvPaymnet.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+        Me.dgvPaymnet.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.dgvPaymnet.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.dgvPaymnet.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.dgvPaymnet.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.dgvPaymnet.ThemeStyle.BackColor = System.Drawing.Color.White
+        Me.dgvPaymnet.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvPaymnet.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvPaymnet.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgvPaymnet.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.dgvPaymnet.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.dgvPaymnet.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.dgvPaymnet.ThemeStyle.HeaderStyle.Height = 27
+        Me.dgvPaymnet.ThemeStyle.ReadOnly = True
+        Me.dgvPaymnet.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
+        Me.dgvPaymnet.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.dgvPaymnet.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.dgvPaymnet.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.dgvPaymnet.ThemeStyle.RowsStyle.Height = 24
+        Me.dgvPaymnet.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvPaymnet.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
         'btnCheckout
         '
@@ -449,10 +401,6 @@ Partial Class PaymentInfo
         Me.btnCheckout.Size = New System.Drawing.Size(395, 64)
         Me.btnCheckout.TabIndex = 8
         Me.btnCheckout.Text = "Checkout"
-        '
-        'FoodTableAdapter
-        '
-        Me.FoodTableAdapter.ClearBeforeFill = True
         '
         'PictureBox4
         '
@@ -494,6 +442,10 @@ Partial Class PaymentInfo
         Me.PictureBox1.TabIndex = 4
         Me.PictureBox1.TabStop = False
         '
+        'err
+        '
+        Me.err.ContainerControl = Me
+        '
         'PaymentInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -511,13 +463,12 @@ Partial Class PaymentInfo
         Me.Guna2ShadowPanel1.ResumeLayout(False)
         Me.Guna2ShadowPanel1.PerformLayout()
         Me.Guna2ShadowPanel2.ResumeLayout(False)
-        CType(Me.Guna2DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FoodBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FoodShopDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvPaymnet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.err, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -532,8 +483,6 @@ Partial Class PaymentInfo
     Friend WithEvents Label2 As Label
     Friend WithEvents txbName As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents btnAddAddress As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents ddlAddressDetails As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents ckbHavingHere As Guna.UI2.WinForms.Guna2CheckBox
     Friend WithEvents Label5 As Label
     Friend WithEvents txbCompanyName As Guna.UI2.WinForms.Guna2TextBox
@@ -546,10 +495,7 @@ Partial Class PaymentInfo
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents btnCheckout As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2DataGridView1 As Guna.UI2.WinForms.Guna2DataGridView
-    Friend WithEvents FoodBindingSource As BindingSource
-    Friend WithEvents FoodShopDataSet As FoodShopDataSet
-    Friend WithEvents FoodTableAdapter As FoodShopDataSetTableAdapters.FoodTableAdapter
-    Friend WithEvents TitleDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents price As DataGridViewTextBoxColumn
+    Friend WithEvents dgvPaymnet As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents txbAddressDetails2 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents err As ErrorProvider
 End Class

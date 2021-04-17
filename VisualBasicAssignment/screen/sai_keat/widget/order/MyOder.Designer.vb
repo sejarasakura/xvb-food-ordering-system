@@ -318,58 +318,63 @@ Partial Class MyOder
         '
         'Guna2HtmlLabel5
         '
+        Me.Guna2HtmlLabel5.AutoSize = False
         Me.Guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.8!)
-        Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(881, 385)
+        Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(834, 385)
         Me.Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
-        Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(87, 22)
+        Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(200, 22)
         Me.Guna2HtmlLabel5.TabIndex = 28
         Me.Guna2HtmlLabel5.Text = "Recived: (7)"
         '
         'Guna2HtmlLabel6
         '
+        Me.Guna2HtmlLabel6.AutoSize = False
         Me.Guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.8!)
-        Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(881, 343)
+        Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(834, 343)
         Me.Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
-        Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(121, 22)
+        Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(200, 22)
         Me.Guna2HtmlLabel6.TabIndex = 27
         Me.Guna2HtmlLabel6.Text = "To Deliveried: (2)"
         '
         'Guna2HtmlLabel4
         '
+        Me.Guna2HtmlLabel4.AutoSize = False
         Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.8!)
-        Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(881, 296)
+        Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(834, 296)
         Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
-        Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(118, 22)
+        Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(200, 22)
         Me.Guna2HtmlLabel4.TabIndex = 26
         Me.Guna2HtmlLabel4.Text = "To pay: (1 order)"
         '
         'Guna2HtmlLabel3
         '
+        Me.Guna2HtmlLabel3.AutoSize = False
         Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.8!)
-        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(881, 254)
+        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(834, 254)
         Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
-        Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(97, 22)
+        Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(200, 22)
         Me.Guna2HtmlLabel3.TabIndex = 25
         Me.Guna2HtmlLabel3.Text = "All: (10 order)"
         '
         'Guna2HtmlLabel2
         '
+        Me.Guna2HtmlLabel2.AutoSize = False
         Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(871, 44)
+        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(824, 44)
         Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(96, 38)
+        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(200, 38)
         Me.Guna2HtmlLabel2.TabIndex = 24
         Me.Guna2HtmlLabel2.Text = "Overall"
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(910, 88)
+        Me.PictureBox1.Location = New System.Drawing.Point(863, 88)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(160, 143)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage

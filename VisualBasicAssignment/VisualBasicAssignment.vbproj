@@ -295,6 +295,24 @@
     <Compile Include="screen\LHW\UserRecordReport.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="screen\sai_keat\PaymentStep1.Designer.vb">
+      <DependentUpon>PaymentStep1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="screen\sai_keat\PaymentStep1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="screen\sai_keat\PaymentStep2.Designer.vb">
+      <DependentUpon>PaymentStep2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="screen\sai_keat\PaymentStep2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="screen\sai_keat\PaymentStep3.Designer.vb">
+      <DependentUpon>PaymentStep3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="screen\sai_keat\PaymentStep3.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="screen\sai_keat\widget\order\CartScreen.Designer.vb">
       <DependentUpon>CartScreen.vb</DependentUpon>
     </Compile>
@@ -313,28 +331,10 @@
     <Compile Include="screen\sai_keat\widget\order\MyOder.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="screen\sai_keat\widget\order\OrderDetails.Designer.vb">
-      <DependentUpon>OrderDetails.vb</DependentUpon>
-    </Compile>
-    <Compile Include="screen\sai_keat\widget\order\OrderDetails.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="screen\sai_keat\widget\order\OrderItem.Designer.vb">
       <DependentUpon>OrderItem.vb</DependentUpon>
     </Compile>
     <Compile Include="screen\sai_keat\widget\order\OrderItem.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="screen\sai_keat\widget\payment\Card.Designer.vb">
-      <DependentUpon>Card.vb</DependentUpon>
-    </Compile>
-    <Compile Include="screen\sai_keat\widget\payment\Card.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="screen\sai_keat\widget\payment\PaymentComplete.Designer.vb">
-      <DependentUpon>PaymentComplete.vb</DependentUpon>
-    </Compile>
-    <Compile Include="screen\sai_keat\widget\payment\PaymentComplete.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="screen\sai_keat\widget\payment\PaymentConfirm.Designer.vb">
@@ -464,6 +464,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="screen\LHW\UserRecordReport.resx">
       <DependentUpon>UserRecordReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screen\sai_keat\PaymentStep1.resx">
+      <DependentUpon>PaymentStep1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screen\sai_keat\PaymentStep2.resx">
+      <DependentUpon>PaymentStep2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screen\sai_keat\PaymentStep3.resx">
+      <DependentUpon>PaymentStep3.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="screen\sai_keat\widget\order\CartScreen.resx">
       <DependentUpon>CartScreen.vb</DependentUpon>

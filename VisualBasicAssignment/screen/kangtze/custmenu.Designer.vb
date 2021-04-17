@@ -29,7 +29,7 @@ Partial Class custmenu
         'pnlPicture
         '
         Me.pnlPicture.Location = New System.Drawing.Point(16, 15)
-        Me.pnlPicture.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pnlPicture.Margin = New System.Windows.Forms.Padding(4)
         Me.pnlPicture.Name = "pnlPicture"
         Me.pnlPicture.Size = New System.Drawing.Size(1075, 498)
         Me.pnlPicture.TabIndex = 0
@@ -56,7 +56,7 @@ Partial Class custmenu
         Me.Controls.Add(Me.btnReload)
         Me.Controls.Add(Me.pnlPicture)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "custmenu"
         Me.Text = "custmenu"
         Me.ResumeLayout(False)

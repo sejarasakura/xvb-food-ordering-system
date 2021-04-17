@@ -19,30 +19,32 @@ Partial Class NewOder
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.btnClear = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
-        Me.btnAdd = New Guna.UI2.WinForms.Guna2Button()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.btnSearch = New Guna.UI2.WinForms.Guna2Button()
+        Me.lblTitle = New System.Windows.Forms.Label()
         Me.nudQuantity = New Guna.UI2.WinForms.Guna2NumericUpDown()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txbSearch = New Guna.UI2.WinForms.Guna2TextBox()
         Me.dgvOrder = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Guna2HtmlLabel7 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.dgvOrderDetails = New System.Windows.Forms.DataGridView()
+        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Food = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Price = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.quantituy = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LinkLabel4 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
-        Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnPayment = New Guna.UI2.WinForms.Guna2Button()
         Me.lblTotal = New System.Windows.Forms.Label()
-        Me.lblTotalText = New System.Windows.Forms.Label()
+        Me.btnAdd = New Guna.UI2.WinForms.Guna2Button()
         Me.Panel1.SuspendLayout()
         CType(Me.nudQuantity, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvOrder, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,11 +55,10 @@ Partial Class NewOder
         '
         Me.Panel1.AutoScroll = True
         Me.Panel1.AutoSize = True
-        Me.Panel1.Controls.Add(Me.Guna2HtmlLabel2)
         Me.Panel1.Controls.Add(Me.btnClear)
-        Me.Panel1.Controls.Add(Me.Guna2Button1)
+        Me.Panel1.Controls.Add(Me.btnSearch)
         Me.Panel1.Controls.Add(Me.btnAdd)
-        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.lblTitle)
         Me.Panel1.Controls.Add(Me.nudQuantity)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.txbSearch)
@@ -69,16 +70,6 @@ Partial Class NewOder
         Me.Panel1.Size = New System.Drawing.Size(784, 475)
         Me.Panel1.TabIndex = 22
         '
-        'Guna2HtmlLabel2
-        '
-        Me.Guna2HtmlLabel2.AutoSize = False
-        Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(581, 87)
-        Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(187, 98)
-        Me.Guna2HtmlLabel2.TabIndex = 36
-        Me.Guna2HtmlLabel2.Text = "Guna2HtmlLabel2"
-        '
         'btnClear
         '
         Me.btnClear.CheckedState.Parent = Me.btnClear
@@ -86,49 +77,36 @@ Partial Class NewOder
         Me.btnClear.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnClear.ForeColor = System.Drawing.Color.White
         Me.btnClear.HoverState.Parent = Me.btnClear
-        Me.btnClear.Location = New System.Drawing.Point(539, 191)
+        Me.btnClear.Location = New System.Drawing.Point(661, 197)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.ShadowDecoration.Parent = Me.btnClear
         Me.btnClear.Size = New System.Drawing.Size(116, 35)
         Me.btnClear.TabIndex = 35
         Me.btnClear.Text = "Clear"
         '
-        'Guna2Button1
+        'btnSearch
         '
-        Me.Guna2Button1.CheckedState.Parent = Me.Guna2Button1
-        Me.Guna2Button1.CustomImages.Parent = Me.Guna2Button1
-        Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.HoverState.Parent = Me.Guna2Button1
-        Me.Guna2Button1.Location = New System.Drawing.Point(661, 18)
-        Me.Guna2Button1.Name = "Guna2Button1"
-        Me.Guna2Button1.ShadowDecoration.Parent = Me.Guna2Button1
-        Me.Guna2Button1.Size = New System.Drawing.Size(116, 35)
-        Me.Guna2Button1.TabIndex = 34
-        Me.Guna2Button1.Text = "Search"
+        Me.btnSearch.CheckedState.Parent = Me.btnSearch
+        Me.btnSearch.CustomImages.Parent = Me.btnSearch
+        Me.btnSearch.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnSearch.ForeColor = System.Drawing.Color.White
+        Me.btnSearch.HoverState.Parent = Me.btnSearch
+        Me.btnSearch.Location = New System.Drawing.Point(661, 18)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.ShadowDecoration.Parent = Me.btnSearch
+        Me.btnSearch.Size = New System.Drawing.Size(116, 35)
+        Me.btnSearch.TabIndex = 34
+        Me.btnSearch.Text = "Search"
         '
-        'btnAdd
+        'lblTitle
         '
-        Me.btnAdd.CheckedState.Parent = Me.btnAdd
-        Me.btnAdd.CustomImages.Parent = Me.btnAdd
-        Me.btnAdd.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btnAdd.ForeColor = System.Drawing.Color.White
-        Me.btnAdd.HoverState.Parent = Me.btnAdd
-        Me.btnAdd.Location = New System.Drawing.Point(661, 191)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.ShadowDecoration.Parent = Me.btnAdd
-        Me.btnAdd.Size = New System.Drawing.Size(116, 35)
-        Me.btnAdd.TabIndex = 33
-        Me.btnAdd.Text = "Add"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(352, 87)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(61, 17)
-        Me.Label2.TabIndex = 32
-        Me.Label2.Text = "Quantity"
+        Me.lblTitle.AutoSize = True
+        Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitle.Location = New System.Drawing.Point(364, 97)
+        Me.lblTitle.Name = "lblTitle"
+        Me.lblTitle.Size = New System.Drawing.Size(85, 25)
+        Me.lblTitle.TabIndex = 32
+        Me.lblTitle.Text = "Quantity"
         '
         'nudQuantity
         '
@@ -144,7 +122,7 @@ Partial Class NewOder
         Me.nudQuantity.FocusedState.Parent = Me.nudQuantity
         Me.nudQuantity.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.nudQuantity.ForeColor = System.Drawing.Color.FromArgb(CType(CType(126, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.nudQuantity.Location = New System.Drawing.Point(455, 87)
+        Me.nudQuantity.Location = New System.Drawing.Point(530, 86)
         Me.nudQuantity.Name = "nudQuantity"
         Me.nudQuantity.ShadowDecoration.Parent = Me.nudQuantity
         Me.nudQuantity.Size = New System.Drawing.Size(116, 36)
@@ -190,30 +168,30 @@ Partial Class NewOder
         Me.dgvOrder.AllowUserToAddRows = False
         Me.dgvOrder.AllowUserToDeleteRows = False
         Me.dgvOrder.AllowUserToOrderColumns = True
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.dgvOrder.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
+        Me.dgvOrder.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvOrder.BackgroundColor = System.Drawing.Color.White
         Me.dgvOrder.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvOrder.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgvOrder.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvOrder.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvOrder.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.dgvOrder.ColumnHeadersHeight = 30
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvOrder.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvOrder.DefaultCellStyle = DataGridViewCellStyle6
         Me.dgvOrder.EnableHeadersVisualStyles = False
         Me.dgvOrder.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgvOrder.Location = New System.Drawing.Point(3, 3)
@@ -263,13 +241,41 @@ Partial Class NewOder
         Me.dgvOrderDetails.AllowUserToAddRows = False
         Me.dgvOrderDetails.AllowUserToOrderColumns = True
         Me.dgvOrderDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvOrderDetails.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.Food, Me.Price, Me.quantituy})
         Me.dgvOrderDetails.Location = New System.Drawing.Point(352, 238)
         Me.dgvOrderDetails.Name = "dgvOrderDetails"
-        Me.dgvOrderDetails.ReadOnly = True
         Me.dgvOrderDetails.RowHeadersWidth = 51
         Me.dgvOrderDetails.RowTemplate.Height = 24
         Me.dgvOrderDetails.Size = New System.Drawing.Size(429, 232)
         Me.dgvOrderDetails.TabIndex = 0
+        '
+        'id
+        '
+        Me.id.HeaderText = "ID"
+        Me.id.MinimumWidth = 6
+        Me.id.Name = "id"
+        Me.id.Width = 125
+        '
+        'Food
+        '
+        Me.Food.HeaderText = "Food"
+        Me.Food.MinimumWidth = 6
+        Me.Food.Name = "Food"
+        Me.Food.Width = 125
+        '
+        'Price
+        '
+        Me.Price.HeaderText = "Price"
+        Me.Price.MinimumWidth = 6
+        Me.Price.Name = "Price"
+        Me.Price.Width = 125
+        '
+        'quantituy
+        '
+        Me.quantituy.HeaderText = "Column1"
+        Me.quantituy.MinimumWidth = 6
+        Me.quantituy.Name = "quantituy"
+        Me.quantituy.Width = 125
         '
         'LinkLabel4
         '
@@ -328,44 +334,48 @@ Partial Class NewOder
         Me.Guna2Separator1.Size = New System.Drawing.Size(1056, 10)
         Me.Guna2Separator1.TabIndex = 16
         '
-        'Guna2Button2
+        'btnPayment
         '
-        Me.Guna2Button2.CheckedState.Parent = Me.Guna2Button2
-        Me.Guna2Button2.CustomImages.Parent = Me.Guna2Button2
-        Me.Guna2Button2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2Button2.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button2.HoverState.Parent = Me.Guna2Button2
-        Me.Guna2Button2.Location = New System.Drawing.Point(818, 479)
-        Me.Guna2Button2.Name = "Guna2Button2"
-        Me.Guna2Button2.ShadowDecoration.Parent = Me.Guna2Button2
-        Me.Guna2Button2.Size = New System.Drawing.Size(258, 35)
-        Me.Guna2Button2.TabIndex = 36
-        Me.Guna2Button2.Text = "Procide Payment"
+        Me.btnPayment.CheckedState.Parent = Me.btnPayment
+        Me.btnPayment.CustomImages.Parent = Me.btnPayment
+        Me.btnPayment.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnPayment.ForeColor = System.Drawing.Color.White
+        Me.btnPayment.HoverState.Parent = Me.btnPayment
+        Me.btnPayment.Location = New System.Drawing.Point(887, 479)
+        Me.btnPayment.Name = "btnPayment"
+        Me.btnPayment.ShadowDecoration.Parent = Me.btnPayment
+        Me.btnPayment.Size = New System.Drawing.Size(189, 35)
+        Me.btnPayment.TabIndex = 36
+        Me.btnPayment.Text = "Procide Payment"
         '
         'lblTotal
         '
         Me.lblTotal.AutoSize = True
-        Me.lblTotal.Location = New System.Drawing.Point(815, 47)
+        Me.lblTotal.Location = New System.Drawing.Point(815, 440)
         Me.lblTotal.Name = "lblTotal"
         Me.lblTotal.Size = New System.Drawing.Size(127, 17)
         Me.lblTotal.TabIndex = 37
         Me.lblTotal.Text = "Total Payment: 0.0"
         '
-        'lblTotalText
+        'btnAdd
         '
-        Me.lblTotalText.AutoSize = True
-        Me.lblTotalText.Location = New System.Drawing.Point(815, 93)
-        Me.lblTotalText.Name = "lblTotalText"
-        Me.lblTotalText.Size = New System.Drawing.Size(95, 17)
-        Me.lblTotalText.TabIndex = 38
-        Me.lblTotalText.Text = "Total Tax: 0.0"
+        Me.btnAdd.CheckedState.Parent = Me.btnAdd
+        Me.btnAdd.CustomImages.Parent = Me.btnAdd
+        Me.btnAdd.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnAdd.ForeColor = System.Drawing.Color.White
+        Me.btnAdd.HoverState.Parent = Me.btnAdd
+        Me.btnAdd.Location = New System.Drawing.Point(661, 87)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.ShadowDecoration.Parent = Me.btnAdd
+        Me.btnAdd.Size = New System.Drawing.Size(116, 35)
+        Me.btnAdd.TabIndex = 33
+        Me.btnAdd.Text = "Add"
         '
         'NewOder
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
-        Me.Controls.Add(Me.lblTotalText)
         Me.Controls.Add(Me.lblTotal)
-        Me.Controls.Add(Me.Guna2Button2)
+        Me.Controls.Add(Me.btnPayment)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.LinkLabel4)
         Me.Controls.Add(Me.LinkLabel3)
@@ -394,15 +404,17 @@ Partial Class NewOder
     Friend WithEvents dgvOrder As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents Guna2HtmlLabel7 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents dgvOrderDetails As DataGridView
-    Friend WithEvents btnAdd As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lblTitle As Label
     Friend WithEvents nudQuantity As Guna.UI2.WinForms.Guna2NumericUpDown
     Friend WithEvents Label1 As Label
     Friend WithEvents txbSearch As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnSearch As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnClear As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnPayment As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents lblTotal As Label
-    Friend WithEvents lblTotalText As Label
-    Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents id As DataGridViewTextBoxColumn
+    Friend WithEvents Food As DataGridViewTextBoxColumn
+    Friend WithEvents Price As DataGridViewTextBoxColumn
+    Friend WithEvents quantituy As DataGridViewTextBoxColumn
+    Friend WithEvents btnAdd As Guna.UI2.WinForms.Guna2Button
 End Class

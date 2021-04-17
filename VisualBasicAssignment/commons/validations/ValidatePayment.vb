@@ -5,8 +5,10 @@ Public Class ValidatePayment
     Shared ReadOnly masterRegex As Regex = New Regex("^5[1-5][0-9]{14}|^(222[1-9]|22[3-9]\\d|2[3-6]\\d{2}|27[0-1]\\d|2720)[0-9]{12}$")
     Shared ReadOnly visaRegex As Regex = New Regex("^4\d{12}(?:\d{3})?$")
     Shared ReadOnly digitRegex As Regex = New Regex("^\d?$")
-    Shared ReadOnly alphaRegex As Regex = New Regex("^\w?$")
-    Shared ReadOnly phoneRegex As Regex = New Regex("^60[0-9]{2} [0-9]{2} [0-9]{2}?$")
+    Shared ReadOnly nameRegex As Regex = New Regex("^[ a-zA-Z]*?$")
+    Shared ReadOnly ccvRegex As Regex = New Regex("^[0-9]{3}?$")
+    Shared ReadOnly expRegex As Regex = New Regex("^[0-9]{2}[/]{1}[0-9]{2}?$")
+    Shared ReadOnly phoneRegex As Regex = New Regex("^60[0-9]{9}?$")
 
     'Mastercard Checker
     Shared Function isMastercard(ByVal text As String) As Boolean
@@ -28,6 +30,15 @@ Public Class ValidatePayment
         Return match.Success
     End Function
 
+    Friend Shared Function isPhoneNumber(text As String) As Boolean
+        If text Is Nothing Then
+            Return False
+        End If
+        ' Step 2: call Match on Regex.
+        Dim match As Match = phoneRegex.Match(text)
+        Return match.Success
+    End Function
+
     'Digit Checker
     Shared Function isDigit(ByVal text As String) As Boolean
         If text Is Nothing Then
@@ -38,13 +49,33 @@ Public Class ValidatePayment
         Return match.Success
     End Function
 
-    'Alpha Checker
-    Shared Function isAlpha(ByVal text As String) As Boolean
+    'Name Checker
+    Shared Function isName(ByVal text As String) As Boolean
         If text Is Nothing Then
             Return False
         End If
         ' Step 2: call Match on Regex.
-        Dim match As Match = alphaRegex.Match(text)
+        Dim match As Match = nameRegex.Match(text)
+        Return match.Success
+    End Function
+
+    'Exp Checker
+    Shared Function isExp(ByVal text As String) As Boolean
+        If text Is Nothing Then
+            Return False
+        End If
+        ' Step 2: call Match on Regex.
+        Dim match As Match = expRegex.Match(text)
+        Return match.Success
+    End Function
+
+    'CCV Checker
+    Shared Function isCCV(ByVal text As String) As Boolean
+        If text Is Nothing Then
+            Return False
+        End If
+        ' Step 2: call Match on Regex.
+        Dim match As Match = ccvRegex.Match(text)
         Return match.Success
     End Function
 

@@ -77,14 +77,14 @@
         btnCart.FillColor = Color.White
         btnCart.ForeColor = Color.Black
         checkNav(2)
-        'switchPanel(cartform)
+        switchPanel2(New MyOder())
     End Sub
 
     Private Sub btnOrder_Click(sender As Object, e As EventArgs) Handles btnOrder.Click
         btnOrder.FillColor = Color.White
         btnOrder.ForeColor = Color.Black
         checkNav(3)
-        'switchPanel(orderform)
+        switchPanel2(New CartScreen())
     End Sub
 
     Private Sub btnMenu_Click(sender As Object, e As EventArgs) Handles btnMenu.Click
@@ -133,6 +133,12 @@
         panel.TopLevel = False
         Panel4.Controls.Add(panel)
         panel.Show()
+    End Sub
+    Sub switchPanel2(ByVal panel As Control)
+        Panel4.Controls.Clear()
+        panel.Show()
+        panel.Visible = True
+        Panel4.Controls.Add(panel)
     End Sub
 
 
