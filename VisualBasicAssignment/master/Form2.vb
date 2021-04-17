@@ -85,7 +85,14 @@
         btnOrder.FillColor = Color.White
         btnOrder.ForeColor = Color.Black
         checkNav(3)
-        'switchPanel(orderform)
+        switchPanel2(New StaffOrder())
+    End Sub
+
+    Sub switchPanel2(ByVal panel As Control)
+        Panel4.Controls.Clear()
+        panel.Show()
+        panel.Visible = True
+        Panel4.Controls.Add(panel)
     End Sub
 
     Private Sub btnMenu_Click(sender As Object, e As EventArgs) Handles btnMenu.Click

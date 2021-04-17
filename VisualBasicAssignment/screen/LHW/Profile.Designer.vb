@@ -43,6 +43,7 @@ Partial Class Profile
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ImageDialog = New System.Windows.Forms.OpenFileDialog()
+        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.grpBox.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -413,6 +414,20 @@ Partial Class Profile
         Me.ImageDialog.FileName = "OpenFileDialog1"
         Me.ImageDialog.Multiselect = True
         '
+        'Guna2Button1
+        '
+        Me.Guna2Button1.CheckedState.Parent = Me.Guna2Button1
+        Me.Guna2Button1.CustomImages.Parent = Me.Guna2Button1
+        Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2Button1.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button1.HoverState.Parent = Me.Guna2Button1
+        Me.Guna2Button1.Location = New System.Drawing.Point(697, 406)
+        Me.Guna2Button1.Name = "Guna2Button1"
+        Me.Guna2Button1.ShadowDecoration.Parent = Me.Guna2Button1
+        Me.Guna2Button1.Size = New System.Drawing.Size(121, 32)
+        Me.Guna2Button1.TabIndex = 60
+        Me.Guna2Button1.Text = "Report"
+        '
         'Profile
         '
         Me.AcceptButton = Me.txtReset
@@ -420,6 +435,7 @@ Partial Class Profile
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(830, 450)
+        Me.Controls.Add(Me.Guna2Button1)
         Me.Controls.Add(Me.grpBox)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Profile"
@@ -451,4 +467,5 @@ Partial Class Profile
     Friend WithEvents txtGender As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtFName As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtLName As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
 End Class

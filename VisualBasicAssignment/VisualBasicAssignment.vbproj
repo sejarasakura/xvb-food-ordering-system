@@ -182,9 +182,6 @@
     <Compile Include="model\Membership.vb">
       <DependentUpon>FoodShopModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="model\Menu.vb">
-      <DependentUpon>FoodShopModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="model\Order.vb">
       <DependentUpon>FoodShopModel.tt</DependentUpon>
     </Compile>
@@ -195,6 +192,9 @@
       <DependentUpon>FoodShopModel.tt</DependentUpon>
     </Compile>
     <Compile Include="model\PaymentDetail.vb">
+      <DependentUpon>FoodShopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\PaymentDetailsReportView.vb">
       <DependentUpon>FoodShopModel.tt</DependentUpon>
     </Compile>
     <Compile Include="model\PaymentMethod.vb">
@@ -319,6 +319,22 @@
     <Compile Include="screen\sai_keat\widget\order\CartScreen.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="screen\sai_keat\widget\order\PaymentReport.Designer.vb">
+      <DependentUpon>PaymentReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="screen\sai_keat\widget\order\PaymentReport.vb" />
+    <Compile Include="screen\sai_keat\widget\order\StaffOrder.Designer.vb">
+      <DependentUpon>StaffOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="screen\sai_keat\widget\order\StaffOrder.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="screen\sai_keat\widget\order\SalesReport.Designer.vb">
+      <DependentUpon>SalesReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="screen\sai_keat\widget\order\SalesReport.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="screen\sai_keat\widget\order\NewOrder.Designer.vb">
       <DependentUpon>NewOrder.vb</DependentUpon>
     </Compile>
@@ -396,6 +412,12 @@
     </Compile>
     <Compile Include="model\User.vb">
       <DependentUpon>FoodShopModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user_control\MasterWidgetItemSm.Designer.vb">
+      <DependentUpon>MasterWidgetItemSm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="user_control\MasterWidgetItemSm.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="user_control\MasterWidgetItem.Designer.vb">
       <DependentUpon>MasterWidgetItem.vb</DependentUpon>
@@ -477,6 +499,15 @@
     <EmbeddedResource Include="screen\sai_keat\widget\order\CartScreen.resx">
       <DependentUpon>CartScreen.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="screen\sai_keat\widget\order\PaymentReport.resx">
+      <DependentUpon>PaymentReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screen\sai_keat\widget\order\StaffOrder.resx">
+      <DependentUpon>StaffOrder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screen\sai_keat\widget\order\SalesReport.resx">
+      <DependentUpon>SalesReport.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="screen\sai_keat\widget\order\NewOrder.resx">
       <DependentUpon>NewOrder.vb</DependentUpon>
     </EmbeddedResource>
@@ -503,6 +534,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user_control\MasterWidgetItemSm.resx">
+      <DependentUpon>MasterWidgetItemSm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="user_control\MasterWidgetItem.resx">
       <DependentUpon>MasterWidgetItem.vb</DependentUpon>

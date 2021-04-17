@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="bfbd7e1b60994fd0b3ac8b830524129f" Name="Diagram1" ZoomLevel="39">
+      <Diagram DiagramId="bfbd7e1b60994fd0b3ac8b830524129f" Name="Diagram1" ZoomLevel="52">
         <EntityTypeShape EntityType="FoodShopModel.Address" Width="1.5" PointX="7.5" PointY="14.75" IsExpanded="true" />
         <EntityTypeShape EntityType="FoodShopModel.Cart" Width="1.5" PointX="8.625" PointY="22.625" IsExpanded="true" />
         <EntityTypeShape EntityType="FoodShopModel.CartDetail" Width="1.5" PointX="10.375" PointY="22.625" IsExpanded="true" />
@@ -16,7 +16,6 @@
         <EntityTypeShape EntityType="FoodShopModel.DeliveryStatu" Width="1.5" PointX="3" PointY="16.875" IsExpanded="true" />
         <EntityTypeShape EntityType="FoodShopModel.Food" Width="1.5" PointX="13.375" PointY="22" IsExpanded="true" />
         <EntityTypeShape EntityType="FoodShopModel.Membership" Width="1.5" PointX="1" PointY="23.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="FoodShopModel.Menu" Width="1.5" PointX="15.5" PointY="22.75" IsExpanded="true" />
         <EntityTypeShape EntityType="FoodShopModel.Order" Width="1.5" PointX="8.25" PointY="25.875" IsExpanded="true" />
         <EntityTypeShape EntityType="FoodShopModel.OrderDetail" Width="1.5" PointX="10.375" PointY="26.125" IsExpanded="true" />
         <EntityTypeShape EntityType="FoodShopModel.Payment" Width="1.5" PointX="14" PointY="15.25" IsExpanded="true" />
@@ -54,8 +53,8 @@
         <AssociationConnector Association="FoodShopModel.FK__ResetPass__user___35BCFE0A" ManuallyRouted="false" />
         <AssociationConnector Association="FoodShopModel.FK__Staff__user_id__2B3F6F97" ManuallyRouted="false" />
         <AssociationConnector Association="FoodShopModel.DeliveryChainDetails" ManuallyRouted="false" />
-        <AssociationConnector Association="FoodShopModel.MenuItems" ManuallyRouted="false" />
         <AssociationConnector Association="FoodShopModel.UserAddress" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="FoodShopModel.PaymentDetailsReportView" Width="1.5" PointX="0.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

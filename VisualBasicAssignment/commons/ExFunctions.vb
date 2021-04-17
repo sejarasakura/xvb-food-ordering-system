@@ -28,7 +28,7 @@ Public Class ExFunctions
         End Using
     End Function
 
-    Public Shared Sub addToCart(ByVal productId As String, ByVal Optional quantity As Integer = 1)
+    Public Shared Sub addToCart(ByVal productId As Integer, ByVal Optional quantity As Integer = 1)
         Dim cd As CartDetail = New CartDetail()
 
         Using db As FoodShopEntities1 = New FoodShopEntities1()
@@ -46,7 +46,7 @@ Public Class ExFunctions
             If cart IsNot Nothing Then
                 'string userid = Session["UserId"].ToString(); //user id for the logged in user
                 Dim lProductid = productId 'get product id from the selected product
-                Dim pidininteger = Integer.Parse(lProductid)
+                Dim pidininteger = lProductid
                 Dim product = db.Foods.Find(pidininteger)
                 cd.food_id = pidininteger 'art id
                 cd.quantity = quantity

@@ -8,7 +8,7 @@
                                       From d In db.Payments
                                       Where d.user_id = u.user_id
                                       Order By d.payment_date Descending
-                                      Select New With {d.id, d.total_pay, d.payment_status}
+                                      Select New With {d.id, d.total_pay, d.PaymentStatu.name}
                                       ).ToList()
 
             Catch ex As Exception
@@ -32,7 +32,11 @@
 
         Using db As FoodShopEntities1 = New FoodShopEntities1()
             Dim pid As Guid = dgvOrder.SelectedRows.Item(0).Cells.Item(0).Value
+            Dim p As Payment = db.Payments.Find(pid)
             Try
+                Me.lblPay.Text = "#" + p.id.ToString
+                Me.lblDate.Text = "Order Date:" + p.payment_date.ToString
+                Me.lblStatus.Text = "Status:" + p.PaymentStatu.name
                 Me.dgvOrderDetails.DataSource = (From d In db.PaymentDetails
                                                  Where d.payment_id = pid
                                                  Order By d.food_id Ascending
@@ -43,7 +47,11 @@
         End Using
     End Sub
 
-    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub lblDate_Click(sender As Object, e As EventArgs) Handles lblDate.Click
 
     End Sub
 End Class

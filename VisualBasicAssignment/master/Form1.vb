@@ -77,14 +77,14 @@
         btnCart.FillColor = Color.White
         btnCart.ForeColor = Color.Black
         checkNav(2)
-        switchPanel2(New MyOder())
+        switchPanel2(New CartScreen())
     End Sub
 
     Private Sub btnOrder_Click(sender As Object, e As EventArgs) Handles btnOrder.Click
         btnOrder.FillColor = Color.White
         btnOrder.ForeColor = Color.Black
         checkNav(3)
-        switchPanel2(New CartScreen())
+        switchPanel2(New MyOder())
     End Sub
 
     Private Sub btnMenu_Click(sender As Object, e As EventArgs) Handles btnMenu.Click

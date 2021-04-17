@@ -13,6 +13,7 @@ Public Class custmenu
     'Private WithEvents btnEdit As Button
 
     Private Sub custmenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.pnlPicture.AutoScroll = True
         ReLoad()
     End Sub
 
@@ -20,7 +21,7 @@ Public Class custmenu
         pnlPicture.Controls.Clear()
         Dim arrImage() As Byte
         Using db As FoodShopEntities1 = New FoodShopEntities1()
-            Dim foods As List(Of Food) = DatabaseConnections.db.Foods.ToList()
+            Dim foods As List(Of Food) = (From d In db.Foods Order By d.id Descending).ToList()
             Try
                 For i = 0 To foods.Count
 
@@ -52,10 +53,18 @@ Public Class custmenu
                     AddHandler btnView.Click, AddressOf Me.Button_Click
                     btnView.Dock = DockStyle.Top
 
+                    Dim btnAddCart As New Button
+                    btnAddCart.Name = foods.Item(i).id
+
+                    btnAddCart.Text = "Add To Cart"
+                    AddHandler btnAddCart.Click, AddressOf Me.AddToCart
+                    btnAddCart.Dock = DockStyle.Top
+
                     pnl = New Panel
                     pnl.Controls.Add(pricelabel)
                     pnl.Controls.Add(namelabel)
                     pnl.Controls.Add(btnView)
+                    pnl.Controls.Add(btnAddCart)
 
                     pnlPicture.Controls.Add(pic)
                     pnlPicture.Controls.Add(pnl)
@@ -66,6 +75,12 @@ Public Class custmenu
             End Try
         End Using
 
+    End Sub
+
+    Private Sub AddToCart(sender As Object, e As EventArgs)
+        Dim btn As New Button
+        btn = CType(sender, Button)
+        ExFunctions.addToCart(btn.Name)
     End Sub
 
     Private Sub Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)

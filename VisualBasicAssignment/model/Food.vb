@@ -27,6 +27,5 @@ Partial Public Class Food
     Public Overridable Property User As User
     Public Overridable Property OrderDetails As ICollection(Of OrderDetail) = New HashSet(Of OrderDetail)
     Public Overridable Property PaymentDetails As ICollection(Of PaymentDetail) = New HashSet(Of PaymentDetail)
-    Public Overridable Property Menus As ICollection(Of Menu) = New HashSet(Of Menu)
 
 End Class

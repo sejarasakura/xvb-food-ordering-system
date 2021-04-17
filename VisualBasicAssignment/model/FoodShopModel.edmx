@@ -130,26 +130,6 @@
           <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="description" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
-        <EntityType Name="Menu">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="start_date" Type="datetime" Nullable="false" />
-          <Property Name="end_date" Type="datetime" Nullable="false" />
-          <Property Name="title" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="descriptions" Type="nvarchar" MaxLength="200" />
-          <Property Name="enabled" Type="bit" />
-          <Property Name="menu_image" Type="image" />
-        </EntityType>
-        <EntityType Name="MenuItems">
-          <Key>
-            <PropertyRef Name="menu_id" />
-            <PropertyRef Name="food_id" />
-          </Key>
-          <Property Name="menu_id" Type="int" Nullable="false" />
-          <Property Name="food_id" Type="int" Nullable="false" />
-        </EntityType>
         <EntityType Name="Order">
           <Key>
             <PropertyRef Name="id" />
@@ -264,7 +244,38 @@
           <Property Name="picture" Type="image" />
           <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <Association Name="FK__Cart__customer_i__3E52440B">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'C:\USERS\ITSUKA KOTORI\DOCUMENTS\GITHUB\XVB-FOOD-ORDERING-SYSTEM\VISUALBASICASSIGNMENT\FOODSHOP.MDF.dbo.PaymentDetailsReportView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="PaymentDetailsReportView">
+          <Key>
+            <PropertyRef Name="payment_id" />
+            <PropertyRef Name="payment_status" />
+            <PropertyRef Name="payment_method" />
+            <PropertyRef Name="food_id" />
+            <PropertyRef Name="price" />
+            <PropertyRef Name="stock" />
+            <PropertyRef Name="title" />
+            <PropertyRef Name="payment_status_name" />
+            <PropertyRef Name="payment_method_name" />
+          </Key>
+          <Property Name="payment_id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="total_pay" Type="float" />
+          <Property Name="net_pay" Type="float" />
+          <Property Name="discount" Type="float" />
+          <Property Name="payment_status" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="payment_method" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="tax_change" Type="float" />
+          <Property Name="payment_date" Type="datetime" />
+          <Property Name="food_id" Type="int" Nullable="false" />
+          <Property Name="quantity" Type="int" />
+          <Property Name="price" Type="float" Nullable="false" />
+          <Property Name="descriptions" Type="nvarchar" MaxLength="200" />
+          <Property Name="stock" Type="int" Nullable="false" />
+          <Property Name="title" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="payment_status_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="payment_method_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Cart__customer_i__59C55456">
           <End Role="Users" Type="Self.Users" Multiplicity="1" />
           <End Role="Cart" Type="Self.Cart" Multiplicity="*" />
           <ReferentialConstraint>
@@ -276,7 +287,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CartDetai__cart___412EB0B6">
+        <Association Name="FK__CartDetai__cart___5CA1C101">
           <End Role="Cart" Type="Self.Cart" Multiplicity="1" />
           <End Role="CartDetails" Type="Self.CartDetails" Multiplicity="*" />
           <ReferentialConstraint>
@@ -288,7 +299,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CartDetai__food___4222D4EF">
+        <Association Name="FK__CartDetai__food___5D95E53A">
           <End Role="Food" Type="Self.Food" Multiplicity="1" />
           <End Role="CartDetails" Type="Self.CartDetails" Multiplicity="*" />
           <ReferentialConstraint>
@@ -300,7 +311,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Customer__member__300424B4">
+        <Association Name="FK__Customer__member__336AA144">
           <End Role="Membership" Type="Self.Membership" Multiplicity="1" />
           <End Role="Customer" Type="Self.Customer" Multiplicity="*" />
           <ReferentialConstraint>
@@ -312,7 +323,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Customer__user_i__2F10007B">
+        <Association Name="FK__Customer__user_i__32767D0B">
           <End Role="Users" Type="Self.Users" Multiplicity="1" />
           <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
           <ReferentialConstraint>
@@ -324,7 +335,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Delivery__delive__6A30C649">
+        <Association Name="FK__Delivery__delive__05A3D694">
           <End Role="DeliveryCompany" Type="Self.DeliveryCompany" Multiplicity="1" />
           <End Role="Delivery" Type="Self.Delivery" Multiplicity="*" />
           <ReferentialConstraint>
@@ -336,7 +347,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Delivery__destin__693CA210">
+        <Association Name="FK__Delivery__destin__04AFB25B">
           <End Role="Address" Type="Self.Address" Multiplicity="1" />
           <End Role="Delivery" Type="Self.Delivery" Multiplicity="*" />
           <ReferentialConstraint>
@@ -348,7 +359,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Delivery__final___6B24EA82">
+        <Association Name="FK__Delivery__final___0697FACD">
           <End Role="DeliveryStatus" Type="Self.DeliveryStatus" Multiplicity="1" />
           <End Role="Delivery" Type="Self.Delivery" Multiplicity="*" />
           <ReferentialConstraint>
@@ -360,7 +371,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Delivery__source__68487DD7">
+        <Association Name="FK__Delivery__source__03BB8E22">
           <End Role="Address" Type="Self.Address" Multiplicity="1" />
           <End Role="Delivery" Type="Self.Delivery" Multiplicity="*" />
           <ReferentialConstraint>
@@ -372,7 +383,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DeliveryC__addre__6EF57B66">
+        <Association Name="FK__DeliveryC__addre__0A688BB1">
           <End Role="Address" Type="Self.Address" Multiplicity="1" />
           <End Role="DeliveryChain" Type="Self.DeliveryChain" Multiplicity="*" />
           <ReferentialConstraint>
@@ -384,7 +395,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DeliveryC__deliv__6FE99F9F">
+        <Association Name="FK__DeliveryC__deliv__0B5CAFEA">
           <End Role="DeliveryStatus" Type="Self.DeliveryStatus" Multiplicity="0..1" />
           <End Role="DeliveryChain" Type="Self.DeliveryChain" Multiplicity="*" />
           <ReferentialConstraint>
@@ -396,7 +407,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DeliveryC__deliv__72C60C4A">
+        <Association Name="FK__DeliveryC__deliv__0E391C95">
           <End Role="Delivery" Type="Self.Delivery" Multiplicity="1" />
           <End Role="DeliveryChainDetails" Type="Self.DeliveryChainDetails" Multiplicity="*" />
           <ReferentialConstraint>
@@ -408,7 +419,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DeliveryC__tranf__73BA3083">
+        <Association Name="FK__DeliveryC__tranf__0F2D40CE">
           <End Role="DeliveryChain" Type="Self.DeliveryChain" Multiplicity="1" />
           <End Role="DeliveryChainDetails" Type="Self.DeliveryChainDetails" Multiplicity="*" />
           <ReferentialConstraint>
@@ -420,7 +431,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Food__catergory___398D8EEE">
+        <Association Name="FK__Food__catergory___55009F39">
           <End Role="Catergory" Type="Self.Catergory" Multiplicity="0..1" />
           <End Role="Food" Type="Self.Food" Multiplicity="*" />
           <ReferentialConstraint>
@@ -432,7 +443,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Food__duty_staff__38996AB5">
+        <Association Name="FK__Food__duty_staff__540C7B00">
           <End Role="Users" Type="Self.Users" Multiplicity="1" />
           <End Role="Food" Type="Self.Food" Multiplicity="*" />
           <ReferentialConstraint>
@@ -444,31 +455,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__MenuItems__food___76969D2E">
-          <End Role="Food" Type="Self.Food" Multiplicity="1" />
-          <End Role="MenuItems" Type="Self.MenuItems" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Food">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="MenuItems">
-              <PropertyRef Name="food_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__MenuItems__menu___778AC167">
-          <End Role="Menu" Type="Self.Menu" Multiplicity="1" />
-          <End Role="MenuItems" Type="Self.MenuItems" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Menu">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="MenuItems">
-              <PropertyRef Name="menu_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Order__customer___44FF419A">
+        <Association Name="FK__Order__customer___607251E5">
           <End Role="Users" Type="Self.Users" Multiplicity="1" />
           <End Role="Order" Type="Self.Order" Multiplicity="*" />
           <ReferentialConstraint>
@@ -480,7 +467,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__OrderDeta__food___48CFD27E">
+        <Association Name="FK__OrderDeta__food___6442E2C9">
           <End Role="Food" Type="Self.Food" Multiplicity="1" />
           <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
           <ReferentialConstraint>
@@ -492,7 +479,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__OrderDeta__order__47DBAE45">
+        <Association Name="FK__OrderDeta__order__634EBE90">
           <End Role="Order" Type="Self.Order" Multiplicity="1" />
           <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
           <ReferentialConstraint>
@@ -504,7 +491,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Payment__payment__52593CB8">
+        <Association Name="FK__Payment__payment__6DCC4D03">
           <End Role="PaymentMethod" Type="Self.PaymentMethod" Multiplicity="1" />
           <End Role="Payment" Type="Self.Payment" Multiplicity="*" />
           <ReferentialConstraint>
@@ -516,7 +503,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Payment__payment__534D60F1">
+        <Association Name="FK__Payment__payment__6EC0713C">
           <End Role="PaymentStatus" Type="Self.PaymentStatus" Multiplicity="1" />
           <End Role="Payment" Type="Self.Payment" Multiplicity="*" />
           <ReferentialConstraint>
@@ -528,7 +515,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Payment__user_id__5441852A">
+        <Association Name="FK__Payment__user_id__6FB49575">
           <End Role="Users" Type="Self.Users" Multiplicity="1" />
           <End Role="Payment" Type="Self.Payment" Multiplicity="*" />
           <ReferentialConstraint>
@@ -540,7 +527,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PaymentDe__food___5812160E">
+        <Association Name="FK__PaymentDe__food___73852659">
           <End Role="Food" Type="Self.Food" Multiplicity="1" />
           <End Role="PaymentDetails" Type="Self.PaymentDetails" Multiplicity="*" />
           <ReferentialConstraint>
@@ -552,7 +539,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PaymentDe__payme__571DF1D5">
+        <Association Name="FK__PaymentDe__payme__72910220">
           <End Role="Payment" Type="Self.Payment" Multiplicity="1" />
           <End Role="PaymentDetails" Type="Self.PaymentDetails" Multiplicity="*" />
           <ReferentialConstraint>
@@ -564,7 +551,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ResetPass__user___35BCFE0A">
+        <Association Name="FK__ResetPass__user___51300E55">
           <End Role="Users" Type="Self.Users" Multiplicity="1" />
           <End Role="ResetPasswordToken" Type="Self.ResetPasswordToken" Multiplicity="*" />
           <ReferentialConstraint>
@@ -576,7 +563,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Staff__position___2C3393D0">
+        <Association Name="FK__Staff__position___489AC854">
           <End Role="Position" Type="Self.Position" Multiplicity="1" />
           <End Role="Staff" Type="Self.Staff" Multiplicity="*" />
           <ReferentialConstraint>
@@ -588,7 +575,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Staff__user_id__2B3F6F97">
+        <Association Name="FK__Staff__user_id__345EC57D">
           <End Role="Users" Type="Self.Users" Multiplicity="1" />
           <End Role="Staff" Type="Self.Staff" Multiplicity="0..1" />
           <ReferentialConstraint>
@@ -600,7 +587,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__UserAddre__addre__6477ECF3">
+        <Association Name="FK__UserAddre__addre__7FEAFD3E">
           <End Role="Address" Type="Self.Address" Multiplicity="1" />
           <End Role="UserAddress" Type="Self.UserAddress" Multiplicity="*" />
           <ReferentialConstraint>
@@ -612,7 +599,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__UserAddre__user___6383C8BA">
+        <Association Name="FK__UserAddre__user___7EF6D905">
           <End Role="Users" Type="Self.Users" Multiplicity="1" />
           <End Role="UserAddress" Type="Self.UserAddress" Multiplicity="*" />
           <ReferentialConstraint>
@@ -637,8 +624,6 @@
           <EntitySet Name="DeliveryStatus" EntityType="Self.DeliveryStatus" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Food" EntityType="Self.Food" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Membership" EntityType="Self.Membership" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Menu" EntityType="Self.Menu" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="MenuItems" EntityType="Self.MenuItems" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OrderDetails" EntityType="Self.OrderDetails" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Payment" EntityType="Self.Payment" Schema="dbo" store:Type="Tables" />
@@ -650,123 +635,135 @@
           <EntitySet Name="Staff" EntityType="Self.Staff" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserAddress" EntityType="Self.UserAddress" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Cart__customer_i__3E52440B" Association="Self.FK__Cart__customer_i__3E52440B">
+          <EntitySet Name="PaymentDetailsReportView" EntityType="Self.PaymentDetailsReportView" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [PaymentDetailsReportView].[payment_id] AS [payment_id], 
+    [PaymentDetailsReportView].[total_pay] AS [total_pay], 
+    [PaymentDetailsReportView].[net_pay] AS [net_pay], 
+    [PaymentDetailsReportView].[discount] AS [discount], 
+    [PaymentDetailsReportView].[payment_status] AS [payment_status], 
+    [PaymentDetailsReportView].[payment_method] AS [payment_method], 
+    [PaymentDetailsReportView].[tax_change] AS [tax_change], 
+    [PaymentDetailsReportView].[payment_date] AS [payment_date], 
+    [PaymentDetailsReportView].[food_id] AS [food_id], 
+    [PaymentDetailsReportView].[quantity] AS [quantity], 
+    [PaymentDetailsReportView].[price] AS [price], 
+    [PaymentDetailsReportView].[descriptions] AS [descriptions], 
+    [PaymentDetailsReportView].[stock] AS [stock], 
+    [PaymentDetailsReportView].[title] AS [title], 
+    [PaymentDetailsReportView].[payment_status_name] AS [payment_status_name], 
+    [PaymentDetailsReportView].[payment_method_name] AS [payment_method_name]
+    FROM [dbo].[PaymentDetailsReportView] AS [PaymentDetailsReportView]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK__Cart__customer_i__59C55456" Association="Self.FK__Cart__customer_i__59C55456">
             <End Role="Users" EntitySet="Users" />
             <End Role="Cart" EntitySet="Cart" />
           </AssociationSet>
-          <AssociationSet Name="FK__CartDetai__cart___412EB0B6" Association="Self.FK__CartDetai__cart___412EB0B6">
+          <AssociationSet Name="FK__CartDetai__cart___5CA1C101" Association="Self.FK__CartDetai__cart___5CA1C101">
             <End Role="Cart" EntitySet="Cart" />
             <End Role="CartDetails" EntitySet="CartDetails" />
           </AssociationSet>
-          <AssociationSet Name="FK__CartDetai__food___4222D4EF" Association="Self.FK__CartDetai__food___4222D4EF">
+          <AssociationSet Name="FK__CartDetai__food___5D95E53A" Association="Self.FK__CartDetai__food___5D95E53A">
             <End Role="Food" EntitySet="Food" />
             <End Role="CartDetails" EntitySet="CartDetails" />
           </AssociationSet>
-          <AssociationSet Name="FK__Customer__member__300424B4" Association="Self.FK__Customer__member__300424B4">
+          <AssociationSet Name="FK__Customer__member__336AA144" Association="Self.FK__Customer__member__336AA144">
             <End Role="Membership" EntitySet="Membership" />
             <End Role="Customer" EntitySet="Customer" />
           </AssociationSet>
-          <AssociationSet Name="FK__Customer__user_i__2F10007B" Association="Self.FK__Customer__user_i__2F10007B">
+          <AssociationSet Name="FK__Customer__user_i__32767D0B" Association="Self.FK__Customer__user_i__32767D0B">
             <End Role="Users" EntitySet="Users" />
             <End Role="Customer" EntitySet="Customer" />
           </AssociationSet>
-          <AssociationSet Name="FK__Delivery__delive__6A30C649" Association="Self.FK__Delivery__delive__6A30C649">
+          <AssociationSet Name="FK__Delivery__delive__05A3D694" Association="Self.FK__Delivery__delive__05A3D694">
             <End Role="DeliveryCompany" EntitySet="DeliveryCompany" />
             <End Role="Delivery" EntitySet="Delivery" />
           </AssociationSet>
-          <AssociationSet Name="FK__Delivery__destin__693CA210" Association="Self.FK__Delivery__destin__693CA210">
+          <AssociationSet Name="FK__Delivery__destin__04AFB25B" Association="Self.FK__Delivery__destin__04AFB25B">
             <End Role="Address" EntitySet="Address" />
             <End Role="Delivery" EntitySet="Delivery" />
           </AssociationSet>
-          <AssociationSet Name="FK__Delivery__final___6B24EA82" Association="Self.FK__Delivery__final___6B24EA82">
+          <AssociationSet Name="FK__Delivery__final___0697FACD" Association="Self.FK__Delivery__final___0697FACD">
             <End Role="DeliveryStatus" EntitySet="DeliveryStatus" />
             <End Role="Delivery" EntitySet="Delivery" />
           </AssociationSet>
-          <AssociationSet Name="FK__Delivery__source__68487DD7" Association="Self.FK__Delivery__source__68487DD7">
+          <AssociationSet Name="FK__Delivery__source__03BB8E22" Association="Self.FK__Delivery__source__03BB8E22">
             <End Role="Address" EntitySet="Address" />
             <End Role="Delivery" EntitySet="Delivery" />
           </AssociationSet>
-          <AssociationSet Name="FK__DeliveryC__addre__6EF57B66" Association="Self.FK__DeliveryC__addre__6EF57B66">
+          <AssociationSet Name="FK__DeliveryC__addre__0A688BB1" Association="Self.FK__DeliveryC__addre__0A688BB1">
             <End Role="Address" EntitySet="Address" />
             <End Role="DeliveryChain" EntitySet="DeliveryChain" />
           </AssociationSet>
-          <AssociationSet Name="FK__DeliveryC__deliv__6FE99F9F" Association="Self.FK__DeliveryC__deliv__6FE99F9F">
+          <AssociationSet Name="FK__DeliveryC__deliv__0B5CAFEA" Association="Self.FK__DeliveryC__deliv__0B5CAFEA">
             <End Role="DeliveryStatus" EntitySet="DeliveryStatus" />
             <End Role="DeliveryChain" EntitySet="DeliveryChain" />
           </AssociationSet>
-          <AssociationSet Name="FK__DeliveryC__deliv__72C60C4A" Association="Self.FK__DeliveryC__deliv__72C60C4A">
+          <AssociationSet Name="FK__DeliveryC__deliv__0E391C95" Association="Self.FK__DeliveryC__deliv__0E391C95">
             <End Role="Delivery" EntitySet="Delivery" />
             <End Role="DeliveryChainDetails" EntitySet="DeliveryChainDetails" />
           </AssociationSet>
-          <AssociationSet Name="FK__DeliveryC__tranf__73BA3083" Association="Self.FK__DeliveryC__tranf__73BA3083">
+          <AssociationSet Name="FK__DeliveryC__tranf__0F2D40CE" Association="Self.FK__DeliveryC__tranf__0F2D40CE">
             <End Role="DeliveryChain" EntitySet="DeliveryChain" />
             <End Role="DeliveryChainDetails" EntitySet="DeliveryChainDetails" />
           </AssociationSet>
-          <AssociationSet Name="FK__Food__catergory___398D8EEE" Association="Self.FK__Food__catergory___398D8EEE">
+          <AssociationSet Name="FK__Food__catergory___55009F39" Association="Self.FK__Food__catergory___55009F39">
             <End Role="Catergory" EntitySet="Catergory" />
             <End Role="Food" EntitySet="Food" />
           </AssociationSet>
-          <AssociationSet Name="FK__Food__duty_staff__38996AB5" Association="Self.FK__Food__duty_staff__38996AB5">
+          <AssociationSet Name="FK__Food__duty_staff__540C7B00" Association="Self.FK__Food__duty_staff__540C7B00">
             <End Role="Users" EntitySet="Users" />
             <End Role="Food" EntitySet="Food" />
           </AssociationSet>
-          <AssociationSet Name="FK__MenuItems__food___76969D2E" Association="Self.FK__MenuItems__food___76969D2E">
-            <End Role="Food" EntitySet="Food" />
-            <End Role="MenuItems" EntitySet="MenuItems" />
-          </AssociationSet>
-          <AssociationSet Name="FK__MenuItems__menu___778AC167" Association="Self.FK__MenuItems__menu___778AC167">
-            <End Role="Menu" EntitySet="Menu" />
-            <End Role="MenuItems" EntitySet="MenuItems" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Order__customer___44FF419A" Association="Self.FK__Order__customer___44FF419A">
+          <AssociationSet Name="FK__Order__customer___607251E5" Association="Self.FK__Order__customer___607251E5">
             <End Role="Users" EntitySet="Users" />
             <End Role="Order" EntitySet="Order" />
           </AssociationSet>
-          <AssociationSet Name="FK__OrderDeta__food___48CFD27E" Association="Self.FK__OrderDeta__food___48CFD27E">
+          <AssociationSet Name="FK__OrderDeta__food___6442E2C9" Association="Self.FK__OrderDeta__food___6442E2C9">
             <End Role="Food" EntitySet="Food" />
             <End Role="OrderDetails" EntitySet="OrderDetails" />
           </AssociationSet>
-          <AssociationSet Name="FK__OrderDeta__order__47DBAE45" Association="Self.FK__OrderDeta__order__47DBAE45">
+          <AssociationSet Name="FK__OrderDeta__order__634EBE90" Association="Self.FK__OrderDeta__order__634EBE90">
             <End Role="Order" EntitySet="Order" />
             <End Role="OrderDetails" EntitySet="OrderDetails" />
           </AssociationSet>
-          <AssociationSet Name="FK__Payment__payment__52593CB8" Association="Self.FK__Payment__payment__52593CB8">
+          <AssociationSet Name="FK__Payment__payment__6DCC4D03" Association="Self.FK__Payment__payment__6DCC4D03">
             <End Role="PaymentMethod" EntitySet="PaymentMethod" />
             <End Role="Payment" EntitySet="Payment" />
           </AssociationSet>
-          <AssociationSet Name="FK__Payment__payment__534D60F1" Association="Self.FK__Payment__payment__534D60F1">
+          <AssociationSet Name="FK__Payment__payment__6EC0713C" Association="Self.FK__Payment__payment__6EC0713C">
             <End Role="PaymentStatus" EntitySet="PaymentStatus" />
             <End Role="Payment" EntitySet="Payment" />
           </AssociationSet>
-          <AssociationSet Name="FK__Payment__user_id__5441852A" Association="Self.FK__Payment__user_id__5441852A">
+          <AssociationSet Name="FK__Payment__user_id__6FB49575" Association="Self.FK__Payment__user_id__6FB49575">
             <End Role="Users" EntitySet="Users" />
             <End Role="Payment" EntitySet="Payment" />
           </AssociationSet>
-          <AssociationSet Name="FK__PaymentDe__food___5812160E" Association="Self.FK__PaymentDe__food___5812160E">
+          <AssociationSet Name="FK__PaymentDe__food___73852659" Association="Self.FK__PaymentDe__food___73852659">
             <End Role="Food" EntitySet="Food" />
             <End Role="PaymentDetails" EntitySet="PaymentDetails" />
           </AssociationSet>
-          <AssociationSet Name="FK__PaymentDe__payme__571DF1D5" Association="Self.FK__PaymentDe__payme__571DF1D5">
+          <AssociationSet Name="FK__PaymentDe__payme__72910220" Association="Self.FK__PaymentDe__payme__72910220">
             <End Role="Payment" EntitySet="Payment" />
             <End Role="PaymentDetails" EntitySet="PaymentDetails" />
           </AssociationSet>
-          <AssociationSet Name="FK__ResetPass__user___35BCFE0A" Association="Self.FK__ResetPass__user___35BCFE0A">
+          <AssociationSet Name="FK__ResetPass__user___51300E55" Association="Self.FK__ResetPass__user___51300E55">
             <End Role="Users" EntitySet="Users" />
             <End Role="ResetPasswordToken" EntitySet="ResetPasswordToken" />
           </AssociationSet>
-          <AssociationSet Name="FK__Staff__position___2C3393D0" Association="Self.FK__Staff__position___2C3393D0">
+          <AssociationSet Name="FK__Staff__position___489AC854" Association="Self.FK__Staff__position___489AC854">
             <End Role="Position" EntitySet="Position" />
             <End Role="Staff" EntitySet="Staff" />
           </AssociationSet>
-          <AssociationSet Name="FK__Staff__user_id__2B3F6F97" Association="Self.FK__Staff__user_id__2B3F6F97">
+          <AssociationSet Name="FK__Staff__user_id__345EC57D" Association="Self.FK__Staff__user_id__345EC57D">
             <End Role="Users" EntitySet="Users" />
             <End Role="Staff" EntitySet="Staff" />
           </AssociationSet>
-          <AssociationSet Name="FK__UserAddre__addre__6477ECF3" Association="Self.FK__UserAddre__addre__6477ECF3">
+          <AssociationSet Name="FK__UserAddre__addre__7FEAFD3E" Association="Self.FK__UserAddre__addre__7FEAFD3E">
             <End Role="Address" EntitySet="Address" />
             <End Role="UserAddress" EntitySet="UserAddress" />
           </AssociationSet>
-          <AssociationSet Name="FK__UserAddre__user___6383C8BA" Association="Self.FK__UserAddre__user___6383C8BA">
+          <AssociationSet Name="FK__UserAddre__user___7EF6D905" Association="Self.FK__UserAddre__user___7EF6D905">
             <End Role="Users" EntitySet="Users" />
             <End Role="UserAddress" EntitySet="UserAddress" />
           </AssociationSet>
@@ -910,7 +907,6 @@
           <NavigationProperty Name="User" Relationship="Self.FK__Food__duty_staff__38996AB5" FromRole="Food" ToRole="Users" />
           <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__food___48CFD27E" FromRole="Food" ToRole="OrderDetails" />
           <NavigationProperty Name="PaymentDetails" Relationship="Self.FK__PaymentDe__food___5812160E" FromRole="Food" ToRole="PaymentDetails" />
-          <NavigationProperty Name="Menus" Relationship="Self.MenuItems" FromRole="Food" ToRole="Menu" />
         </EntityType>
         <EntityType Name="Membership">
           <Key>
@@ -920,19 +916,6 @@
           <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Customers" Relationship="Self.FK__Customer__member__300424B4" FromRole="Membership" ToRole="Customer" />
-        </EntityType>
-        <EntityType Name="Menu">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="start_date" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="end_date" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="descriptions" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="enabled" Type="Boolean" />
-          <Property Name="menu_image" Type="Binary" MaxLength="Max" FixedLength="false" />
-          <NavigationProperty Name="Foods" Relationship="Self.MenuItems" FromRole="Menu" ToRole="Food" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
@@ -1356,10 +1339,6 @@
           <End Role="Delivery" Type="Self.Delivery" Multiplicity="*" />
           <End Role="DeliveryChain" Type="Self.DeliveryChain" Multiplicity="*" />
         </Association>
-        <Association Name="MenuItems">
-          <End Role="Food" Type="Self.Food" Multiplicity="*" />
-          <End Role="Menu" Type="Self.Menu" Multiplicity="*" />
-        </Association>
         <Association Name="UserAddress">
           <End Role="Address" Type="Self.Address" Multiplicity="*" />
           <End Role="Users" Type="Self.User" Multiplicity="*" />
@@ -1376,7 +1355,6 @@
           <EntitySet Name="DeliveryStatus" EntityType="Self.DeliveryStatu" />
           <EntitySet Name="Foods" EntityType="Self.Food" />
           <EntitySet Name="Memberships" EntityType="Self.Membership" />
-          <EntitySet Name="Menus" EntityType="Self.Menu" />
           <EntitySet Name="Orders" EntityType="Self.Order" />
           <EntitySet Name="OrderDetails" EntityType="Self.OrderDetail" />
           <EntitySet Name="Payments" EntityType="Self.Payment" />
@@ -1487,15 +1465,41 @@
             <End Role="Delivery" EntitySet="Deliveries" />
             <End Role="DeliveryChain" EntitySet="DeliveryChains" />
           </AssociationSet>
-          <AssociationSet Name="MenuItems" Association="Self.MenuItems">
-            <End Role="Food" EntitySet="Foods" />
-            <End Role="Menu" EntitySet="Menus" />
-          </AssociationSet>
           <AssociationSet Name="UserAddress" Association="Self.UserAddress">
             <End Role="Address" EntitySet="Addresses" />
             <End Role="Users" EntitySet="Users" />
           </AssociationSet>
+          <EntitySet Name="PaymentDetailsReportViews" EntityType="FoodShopModel.PaymentDetailsReportView" />
         </EntityContainer>
+        <EntityType Name="PaymentDetailsReportView">
+          <Key>
+            <PropertyRef Name="payment_id" />
+            <PropertyRef Name="payment_status" />
+            <PropertyRef Name="payment_method" />
+            <PropertyRef Name="food_id" />
+            <PropertyRef Name="price" />
+            <PropertyRef Name="stock" />
+            <PropertyRef Name="title" />
+            <PropertyRef Name="payment_status_name" />
+            <PropertyRef Name="payment_method_name" />
+          </Key>
+          <Property Name="payment_id" Type="Guid" Nullable="false" />
+          <Property Name="total_pay" Type="Double" />
+          <Property Name="net_pay" Type="Double" />
+          <Property Name="discount" Type="Double" />
+          <Property Name="payment_status" Type="Guid" Nullable="false" />
+          <Property Name="payment_method" Type="Guid" Nullable="false" />
+          <Property Name="tax_change" Type="Double" />
+          <Property Name="food_id" Type="Int32" Nullable="false" />
+          <Property Name="quantity" Type="Int32" />
+          <Property Name="price" Type="Double" Nullable="false" />
+          <Property Name="descriptions" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="stock" Type="Int32" Nullable="false" />
+          <Property Name="title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="payment_status_name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="payment_method_name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="payment_date" Type="DateTime" Precision="3" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1629,19 +1633,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Menus">
-            <EntityTypeMapping TypeName="FoodShopModel.Menu">
-              <MappingFragment StoreEntitySet="Menu">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="start_date" ColumnName="start_date" />
-                <ScalarProperty Name="end_date" ColumnName="end_date" />
-                <ScalarProperty Name="title" ColumnName="title" />
-                <ScalarProperty Name="descriptions" ColumnName="descriptions" />
-                <ScalarProperty Name="enabled" ColumnName="enabled" />
-                <ScalarProperty Name="menu_image" ColumnName="menu_image" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Orders">
             <EntityTypeMapping TypeName="FoodShopModel.Order">
               <MappingFragment StoreEntitySet="Order">
@@ -1764,14 +1755,6 @@
               <ScalarProperty Name="id" ColumnName="tranfer_chain_id" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="MenuItems" TypeName="FoodShopModel.MenuItems" StoreEntitySet="MenuItems">
-            <EndProperty Name="Food">
-              <ScalarProperty Name="id" ColumnName="food_id" />
-            </EndProperty>
-            <EndProperty Name="Menu">
-              <ScalarProperty Name="id" ColumnName="menu_id" />
-            </EndProperty>
-          </AssociationSetMapping>
           <AssociationSetMapping Name="UserAddress" TypeName="FoodShopModel.UserAddress" StoreEntitySet="UserAddress">
             <EndProperty Name="Address">
               <ScalarProperty Name="id" ColumnName="address_id" />
@@ -1780,6 +1763,28 @@
               <ScalarProperty Name="user_id" ColumnName="user_id" />
             </EndProperty>
           </AssociationSetMapping>
+          <EntitySetMapping Name="PaymentDetailsReportViews">
+            <EntityTypeMapping TypeName="FoodShopModel.PaymentDetailsReportView">
+              <MappingFragment StoreEntitySet="PaymentDetailsReportView">
+                <ScalarProperty Name="payment_date" ColumnName="payment_date" />
+                <ScalarProperty Name="payment_method_name" ColumnName="payment_method_name" />
+                <ScalarProperty Name="payment_status_name" ColumnName="payment_status_name" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="stock" ColumnName="stock" />
+                <ScalarProperty Name="descriptions" ColumnName="descriptions" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="food_id" ColumnName="food_id" />
+                <ScalarProperty Name="tax_change" ColumnName="tax_change" />
+                <ScalarProperty Name="payment_method" ColumnName="payment_method" />
+                <ScalarProperty Name="payment_status" ColumnName="payment_status" />
+                <ScalarProperty Name="discount" ColumnName="discount" />
+                <ScalarProperty Name="net_pay" ColumnName="net_pay" />
+                <ScalarProperty Name="total_pay" ColumnName="total_pay" />
+                <ScalarProperty Name="payment_id" ColumnName="payment_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

@@ -1,6 +1,8 @@
 ﻿Public Class CartScreen
     Dim details As List(Of CartDetail)
     Private Sub CartScreen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        Me.pnlPicture.AutoScroll = True
         ReLoad()
     End Sub
 

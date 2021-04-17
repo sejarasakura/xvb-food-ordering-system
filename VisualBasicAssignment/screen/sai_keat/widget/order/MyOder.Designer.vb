@@ -24,13 +24,9 @@ Partial Class MyOder
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MyOder))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
-        Me.btnAdd = New Guna.UI2.WinForms.Guna2Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.nudQuantity = New Guna.UI2.WinForms.Guna2NumericUpDown()
-        Me.Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txbSearch = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.lblStatus = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.lblDate = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.lblPay = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.dgvOrder = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Guna2HtmlLabel7 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.dgvOrderDetails = New System.Windows.Forms.DataGridView()
@@ -47,7 +43,6 @@ Partial Class MyOder
         Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
-        CType(Me.nudQuantity, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvOrder, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvOrderDetails, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,13 +52,9 @@ Partial Class MyOder
         '
         Me.Panel1.AutoScroll = True
         Me.Panel1.AutoSize = True
-        Me.Panel1.Controls.Add(Me.Guna2Button1)
-        Me.Panel1.Controls.Add(Me.btnAdd)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.nudQuantity)
-        Me.Panel1.Controls.Add(Me.Guna2HtmlLabel8)
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.txbSearch)
+        Me.Panel1.Controls.Add(Me.lblStatus)
+        Me.Panel1.Controls.Add(Me.lblDate)
+        Me.Panel1.Controls.Add(Me.lblPay)
         Me.Panel1.Controls.Add(Me.dgvOrder)
         Me.Panel1.Controls.Add(Me.Guna2HtmlLabel7)
         Me.Panel1.Controls.Add(Me.dgvOrderDetails)
@@ -72,106 +63,38 @@ Partial Class MyOder
         Me.Panel1.Size = New System.Drawing.Size(784, 475)
         Me.Panel1.TabIndex = 22
         '
-        'Guna2Button1
+        'lblStatus
         '
-        Me.Guna2Button1.CheckedState.Parent = Me.Guna2Button1
-        Me.Guna2Button1.CustomImages.Parent = Me.Guna2Button1
-        Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.HoverState.Parent = Me.Guna2Button1
-        Me.Guna2Button1.Location = New System.Drawing.Point(661, 18)
-        Me.Guna2Button1.Name = "Guna2Button1"
-        Me.Guna2Button1.ShadowDecoration.Parent = Me.Guna2Button1
-        Me.Guna2Button1.Size = New System.Drawing.Size(116, 35)
-        Me.Guna2Button1.TabIndex = 34
-        Me.Guna2Button1.Text = "Search"
+        Me.lblStatus.AutoSize = False
+        Me.lblStatus.BackColor = System.Drawing.Color.Transparent
+        Me.lblStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.8!)
+        Me.lblStatus.Location = New System.Drawing.Point(362, 72)
+        Me.lblStatus.Name = "lblStatus"
+        Me.lblStatus.Size = New System.Drawing.Size(404, 22)
+        Me.lblStatus.TabIndex = 30
+        Me.lblStatus.Text = "Order Date: "
         '
-        'btnAdd
+        'lblDate
         '
-        Me.btnAdd.CheckedState.Parent = Me.btnAdd
-        Me.btnAdd.CustomImages.Parent = Me.btnAdd
-        Me.btnAdd.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btnAdd.ForeColor = System.Drawing.Color.White
-        Me.btnAdd.HoverState.Parent = Me.btnAdd
-        Me.btnAdd.Location = New System.Drawing.Point(661, 191)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.ShadowDecoration.Parent = Me.btnAdd
-        Me.btnAdd.Size = New System.Drawing.Size(116, 35)
-        Me.btnAdd.TabIndex = 33
-        Me.btnAdd.Text = "Add"
+        Me.lblDate.AutoSize = False
+        Me.lblDate.BackColor = System.Drawing.Color.Transparent
+        Me.lblDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.8!)
+        Me.lblDate.Location = New System.Drawing.Point(362, 44)
+        Me.lblDate.Name = "lblDate"
+        Me.lblDate.Size = New System.Drawing.Size(404, 22)
+        Me.lblDate.TabIndex = 29
+        Me.lblDate.Text = "Order Date: "
         '
-        'Label2
+        'lblPay
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(658, 63)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(61, 17)
-        Me.Label2.TabIndex = 32
-        Me.Label2.Text = "Quantity"
-        '
-        'nudQuantity
-        '
-        Me.nudQuantity.BackColor = System.Drawing.Color.Transparent
-        Me.nudQuantity.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.nudQuantity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.nudQuantity.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.nudQuantity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.nudQuantity.DisabledState.Parent = Me.nudQuantity
-        Me.nudQuantity.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(177, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(177, Byte), Integer))
-        Me.nudQuantity.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(203, Byte), Integer), CType(CType(203, Byte), Integer), CType(CType(203, Byte), Integer))
-        Me.nudQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.nudQuantity.FocusedState.Parent = Me.nudQuantity
-        Me.nudQuantity.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.nudQuantity.ForeColor = System.Drawing.Color.FromArgb(CType(CType(126, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.nudQuantity.Location = New System.Drawing.Point(661, 87)
-        Me.nudQuantity.Name = "nudQuantity"
-        Me.nudQuantity.ShadowDecoration.Parent = Me.nudQuantity
-        Me.nudQuantity.Size = New System.Drawing.Size(116, 36)
-        Me.nudQuantity.TabIndex = 31
-        '
-        'Guna2HtmlLabel8
-        '
-        Me.Guna2HtmlLabel8.AutoSize = False
-        Me.Guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel8.Location = New System.Drawing.Point(355, 67)
-        Me.Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
-        Me.Guna2HtmlLabel8.Size = New System.Drawing.Size(295, 137)
-        Me.Guna2HtmlLabel8.TabIndex = 30
-        Me.Guna2HtmlLabel8.Text = "Guna2HtmlLabel8"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(352, 27)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(53, 17)
-        Me.Label1.TabIndex = 29
-        Me.Label1.Text = "Search"
-        '
-        'txbSearch
-        '
-        Me.txbSearch.AllowDrop = True
-        Me.txbSearch.BorderRadius = 10
-        Me.txbSearch.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txbSearch.DefaultText = ""
-        Me.txbSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txbSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txbSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txbSearch.DisabledState.Parent = Me.txbSearch
-        Me.txbSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txbSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txbSearch.FocusedState.Parent = Me.txbSearch
-        Me.txbSearch.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txbSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txbSearch.HoverState.Parent = Me.txbSearch
-        Me.txbSearch.Location = New System.Drawing.Point(455, 19)
-        Me.txbSearch.Name = "txbSearch"
-        Me.txbSearch.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txbSearch.PlaceholderText = ""
-        Me.txbSearch.SelectedText = ""
-        Me.txbSearch.ShadowDecoration.Parent = Me.txbSearch
-        Me.txbSearch.Size = New System.Drawing.Size(200, 36)
-        Me.txbSearch.TabIndex = 28
+        Me.lblPay.AutoSize = False
+        Me.lblPay.BackColor = System.Drawing.Color.Transparent
+        Me.lblPay.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.8!)
+        Me.lblPay.Location = New System.Drawing.Point(362, 16)
+        Me.lblPay.Name = "lblPay"
+        Me.lblPay.Size = New System.Drawing.Size(404, 22)
+        Me.lblPay.TabIndex = 28
+        Me.lblPay.Text = "Payment ID: "
         '
         'dgvOrder
         '
@@ -238,11 +161,12 @@ Partial Class MyOder
         '
         'Guna2HtmlLabel7
         '
+        Me.Guna2HtmlLabel7.AutoSize = False
         Me.Guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.8!)
-        Me.Guna2HtmlLabel7.Location = New System.Drawing.Point(352, 210)
+        Me.Guna2HtmlLabel7.Location = New System.Drawing.Point(362, 116)
         Me.Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
-        Me.Guna2HtmlLabel7.Size = New System.Drawing.Size(97, 22)
+        Me.Guna2HtmlLabel7.Size = New System.Drawing.Size(419, 22)
         Me.Guna2HtmlLabel7.TabIndex = 26
         Me.Guna2HtmlLabel7.Text = "Order details: "
         '
@@ -251,12 +175,12 @@ Partial Class MyOder
         Me.dgvOrderDetails.AllowUserToAddRows = False
         Me.dgvOrderDetails.AllowUserToOrderColumns = True
         Me.dgvOrderDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvOrderDetails.Location = New System.Drawing.Point(352, 238)
+        Me.dgvOrderDetails.Location = New System.Drawing.Point(352, 144)
         Me.dgvOrderDetails.Name = "dgvOrderDetails"
         Me.dgvOrderDetails.ReadOnly = True
         Me.dgvOrderDetails.RowHeadersWidth = 51
         Me.dgvOrderDetails.RowTemplate.Height = 24
-        Me.dgvOrderDetails.Size = New System.Drawing.Size(429, 232)
+        Me.dgvOrderDetails.Size = New System.Drawing.Size(429, 326)
         Me.dgvOrderDetails.TabIndex = 0
         '
         'LinkLabel4
@@ -399,8 +323,6 @@ Partial Class MyOder
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "MyOder"
         Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        CType(Me.nudQuantity, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvOrder, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvOrderDetails, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -425,11 +347,7 @@ Partial Class MyOder
     Friend WithEvents dgvOrder As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents Guna2HtmlLabel7 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents dgvOrderDetails As DataGridView
-    Friend WithEvents btnAdd As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Label2 As Label
-    Friend WithEvents nudQuantity As Guna.UI2.WinForms.Guna2NumericUpDown
-    Friend WithEvents Guna2HtmlLabel8 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents txbSearch As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents lblDate As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblPay As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblStatus As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class

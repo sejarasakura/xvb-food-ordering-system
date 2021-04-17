@@ -33,7 +33,6 @@ Partial Public Class FoodShopEntities1
     Public Overridable Property DeliveryStatus() As DbSet(Of DeliveryStatu)
     Public Overridable Property Foods() As DbSet(Of Food)
     Public Overridable Property Memberships() As DbSet(Of Membership)
-    Public Overridable Property Menus() As DbSet(Of Menu)
     Public Overridable Property Orders() As DbSet(Of Order)
     Public Overridable Property OrderDetails() As DbSet(Of OrderDetail)
     Public Overridable Property Payments() As DbSet(Of Payment)
@@ -44,5 +43,6 @@ Partial Public Class FoodShopEntities1
     Public Overridable Property ResetPasswordTokens() As DbSet(Of ResetPasswordToken)
     Public Overridable Property Staffs() As DbSet(Of Staff)
     Public Overridable Property Users() As DbSet(Of User)
+    Public Overridable Property PaymentDetailsReportViews() As DbSet(Of PaymentDetailsReportView)
 
 End Class
