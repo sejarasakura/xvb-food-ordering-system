@@ -8,11 +8,11 @@
     End Sub
 
     Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
-        Screen.NAV_ORDER_SCREEN.Show()
+        'Screen.NAV_ORDER_SCREEN.Show()
     End Sub
 
     Private Sub Guna2Button3_Click(sender As Object, e As EventArgs) Handles Guna2Button3.Click
-        Screen.NAV_PAYMENT_SCREEN.Show()
+        'Screen.NAV_PAYMENT_SCREEN.Show()
     End Sub
 
     Private Sub Guna2Button5_Click(sender As Object, e As EventArgs) Handles Guna2Button5.Click

@@ -115,11 +115,15 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Include="master\Form1.Designer.vb" />
+    <Compile Include="master\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
     <Compile Include="master\Form1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="master\Form2.Designer.vb" />
+    <Compile Include="master\Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
     <Compile Include="master\Form2.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -218,66 +222,84 @@
     <Compile Include="screen\HomeScreen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="screen\kangtze\addfood.Designer.vb" />
+    <Compile Include="screen\kangtze\addfood.Designer.vb">
+      <DependentUpon>addfood.vb</DependentUpon>
+    </Compile>
     <Compile Include="screen\kangtze\addfood.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="screen\kangtze\custmenu.Designer.vb" />
+    <Compile Include="screen\kangtze\custmenu.Designer.vb">
+      <DependentUpon>custmenu.vb</DependentUpon>
+    </Compile>
     <Compile Include="screen\kangtze\custmenu.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="screen\kangtze\detail.Designer.vb" />
+    <Compile Include="screen\kangtze\detail.Designer.vb">
+      <DependentUpon>detail.vb</DependentUpon>
+    </Compile>
     <Compile Include="screen\kangtze\detail.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="screen\kangtze\edit.Designer.vb" />
+    <Compile Include="screen\kangtze\edit.Designer.vb">
+      <DependentUpon>edit.vb</DependentUpon>
+    </Compile>
     <Compile Include="screen\kangtze\edit.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="screen\kangtze\menuform.vb" />
-    <Compile Include="screen\kangtze\staffmenu.Designer.vb" />
+    <Compile Include="screen\kangtze\staffmenu.Designer.vb">
+      <DependentUpon>staffmenu.vb</DependentUpon>
+    </Compile>
     <Compile Include="screen\kangtze\staffmenu.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="screen\LHW\AddUser.Designer.vb" />
+    <Compile Include="screen\LHW\AddUser.Designer.vb">
+      <DependentUpon>AddUser.vb</DependentUpon>
+    </Compile>
     <Compile Include="screen\LHW\AddUser.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="screen\LHW\ForgotPassword.Designer.vb" />
+    <Compile Include="screen\LHW\ForgotPassword.Designer.vb">
+      <DependentUpon>ForgotPassword.vb</DependentUpon>
+    </Compile>
     <Compile Include="screen\LHW\ForgotPassword.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="screen\LHW\Login.Designer.vb" />
+    <Compile Include="screen\LHW\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
     <Compile Include="screen\LHW\Login.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="screen\LHW\ModifyUser.Designer.vb" />
+    <Compile Include="screen\LHW\ModifyUser.Designer.vb">
+      <DependentUpon>ModifyUser.vb</DependentUpon>
+    </Compile>
     <Compile Include="screen\LHW\ModifyUser.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="screen\LHW\Profile.Designer.vb" />
+    <Compile Include="screen\LHW\Profile.Designer.vb">
+      <DependentUpon>Profile.vb</DependentUpon>
+    </Compile>
     <Compile Include="screen\LHW\Profile.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="screen\LHW\Register.Designer.vb" />
+    <Compile Include="screen\LHW\Register.Designer.vb">
+      <DependentUpon>Register.vb</DependentUpon>
+    </Compile>
     <Compile Include="screen\LHW\Register.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="screen\LHW\UserRecordReport.Designer.vb" />
+    <Compile Include="screen\LHW\UserRecordReport.Designer.vb">
+      <DependentUpon>UserRecordReport.vb</DependentUpon>
+    </Compile>
     <Compile Include="screen\LHW\UserRecordReport.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="screen\sai_keat\custOrder.Designer.vb">
-      <DependentUpon>custOrder.vb</DependentUpon>
+    <Compile Include="screen\sai_keat\widget\order\CartScreen.Designer.vb">
+      <DependentUpon>CartScreen.vb</DependentUpon>
     </Compile>
-    <Compile Include="screen\sai_keat\custOrder.vb">
+    <Compile Include="screen\sai_keat\widget\order\CartScreen.vb">
       <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="screen\sai_keat\OrderScreen.Designer.vb">
-      <DependentUpon>OrderScreen.vb</DependentUpon>
-    </Compile>
-    <Compile Include="screen\sai_keat\OrderScreen.vb">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="screen\sai_keat\widget\order\NewOrder.Designer.vb">
       <DependentUpon>NewOrder.vb</DependentUpon>
@@ -297,28 +319,16 @@
     <Compile Include="screen\sai_keat\widget\order\OrderDetails.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="screen\sai_keat\PaymentScreen.Designer.vb">
-      <DependentUpon>PaymentScreen.vb</DependentUpon>
+    <Compile Include="screen\sai_keat\widget\order\OrderItem.Designer.vb">
+      <DependentUpon>OrderItem.vb</DependentUpon>
     </Compile>
-    <Compile Include="screen\sai_keat\PaymentScreen.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="screen\sai_keat\widget\payment\methods\Bank.Designer.vb">
-      <DependentUpon>Bank.vb</DependentUpon>
-    </Compile>
-    <Compile Include="screen\sai_keat\widget\payment\methods\Bank.vb">
+    <Compile Include="screen\sai_keat\widget\order\OrderItem.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="screen\sai_keat\widget\payment\methods\Card.Designer.vb">
+    <Compile Include="screen\sai_keat\widget\payment\Card.Designer.vb">
       <DependentUpon>Card.vb</DependentUpon>
     </Compile>
-    <Compile Include="screen\sai_keat\widget\payment\methods\Card.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="screen\sai_keat\widget\payment\methods\TouchNGo.Designer.vb">
-      <DependentUpon>TouchNGo.vb</DependentUpon>
-    </Compile>
-    <Compile Include="screen\sai_keat\widget\payment\methods\TouchNGo.vb">
+    <Compile Include="screen\sai_keat\widget\payment\Card.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="screen\sai_keat\widget\payment\PaymentComplete.Designer.vb">
@@ -395,8 +405,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="master\Form1.resx" />
-    <EmbeddedResource Include="master\Form2.resx" />
+    <EmbeddedResource Include="master\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="master\Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="master\Master.resx">
       <DependentUpon>Master.vb</DependentUpon>
     </EmbeddedResource>
@@ -412,27 +426,47 @@
     <EmbeddedResource Include="screen\HomeScreen.resx">
       <DependentUpon>HomeScreen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="screen\kangtze\addfood.resx" />
-    <EmbeddedResource Include="screen\kangtze\custmenu.resx" />
-    <EmbeddedResource Include="screen\kangtze\detail.resx" />
-    <EmbeddedResource Include="screen\kangtze\edit.resx" />
-    <EmbeddedResource Include="screen\kangtze\menuform.resx" />
-    <EmbeddedResource Include="screen\kangtze\staffmenu.resx" />
-    <EmbeddedResource Include="screen\LHW\AddUser.resx" />
-    <EmbeddedResource Include="screen\LHW\ForgotPassword.resx" />
-    <EmbeddedResource Include="screen\LHW\Login.resx" />
-    <EmbeddedResource Include="screen\LHW\ModifyUser.resx" />
-    <EmbeddedResource Include="screen\LHW\Profile.resx" />
-    <EmbeddedResource Include="screen\LHW\Register.resx" />
-    <EmbeddedResource Include="screen\LHW\UserRecordReport.resx" />
-    <EmbeddedResource Include="screen\sai_keat\custOrder.resx">
-      <DependentUpon>custOrder.vb</DependentUpon>
+    <EmbeddedResource Include="screen\kangtze\addfood.resx">
+      <DependentUpon>addfood.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="screen\sai_keat\OrderScreen.resx">
-      <DependentUpon>OrderScreen.vb</DependentUpon>
+    <EmbeddedResource Include="screen\kangtze\custmenu.resx">
+      <DependentUpon>custmenu.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="screen\sai_keat\PaymentScreen.resx">
-      <DependentUpon>PaymentScreen.vb</DependentUpon>
+    <EmbeddedResource Include="screen\kangtze\detail.resx">
+      <DependentUpon>detail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screen\kangtze\edit.resx">
+      <DependentUpon>edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screen\kangtze\menuform.resx">
+      <DependentUpon>menuform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screen\kangtze\staffmenu.resx">
+      <DependentUpon>staffmenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screen\LHW\AddUser.resx">
+      <DependentUpon>AddUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screen\LHW\ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screen\LHW\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screen\LHW\ModifyUser.resx">
+      <DependentUpon>ModifyUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screen\LHW\Profile.resx">
+      <DependentUpon>Profile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screen\LHW\Register.resx">
+      <DependentUpon>Register.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screen\LHW\UserRecordReport.resx">
+      <DependentUpon>UserRecordReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screen\sai_keat\widget\order\CartScreen.resx">
+      <DependentUpon>CartScreen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="screen\sai_keat\widget\order\NewOrder.resx">
       <DependentUpon>NewOrder.vb</DependentUpon>
@@ -440,8 +474,8 @@
     <EmbeddedResource Include="screen\sai_keat\widget\order\MyOder.resx">
       <DependentUpon>MyOder.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="screen\sai_keat\widget\payment\methods\Bank.resx">
-      <DependentUpon>Bank.vb</DependentUpon>
+    <EmbeddedResource Include="screen\sai_keat\widget\order\OrderItem.resx">
+      <DependentUpon>OrderItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="screen\sai_keat\widget\payment\PaymentConfirm.resx">
       <DependentUpon>PaymentConfirm.vb</DependentUpon>

@@ -67,7 +67,7 @@ Partial Class DebugScreen
         Me.Guna2Button2.ShadowDecoration.Parent = Me.Guna2Button2
         Me.Guna2Button2.Size = New System.Drawing.Size(129, 39)
         Me.Guna2Button2.TabIndex = 2
-        Me.Guna2Button2.Text = "Order"
+        Me.Guna2Button2.Text = "None"
         '
         'Guna2Button3
         '
@@ -81,7 +81,7 @@ Partial Class DebugScreen
         Me.Guna2Button3.ShadowDecoration.Parent = Me.Guna2Button3
         Me.Guna2Button3.Size = New System.Drawing.Size(129, 39)
         Me.Guna2Button3.TabIndex = 3
-        Me.Guna2Button3.Text = "Payment"
+        Me.Guna2Button3.Text = "None"
         '
         'Guna2Button4
         '

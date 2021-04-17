@@ -14,66 +14,65 @@ Public Class staffmenu
     'Private WithEvents btnEdit As Button
 
     Private Sub custmenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim dr As SqlDataReader
-        Dim cmd As SqlCommand
-        Dim cmdstr As String = "select * from Food"
+        ReLoad()
+    End Sub
+
+    Private Sub ReLoad()
+        pnlPicture.Controls.Clear()
         Dim arrImage() As Byte
-        Dim i As Int16 = 0
+        Using db As FoodShopEntities1 = New FoodShopEntities1()
+            Dim foods As List(Of Food) = DatabaseConnections.db.Foods.ToList()
+            Try
+                For i = 0 To foods.Count
 
-        If openconnect() = True Then
-            cmd = New SqlCommand(cmdstr, con)
-            dr = cmd.ExecuteReader()
+                    arrImage = foods.Item(i).image
+                    pic = New PictureBox
+                    pic.Width = 130
+                    pic.Height = 150
+                    pic.BackgroundImageLayout = ImageLayout.Stretch
 
+                    If arrImage IsNot Nothing Then
+                        pic.BackgroundImage = ExFunctions.byteToImage(CType(arrImage, Byte()))
+                    End If
 
-            While dr.Read
+                    namelabel = New Label
+                    namelabel.Font = New Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+                    namelabel.Text = "Name : " + foods.Item(i).title
+                    namelabel.Dock = DockStyle.Top
 
-                arrImage = dr.Item("image")
-                pic = New PictureBox
-                pic.Width = 130
-                pic.Height = 150
-                pic.BackgroundImageLayout = ImageLayout.Stretch
-
-                If arrImage IsNot Nothing Then
-                    pic.BackgroundImage = ExFunctions.byteToImage(CType(arrImage, Byte()))
-                End If
-                Dim btnEdit As New Button
-                btnEdit.Name = dr.Item("id")
-
-                namelabel = New Label
-                namelabel.Font = New Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-                namelabel.Text = "Name : " + dr.Item("title")
-                namelabel.Dock = DockStyle.Top
-
-                desclabel = New Label
-                desclabel.Font = New Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-                desclabel.Text = dr.Item("descriptions")
-                desclabel.Dock = DockStyle.Fill
-
-                pricelabel = New Label
-                pricelabel.Font = New Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-                pricelabel.Text = "Price : RM" + dr.Item("price").ToString
-                pricelabel.Dock = DockStyle.Top
+                    pricelabel = New Label
+                    pricelabel.Font = New Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+                    pricelabel.Text = "Price : RM" + foods.Item(i).price.ToString
+                    pricelabel.Dock = DockStyle.Top
 
 
-                btnEdit.Text = "Edit"
-                AddHandler btnEdit.Click, AddressOf Me.Button_Click
-                btnEdit.Dock = DockStyle.Top
+                    desclabel = New Label
+                    desclabel.Font = New Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+                    desclabel.Text = foods.Item(i).descriptions
+                    desclabel.Dock = DockStyle.Fill
 
-                pnl = New Panel
+                    Dim btnEdit As New Button
+                    btnEdit.Name = foods.Item(i).id
 
-                pnl.Controls.Add(desclabel)
-                pnl.Controls.Add(pricelabel)
-                pnl.Controls.Add(namelabel)
-                pnl.Controls.Add(btnEdit)
+                    btnEdit.Text = "Edit"
+                    AddHandler btnEdit.Click, AddressOf Me.Button_Click
+                    btnEdit.Dock = DockStyle.Top
 
-                pnlPicture.Controls.Add(pic)
-                pnlPicture.Controls.Add(pnl)
+                    pnl = New Panel
+                    pnl.Controls.Add(pricelabel)
+                    pnl.Controls.Add(namelabel)
+                    pnl.Controls.Add(desclabel)
+                    pnl.Controls.Add(btnEdit)
 
+                    pnlPicture.Controls.Add(pic)
+                    pnlPicture.Controls.Add(pnl)
 
-            End While
+                Next
+            Catch ex As Exception
+                Console.WriteLine("Exception caught: {0}", ex)
+            End Try
+        End Using
 
-            closeconnect()
-        End If
     End Sub
 
     Private Sub Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -82,9 +81,11 @@ Public Class staffmenu
         MessageBox.Show(btn.Name + "clicked")
         editid = btn.Name
         edit.ShowDialog()
-        Me.Dispose()
         Me.Show()
 
     End Sub
 
+    Private Sub btnReload_Click(sender As Object, e As EventArgs) Handles btnReload.Click
+        ReLoad()
+    End Sub
 End Class

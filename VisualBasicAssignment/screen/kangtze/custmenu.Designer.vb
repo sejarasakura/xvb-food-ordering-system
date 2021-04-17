@@ -23,22 +23,40 @@ Partial Class custmenu
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.pnlPicture = New System.Windows.Forms.FlowLayoutPanel()
+        Me.btnReload = New Guna.UI2.WinForms.Guna2Button()
         Me.SuspendLayout()
         '
         'pnlPicture
         '
-        Me.pnlPicture.Location = New System.Drawing.Point(12, 12)
+        Me.pnlPicture.Location = New System.Drawing.Point(16, 15)
+        Me.pnlPicture.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pnlPicture.Name = "pnlPicture"
-        Me.pnlPicture.Size = New System.Drawing.Size(806, 426)
+        Me.pnlPicture.Size = New System.Drawing.Size(1075, 498)
         Me.pnlPicture.TabIndex = 0
+        '
+        'btnReload
+        '
+        Me.btnReload.CheckedState.Parent = Me.btnReload
+        Me.btnReload.CustomImages.Parent = Me.btnReload
+        Me.btnReload.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnReload.ForeColor = System.Drawing.Color.White
+        Me.btnReload.HoverState.Parent = Me.btnReload
+        Me.btnReload.Location = New System.Drawing.Point(958, 520)
+        Me.btnReload.Name = "btnReload"
+        Me.btnReload.ShadowDecoration.Parent = Me.btnReload
+        Me.btnReload.Size = New System.Drawing.Size(133, 26)
+        Me.btnReload.TabIndex = 1
+        Me.btnReload.Text = "Reload"
         '
         'custmenu
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(830, 450)
+        Me.ClientSize = New System.Drawing.Size(1107, 554)
+        Me.Controls.Add(Me.btnReload)
         Me.Controls.Add(Me.pnlPicture)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "custmenu"
         Me.Text = "custmenu"
         Me.ResumeLayout(False)
@@ -46,4 +64,5 @@ Partial Class custmenu
     End Sub
 
     Friend WithEvents pnlPicture As FlowLayoutPanel
+    Friend WithEvents btnReload As Guna.UI2.WinForms.Guna2Button
 End Class

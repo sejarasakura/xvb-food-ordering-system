@@ -262,7 +262,7 @@ Partial Class MyOder
         'LinkLabel4
         '
         Me.LinkLabel4.AutoSize = True
-        Me.LinkLabel4.Location = New System.Drawing.Point(189, 5)
+        Me.LinkLabel4.Location = New System.Drawing.Point(201, 5)
         Me.LinkLabel4.Name = "LinkLabel4"
         Me.LinkLabel4.Size = New System.Drawing.Size(59, 17)
         Me.LinkLabel4.TabIndex = 21

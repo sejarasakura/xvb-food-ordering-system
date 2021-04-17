@@ -13,7 +13,11 @@ Public Class custmenu
     'Private WithEvents btnEdit As Button
 
     Private Sub custmenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ReLoad()
+    End Sub
 
+    Private Sub ReLoad()
+        pnlPicture.Controls.Clear()
         Dim arrImage() As Byte
         Using db As FoodShopEntities1 = New FoodShopEntities1()
             Dim foods As List(Of Food) = DatabaseConnections.db.Foods.ToList()
@@ -71,5 +75,9 @@ Public Class custmenu
         detailid = btn.Name
         detail.Show()
 
+    End Sub
+
+    Private Sub btnReload_Click(sender As Object, e As EventArgs) Handles btnReload.Click
+        ReLoad()
     End Sub
 End Class

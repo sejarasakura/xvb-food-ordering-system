@@ -19,7 +19,6 @@ Partial Class NewOder
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -33,13 +32,6 @@ Partial Class NewOder
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txbSearch = New Guna.UI2.WinForms.Guna2TextBox()
         Me.dgvOrder = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TitleDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ImageDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.PriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FoodBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.FoodShopDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.FoodShopDataSet = New VisualBasicAssignment.FoodShopDataSet()
         Me.Guna2HtmlLabel7 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.dgvOrderDetails = New System.Windows.Forms.DataGridView()
         Me.LinkLabel4 = New System.Windows.Forms.LinkLabel()
@@ -48,16 +40,12 @@ Partial Class NewOder
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
-        Me.FoodTableAdapter = New VisualBasicAssignment.FoodShopDataSetTableAdapters.FoodTableAdapter()
         Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
         Me.lblTotal = New System.Windows.Forms.Label()
         Me.lblTotalText = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.nudQuantity, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvOrder, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FoodBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FoodShopDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FoodShopDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvOrderDetails, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -204,7 +192,6 @@ Partial Class NewOder
         Me.dgvOrder.AllowUserToOrderColumns = True
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
         Me.dgvOrder.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvOrder.AutoGenerateColumns = False
         Me.dgvOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvOrder.BackgroundColor = System.Drawing.Color.White
         Me.dgvOrder.BorderStyle = System.Windows.Forms.BorderStyle.None
@@ -219,8 +206,6 @@ Partial Class NewOder
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvOrder.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvOrder.ColumnHeadersHeight = 30
-        Me.dgvOrder.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.TitleDataGridViewTextBoxColumn, Me.ImageDataGridViewImageColumn, Me.PriceDataGridViewTextBoxColumn})
-        Me.dgvOrder.DataSource = Me.FoodBindingSource
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
@@ -262,53 +247,6 @@ Partial Class NewOder
         Me.dgvOrder.ThemeStyle.RowsStyle.Height = 24
         Me.dgvOrder.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgvOrder.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        '
-        'IdDataGridViewTextBoxColumn
-        '
-        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "id"
-        Me.IdDataGridViewTextBoxColumn.HeaderText = "id"
-        Me.IdDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        Me.IdDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'TitleDataGridViewTextBoxColumn
-        '
-        Me.TitleDataGridViewTextBoxColumn.DataPropertyName = "title"
-        Me.TitleDataGridViewTextBoxColumn.HeaderText = "title"
-        Me.TitleDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.TitleDataGridViewTextBoxColumn.Name = "TitleDataGridViewTextBoxColumn"
-        Me.TitleDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ImageDataGridViewImageColumn
-        '
-        Me.ImageDataGridViewImageColumn.DataPropertyName = "image"
-        Me.ImageDataGridViewImageColumn.HeaderText = "image"
-        Me.ImageDataGridViewImageColumn.MinimumWidth = 6
-        Me.ImageDataGridViewImageColumn.Name = "ImageDataGridViewImageColumn"
-        Me.ImageDataGridViewImageColumn.ReadOnly = True
-        '
-        'PriceDataGridViewTextBoxColumn
-        '
-        Me.PriceDataGridViewTextBoxColumn.DataPropertyName = "price"
-        Me.PriceDataGridViewTextBoxColumn.HeaderText = "price"
-        Me.PriceDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.PriceDataGridViewTextBoxColumn.Name = "PriceDataGridViewTextBoxColumn"
-        Me.PriceDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'FoodBindingSource
-        '
-        Me.FoodBindingSource.DataMember = "Food"
-        Me.FoodBindingSource.DataSource = Me.FoodShopDataSetBindingSource
-        '
-        'FoodShopDataSetBindingSource
-        '
-        Me.FoodShopDataSetBindingSource.DataSource = Me.FoodShopDataSet
-        Me.FoodShopDataSetBindingSource.Position = 0
-        '
-        'FoodShopDataSet
-        '
-        Me.FoodShopDataSet.DataSetName = "FoodShopDataSet"
-        Me.FoodShopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Guna2HtmlLabel7
         '
@@ -390,10 +328,6 @@ Partial Class NewOder
         Me.Guna2Separator1.Size = New System.Drawing.Size(1056, 10)
         Me.Guna2Separator1.TabIndex = 16
         '
-        'FoodTableAdapter
-        '
-        Me.FoodTableAdapter.ClearBeforeFill = True
-        '
         'Guna2Button2
         '
         Me.Guna2Button2.CheckedState.Parent = Me.Guna2Button2
@@ -444,9 +378,6 @@ Partial Class NewOder
         Me.Panel1.PerformLayout()
         CType(Me.nudQuantity, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvOrder, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FoodBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FoodShopDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FoodShopDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvOrderDetails, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -469,14 +400,6 @@ Partial Class NewOder
     Friend WithEvents Label1 As Label
     Friend WithEvents txbSearch As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents IdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TitleDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ImageDataGridViewImageColumn As DataGridViewImageColumn
-    Friend WithEvents PriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents FoodBindingSource As BindingSource
-    Friend WithEvents FoodShopDataSetBindingSource As BindingSource
-    Friend WithEvents FoodShopDataSet As FoodShopDataSet
-    Friend WithEvents FoodTableAdapter As FoodShopDataSetTableAdapters.FoodTableAdapter
     Friend WithEvents btnClear As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents lblTotal As Label

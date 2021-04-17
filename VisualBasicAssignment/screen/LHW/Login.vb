@@ -43,12 +43,12 @@
                     Me.Hide()
                     Profile.username = name
                     DatabaseConnections.SetLoginUser(dbName)
-                    UserRecordReport.Show()
+                    Screen.NAV_FORM1_CUST.Show()
                 ElseIf dbName.user_role = "s" Then
                     Me.Hide()
                     Profile.username = name
                     DatabaseConnections.SetLoginUser(dbName)
-                    UserRecordReport.Show()
+                    Screen.NAV_FORM2_STAFF.Show()
                 End If
             End If
         End If
