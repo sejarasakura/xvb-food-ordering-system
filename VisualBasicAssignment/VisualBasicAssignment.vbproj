@@ -322,7 +322,9 @@
     <Compile Include="screen\sai_keat\widget\order\PaymentReport.Designer.vb">
       <DependentUpon>PaymentReport.vb</DependentUpon>
     </Compile>
-    <Compile Include="screen\sai_keat\widget\order\PaymentReport.vb" />
+    <Compile Include="screen\sai_keat\widget\order\PaymentReport.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="screen\sai_keat\widget\order\StaffOrder.Designer.vb">
       <DependentUpon>StaffOrder.vb</DependentUpon>
     </Compile>
